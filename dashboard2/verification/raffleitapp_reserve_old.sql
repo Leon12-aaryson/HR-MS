@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 08:25 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.31
+-- Generation Time: Aug 21, 2023 at 10:45 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `message` (
   `message_name` varchar(100) NOT NULL,
   `email` varchar(40) NOT NULL,
   `message` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `organisation` (
   `description` varchar(100) NOT NULL,
   `email` varchar(30) NOT NULL,
   `address` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -59,12 +59,12 @@ CREATE TABLE `organisation` (
 CREATE TABLE `payments` (
   `id` int(11) NOT NULL,
   `product_id` float(10,2) NOT NULL,
-  `transaction_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `transaction_id` varchar(50) NOT NULL,
   `payment_amount` float(10,2) NOT NULL,
-  `currency_code` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `payment_status` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `invoice_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `product_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `currency_code` varchar(255) NOT NULL,
+  `payment_status` varchar(20) NOT NULL,
+  `invoice_id` varchar(50) NOT NULL,
+  `product_name` varchar(50) NOT NULL,
   `createdtime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -85,8 +85,8 @@ INSERT INTO `payments` (`id`, `product_id`, `transaction_id`, `payment_amount`, 
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `price` float(10,2) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=Active | 0=Inactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -108,8 +108,8 @@ INSERT INTO `products` (`id`, `name`, `image`, `price`, `status`) VALUES
 
 CREATE TABLE `products1` (
   `id` int(11) NOT NULL,
-  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `price` float(10,2) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=Active | 0=Inactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -122,11 +122,11 @@ CREATE TABLE `products1` (
 
 CREATE TABLE `rafflepay` (
   `payment_id` int(11) NOT NULL,
-  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `txn_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `item_number` varchar(50) NOT NULL,
+  `txn_id` varchar(50) NOT NULL,
   `payment_gross` float(10,2) NOT NULL,
-  `currency_code` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
-  `payment_status` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+  `currency_code` varchar(5) NOT NULL,
+  `payment_status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -142,7 +142,7 @@ CREATE TABLE `raffles` (
   `picture` blob DEFAULT NULL,
   `startdate` datetime NOT NULL,
   `enddate` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `raffles`
@@ -158,29 +158,21 @@ INSERT INTO `raffles` (`id`, `hostname`, `reason`, `picture`, `startdate`, `endd
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usertable`
+--
+
+CREATE TABLE `usertable` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_at` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password`, `created_at`) VALUES
-(1, '', '', 'leon12', '', '$2y$10$FLq..r8b.NBYVcsKS4cjgOn/cw8nfnjwCaGZkG6FlDeFpmmzfFKbu', '2023-03-11 06:45:57'),
-(2, '', '', 'lexleon12', '', '$2y$10$lJU7ceK2AFlJ8okEuPvxVOUjD19TFIzav6pvmi0AeQasO/VX4y/6y', '2023-03-11 06:52:02'),
-(3, 'Salwa', 'Hope', 'hopeline', 'lexhope@gmail.com', '$2y$10$6RvrGg5jLpk8s3r69trMRegnGVMEWJVtAoQYPRpLSyFBBqEst4eRO', '2023-03-11 06:55:39'),
-(4, 'Deogratious', 'Emma', 'jim12', 'admin@admin.com', '$2y$10$y2Av17G8BthBSCQVj9LfB.MBpVLb7WzrwV7MxZPHZoQWiYs6m6hAm', '2023-03-11 07:50:55'),
-(5, 'Deogratious2', 'Emma2', 'jim123', 'admin@admin.com', '$2y$10$Yz3C74O8VRRn63cwsRo1NuBEcyzi48pzqLtFhCHbOKHD34GvOpFKq', '2023-03-11 07:52:53'),
-(6, 'Euthalia', 'Philgence', 'Euthalia23', 'euthaliacass@gmail.com', '$2y$10$v1A84NamhapIiA5Uq0UiQOD72mclD1Id1tR63dFpTPgU1X5EKZo/.', '2023-03-11 08:30:45'),
-(7, 'Garfield', 'Dawes', 'Garfield23', 'Oldfolly5@gmail.com', '$2y$10$yVw4yncel.Dg3wponTCea.mVwDQ6wCdjpzGdIC0ZEaDkv0Frt7gNu', '2023-03-11 09:03:52'),
-(8, 'leonardo', 'Aaron', 'lexleon', 'aaron@gmail.com', '$2y$10$tGmdyq1lu6d9VzDoXnqniuwP6QDoELkYp1vD49sr6owZbhw1osjqC', '2023-03-22 17:42:28');
+  `code` mediumint(50) NOT NULL,
+  `status` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -235,6 +227,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `usertable`
+--
+ALTER TABLE `usertable`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -285,6 +283,12 @@ ALTER TABLE `raffles`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `usertable`
+--
+ALTER TABLE `usertable`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
