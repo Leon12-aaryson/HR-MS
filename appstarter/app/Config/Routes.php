@@ -30,6 +30,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('employee', 'Home::Employee');
+$routes->get('add-employee', 'Home::CreateEmployee');
+$routes->get('department', 'Home::Department');
+$routes->get('branch-master', 'Home::BranchMaster');
+
 
 /*
  * --------------------------------------------------------------------
