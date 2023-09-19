@@ -38,17 +38,18 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="<?= base_url('employee'); ?>">
                     <i class="bx bx-user icon"></i>
                     <span class="link_name">Employee</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Employee</a></li>
+                    <li class="no-list"><a href="<?= base_url('add-employee'); ?>" class="link_name">Employee</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="#">
+                <a href="add-employee">
+                    <!-- It fails to load whenever i use base_url('employee') -->
                     <i class='bx bx-spreadsheet'></i>
                     <span class="link_name">Payroll</span>
                 </a>
