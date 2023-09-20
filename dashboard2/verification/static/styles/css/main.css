@@ -1,0 +1,75 @@
+a {
+    text-decoration: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+
+.navbar-brand,
+.nav-link {
+    color: rgba(255, 255, 255, .8);
+}
+
+.nav-item.active .nav-link,
+.nav-item:focus .nav-link,
+.nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav {
+    margin-right: 15%;
+}
+
+.logging {
+    margin-top: 4rem;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.side-bar .menu .item a {
+    color: var(--color-primary-variant);
+    text-decoration: none;
+}
+
+.side-bar .menu .item a .dropdown {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+    margin-top: .2rem;
+    display: none;
+    background: var(--color-info-light);
+    transition: all .3s ease;
+}
+
+.side-bar .menu .item .sub-menu li a:hover {
+    color: var(--color-info-dark);
+    /* border-radius: var(--border-radius-1); */
+    transition: all .3s ease;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar {
+    background: var(--color-background);
+    padding: 1.2rem;
+}
+
+button {
+    border: none;
+    outline: none;
+}
