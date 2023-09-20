@@ -35,5 +35,46 @@ class Home extends BaseController
         return view("branch-master");
     }
 
+    public function Job()
+    {
+        return view('job-type');
+    }
+
+    public function Deduction()
+    {
+        return view('deductions');
+    }
+
+    public function Contract()
+    {
+        return view('contract');
+    }
+
+    public function Payement()
+    {
+        return view('payement');
+    }
+
+    public function Designation()
+    {
+        return view('designation');
+    }
+    public function Leave()
+    {
+        return view('leave');
+    }
+    public function Loan()
+    {
+        return view('loan');
+    }
+    public function Shift()
+    {
+        return view('shift');
+    }
+    public function Permission()
+    {
+        return view('permission');
+    }
+
     
 }
