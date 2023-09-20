@@ -1,0 +1,320 @@
+:root {
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-primary: #7380ec;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-primary-variant: #111e83;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --color-dark: #363949;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* custom navigation bar */
+.top-nav nav {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: #1d1b31;
+}
+
+.top-nav nav ul {
+    text-align: right;
+    display: inline-block;
+    right: 20%;
+}
+
+.top-nav nav ul li {
+    display: inline-block;
+}
+
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 95%;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.sub-menu-wrap.open-menu {
+    z-index: 3;
+    max-height: 400px;
+    float: right;
+}
+
+.profile-menu {
+    background: #1d1b31;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: var(--color-info-light);
+    border-radius: var(--border-radius-1);
+
+}
+
+.profile-menu hr {
+    height: 1px;
+    border: 0;
+    background: white;
+    width: 100%;
+    margin: 1rem 0 .5rem;
+}
+
+.sub-Menu li a {
+    text-decoration: none
+}
+
+.user-info {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-menu img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-menu h5 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.profile-menu a {
+    color: var(--color-info-light);
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+}
+
+.profile-links {
+    align-items: center;
+    justify-content: center;
+    display: block;
+    transition: all 3s ease;
+}
+
+.profile-links li {
+    justify-content: center;
+    transition: all 3s ease;
+}
+
+.sub-menu-link {
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.sub-menu-link a {
+    padding: .5rem;
+    transition: 2s;
+}
+
+
+.sub-menu-link:hover {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-white);
+    transform: translateX(5px);
+}
+
+/* profile ends here */
+.top-nav nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+}
+
+.SMS_name {
+    font-weight: 600;
+}
+
+.logo {
+    width: 100px;
+}
+
+.profile,
+.logo3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+/* end of custom navigation bar */
+
+html {
+    overflow-x: hidden;
+    background: var(--color-info-light);
+}
+
+.whole {
+    background: var(--color-info-light);
+    padding: 1rem;
+    height: 100%;
+    z-index: 1;
+}
+
+aside {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: var(--color-background); */
+    padding: 0 1rem;
+    border-radius: var(--border-radius-1);
+    z-index: 100;
+    transition: all 0.5s ease;
+    position: fixed;
+    overflow-y: auto;
+}
+
+
+/* sidebarsample 2 */
+.sidebar li a {
+    /* padding: 0 1rem; */
+    display: flex;
+    align-items: center;
+    color: var(--color-primary-variant);
+    padding: 0.6rem;
+}
+
+.icon-link {
+    display: flex;
+    color: var(--color-primary-variant);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+}
+
+.sidebar .nav-links li i {
+    line-height: 50px;
+    text-align: center;
+    min-width: 78px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+}
+
+aside a i {
+    padding-right: 1rem;
+}
+
+.sub-menu {
+    display: none;
+    padding: 3px 3px 10px 30px;
+    background: var(--color-info-dark);
+    border-radius: 3px;
+    margin-top: -10px;
+}
+
+.sidebar.cloase .sub-menu {
+    left: 100%;
+}
+
+.sidebar .nav-links li .sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #1d1b31;
+    display: none;
+}
+
+/* Aside update end */
+
+.whole-dash .card {
+    background: var(--color-white);
+    color: var(--color-primary-variant);
+    padding: var(--card-padding);
+    margin: 1rem;
+    border-radius: var(--border-radius-1);
+    z-index: 1;
+}
+
+/* dashboard details */
+.whole-dash .dash-detail .card {
+    display: grid;
+    /* grid-template-columns: 60% auto; */
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.dash-detail i {
+    background: rgb(50, 16, 128);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.whole-dash .card-body .card-title {
+    padding-top: -1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-info-light);
+    background: var(--color-dark-variant);
+    padding: 0.5rem;
+}
+
+/* custom scroll-bar */
+.sub-menu li i {
+    font-size: 0.7rem;
+}
+
+.whole-dash .card-group .card .card-title {
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.whole-dash .card-group .card {
+    border-radius: .2rem;
+    padding: 1rem;
+    background: var(--color-white);
+}
+
+.whole-dash .clas label {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: oblique;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+    .regcard {
+        width: 85%;
+    }
+
+}

@@ -151,12 +151,12 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="<?= base_url('branch-master'); ?>">
                     <i class='bx bx-cog' ></i>
                     <span class="link_name">HR system setup</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">HR system setup</a></li>
+                    <li class="no-list"><a href="<?= base_url('branch-master'); ?>" class="link_name">HR system setup</a></li>
                 </ul>
             </li>
 
