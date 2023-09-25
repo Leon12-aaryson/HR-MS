@@ -34,6 +34,15 @@ $routes->get('employee', 'Home::Employee');
 $routes->get('add-employee', 'Home::CreateEmployee');
 $routes->get('department', 'Home::Department');
 $routes->get('branch-master', 'Home::BranchMaster');
+$routes->get('job', 'Home::Job');
+$routes->get('deduction', 'Home::Deduction');
+$routes->get('contract', 'Home::Contract');
+$routes->get('payement', 'Home::Payement');
+$routes->get('designation', 'Home::Designation');
+$routes->get('leave', 'Home::Leave');
+$routes->get('loan', 'Home::Loan');
+$routes->get('shift', 'Home::Shift');
+$routes->get('permission', 'Home::Permission');
 
 
 /*

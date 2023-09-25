@@ -9,38 +9,40 @@
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
                     <li><a href="#" class="active"><?= $head ?></a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff"><?= $link ?></a></li>
+                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><?= $link ?></a></li>
                 </ul> 
                 <div class="hr"></div>
 
                <div class="setup">
                 <div class="list mt-3">
                     <ul>
-                        <li class="<?= $active ?>">
+                        <li >
                             <a  href="#">Branch Manager</a>
                             <i class='bx bxs-chevron-right arrow'></i>
                         </li>
-                        <li><a href="<?= base_url('department'); ?>">Department</a>
+                        <li><a href="#">Department</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('designation'); ?>">Designation</a>
+                        <li><a href="#">Designation</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('leave'); ?>">Leave Type</a>
+                        <li><a href="#">Leave Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url(); ?>">Allowance type</a>
+                        <li><a href="#">Payslip Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('loan'); ?>">Loan options</a>
+                        <li><a href="#">Allowance type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('shift'); ?>">Shift type</a>
+                        <li><a href="#">Loan options</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('deduction'); ?>">Deduction option</a>
+                        <li class="<?= $active ?>"><a href="#">Shift type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('payement'); ?>">Payment Type</a>
+                        <li><a href="#">Deduction option</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('contract'); ?>">Contract Type</a>
+                        <li><a href="#">Payment Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('permission'); ?>">Permissions</a>
+                        <li><a href="#">Contract Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li><a href="<?= base_url('job'); ?>">Job Type</a>
+                        <li><a href="#">Permissions</a>
+                        <i class='bx bxs-chevron-right arrow'></i></li>
+                        <li><a href="#">Job Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
                     </ul>
                 </div>
@@ -50,14 +52,14 @@
                             <thead>
                                 <tr>
                                     <th>S.N</th>
-                                    <th>Branch</th>
+                                    <th>Shift</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Main Branch</td>
+                                    <td>Shift1</td>
                                     <td>
     
                                         <div class="dropdown">
@@ -74,7 +76,7 @@
                                                         Delete
                                                     </button>
                                                 </li>
-                                              
+                                                
                                             </ul>
                                         </div>
                                     </td>
@@ -88,5 +90,28 @@
             </div>
         </main>
         <!-- html for main part ends here -->
+         <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Add Shift</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInput1" class="form-label text-primary"> Shift</label>
+                      <input type="text" class="form-control" id="exampleInput1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+            </div>
+        </div>
+     </div>
 
 <?= $this->endSection() ?>

@@ -9,7 +9,7 @@
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
                     <li><a href="#" class="active">Department</a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add Department</a></li>
+                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Department</a></li>
                 </ul> 
                 <div class="hr"></div>
 
@@ -20,7 +20,7 @@
                             <a  href="#">Branch Manager</a>
                             <i class='bx bxs-chevron-right arrow'></i>
                         </li>
-                        <li class="active-list"><a href="#">Department</a>
+                        <li class="<?= $active ?>"><a href="#">Department</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Designation</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
@@ -62,8 +62,8 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Main Branch</td>
-                                    <td>Shs 10000/-</td>
                                     <td>IT DEPT</td>
+                                    <td>Shs 10000/-</td>
                                     <td>
     
                                         <div class="dropdown">
@@ -94,5 +94,36 @@
             </div>
         </main>
         <!-- html for main part ends here -->
+         <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Add Department</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInput1" class="form-label text-primary">Branch</label>
+                      <input type="text" class="form-control" id="exampleInput1">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInput2" class="form-label text-primary">Department</label>
+                      <input type="text" class="form-control" id="exampleInput2">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInput3" class="form-label text-primary">Salary</label>
+                      <input type="text" class="form-control" id="exampleInput3">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+            </div>
+        </div>
+     </div>
 
 <?= $this->endSection() ?>
