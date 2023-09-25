@@ -4,12 +4,12 @@
 <!-- html for main part starts here -->
 <main>
             <div class="container">
-                <h1 class="title">Manage Permissions</h1>
+                <h1 class="title"><?= $page_title ?></h1>
                 <ul class=" emp" style="line-height: none;">
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
-                    <li><a href="#" class="active">Permissions</a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Assign Loan</a></li>
+                    <li><a href="#" class="active"><?= $head ?></a></li>
+                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><?= $link ?></a></li>
                 </ul> 
                 <div class="hr"></div>
 
@@ -40,7 +40,7 @@
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Contract Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li  class="active-list"><a href="#">Permissions</a>
+                        <li  class="<?= $active ?>"><a href="#">Permissions</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Job Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>

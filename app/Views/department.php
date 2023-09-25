@@ -20,7 +20,7 @@
                             <a  href="#">Branch Manager</a>
                             <i class='bx bxs-chevron-right arrow'></i>
                         </li>
-                        <li class="active-list"><a href="#">Department</a>
+                        <li class="<?= $active ?>"><a href="#">Department</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Designation</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>

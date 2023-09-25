@@ -4,12 +4,12 @@
 <!-- html for main part starts here -->
 <main>
             <div class="container">
-                <h1 class="title">Manage Deduction Types</h1>
+                <h1 class="title"><?= $page_title ?></h1>
                 <ul class=" emp" style="line-height: none;">
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
-                    <li><a href="#" class="active">Deduction Type</a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Deduction Type</a></li>
+                    <li><a href="#" class="active"></a><?= $head ?></li>
+                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><?= $link ?></a></li>
                 </ul> 
                 <div class="hr"></div>
 
@@ -34,7 +34,7 @@
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Shift type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li class="active-list"><a href="#">Deduction option</a>
+                        <li class="<?= $active ?>"><a href="#">Deduction option</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Payment Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>

@@ -4,19 +4,19 @@
 <!-- html for main part starts here -->
 <main>
             <div class="container">
-                <h1 class="title">Manage Branch</h1>
+                <h1 class="title"><?= $page_title ?></h1>
                 <ul class=" emp" style="line-height: none;">
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
-                    <li><a href="#" class="active">Branch</a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add Branch</a></li>
+                    <li><a href="#" class="active"><?= $head ?></a></li>
+                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff"><?= $link ?></a></li>
                 </ul> 
                 <div class="hr"></div>
 
                <div class="setup">
                 <div class="list mt-3">
                     <ul>
-                        <li class="active-list">
+                        <li class="<?= $active ?>">
                             <a  href="#">Branch Manager</a>
                             <i class='bx bxs-chevron-right arrow'></i>
                         </li>

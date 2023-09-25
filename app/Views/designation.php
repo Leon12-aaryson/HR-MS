@@ -4,12 +4,12 @@
 <!-- html for main part starts here -->
 <main>
             <div class="container">
-                <h1 class="title">Manage Designation</h1>
+                <h1 class="title"><?= $page_title ?></h1>
                 <ul class=" emp" style="line-height: none;">
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
-                    <li><a href="#" class="active">Designation</a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Designation</a></li>
+                    <li><a href="#" class="active"><?= $head ?></a></li>
+                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><?= $link ?></a></li>
                 </ul> 
                 <div class="hr"></div>
 
@@ -22,7 +22,7 @@
                         </li>
                         <li><a href="#">Department</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
-                        <li class="active-list"><a href="#">Designation</a>
+                        <li class="<?= $active ?>"><a href="#">Designation</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
                         <li><a href="#">Leave Type</a>
                         <i class='bx bxs-chevron-right arrow'></i></li>
