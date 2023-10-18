@@ -11,7 +11,7 @@
                     <li class="divider">/</li>
                     <li><a href="#" class="active">Employee</a></li>
                     <li class="divider">/</li>
-                    <li><a href="#" class="active">Create Employee</a></li>
+                    <li><a href="#" class="active-list">Create Employee</a></li>
             
                 </ul>
                 <div class="hr"></div>
@@ -118,6 +118,10 @@
 
                             <div class="row g-3 mt-1 mb-5">
                                 <div class="col">
+                                    <label>Branch Location<span>*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter Branch Location">
+                                </div>
+                                <div class="col">
                                     <label>Tax Payer Id<span>*</span></label>
                                     <input type="text" class="form-control" placeholder="Enter Tax Payer id">
                                 </div>
@@ -199,8 +203,13 @@
                         </div>
                         <div class="row g-3">
                             <div class="col">
-                                <label for="Upload">Upload Employee DOC<span>*</span></label>
-                                <input type="file" class="form-control form-control-sm" id="inputGroupFile01">
+                                <label for="branch">Select Permissions<span>*</span></label>
+                                <select class=" form-select form-select-sm" aria-label="Default select example">
+                                    <option selected>Select Permissions</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
                             </div>
 
                             <div class="col">

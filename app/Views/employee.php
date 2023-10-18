@@ -16,7 +16,7 @@
                 <div class="event-table mt-3">
                     <div class="color-top" style="left: -22px;"></div>
                 
-                    <table>
+                    <table class="table-responsive" id="employeeDataTable">
                         <thead>
                             <tr>
                                 <th>Employee_ID</th>

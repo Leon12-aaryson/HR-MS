@@ -44,6 +44,35 @@ $routes->get('loan', 'Home::Loan');
 $routes->get('shift', 'Home::Shift');
 $routes->get('permission', 'Home::Permission');
 
+// Working with employees
+$routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
+
+// Working with branch manager
+$routes->post('fetchbranchmanager', 'BranchmanagerController::fetchbranchmanager');
+
+// Working with department
+$routes->post('fetchdepartment', 'DepartmentController::fetchdepartment');
+
+// Working with designation
+$routes->post('fetchdesignation', 'DesignationController::fetchdesignation');
+
+// Working with leave
+$routes->post('fetchleave', 'LeaveController::fetchleave');
+
+// Working with loan
+$routes->post('fetchloan', 'LoanController::fetchloan');
+
+// Working with shift type
+$routes->post('fetchshiftype', 'ShifttypeController::fetchshiftype');
+
+// Working with deduction options
+$routes->post('fetchdeduction', 'DeductionController::fetchdeduction');
+
+// Working with payment
+$routes->post('fetchpayment', 'PaymentController::fetchpayment');
+
+// Working with contract
+$routes->post('fetchcontract', 'ContractController::fetchcontract');
 
 /*
  * --------------------------------------------------------------------
