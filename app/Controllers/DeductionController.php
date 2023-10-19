@@ -20,9 +20,9 @@ class DeductionController extends BaseController
     public function fetchdeduction()
     {
         // Select deduction option table 
-        $builder = $this->db->table('deduction');
+        $builder = $this->db->table('deduction_table');
 
-        $builder->select('deduction.*'); 
+        $builder->select('deduction_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');

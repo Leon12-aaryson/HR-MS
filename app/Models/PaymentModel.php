@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class PaymentModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'payement';
-    protected $primaryKey       = 'id';
+    protected $table            = 'payement_table';
+    protected $primaryKey       = 'payement_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

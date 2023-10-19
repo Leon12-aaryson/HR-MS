@@ -20,9 +20,9 @@ class LeaveController extends BaseController
     public function fetchleave()
     {
         // Select leave table 
-        $builder = $this->db->table('leave_type');
+        $builder = $this->db->table('leave_type_table');
 
-        $builder->select('leave_type.*'); 
+        $builder->select('leave_type_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');

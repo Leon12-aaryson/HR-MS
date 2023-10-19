@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class LoanModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'loans';
-    protected $primaryKey       = 'id';
+    protected $table            = 'loan_table';
+    protected $primaryKey       = 'loan_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

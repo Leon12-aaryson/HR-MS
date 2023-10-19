@@ -43,12 +43,17 @@ $routes->get('leave', 'Home::Leave');
 $routes->get('loan', 'Home::Loan');
 $routes->get('shift', 'Home::Shift');
 $routes->get('permission', 'Home::Permission');
+$routes->get('payroll', 'Home::Payroll');
+$routes->get('create-payroll', 'Home::CreatePayroll');
+$routes->get('create-attendance', 'Home::CreateAttendance');
+//The following route is not yet linked anywhere
+$routes->get('view-employee', 'Home::ViewEmployee');
 
 // Working with employees
 $routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
 
 // Working with branch manager
-$routes->post('fetchbranchmanager', 'BranchmanagerController::fetchbranchmanager');
+$routes->post('fetchbranchmanager', 'BranchmasterController::fetchbranchmanager');
 
 // Working with department
 $routes->post('fetchdepartment', 'DepartmentController::fetchdepartment');

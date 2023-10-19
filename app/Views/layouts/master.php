@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HR-MS</title>
 
     <link rel="stylesheet" href="public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css">
     <link href='public/assets/datatables/datatables.min.css' rel='stylesheet'>
@@ -48,7 +48,7 @@
             </li>
 
             <li>
-                <a href="add-employee">
+                <a href="<?= base_url('payroll'); ?>">
                     <!-- It fails to load whenever i use base_url('employee') -->
                     <i class='bx bx-spreadsheet'></i>
                     <span class="link_name">Payroll</span>
@@ -78,18 +78,11 @@
 
             <li>
                 <div class="icon-link">
-                    <a href="#">
+                    <a href="<?= base_url('create-attendance'); ?>">
                         <i class='bx bx-timer'></i>
-                        <span class="link_name">Timesheet</span>
+                        <span class="link_name">Attendance</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
                 </div>
-                <ul class="sub-menu">
-                    <li class="no-list"><a href="#" class="link_name">Timesheet</a></li>
-                    <li><a href="#">Manage Leave</a></li>
-                    <li><a href="#">Attendance</a></li>
-
-                </ul>
             </li>
 
             <li>
@@ -104,6 +97,7 @@
                     <li class="no-list"><a href="#" class="link_name">Approval</a></li>
                     <li><a href="#">Answer grievance</a></li>
                     <li><a href="#">Loan Approval</a></li>
+                    <li><a href="#">Manage Leave</a></li>
                 </ul>
             </li>
             <li>

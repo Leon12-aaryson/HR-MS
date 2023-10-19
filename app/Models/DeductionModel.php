@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class DeductionModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'deduction';
-    protected $primaryKey       = 'id';
+    protected $table            = 'deduction_table';
+    protected $primaryKey       = 'deduction_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

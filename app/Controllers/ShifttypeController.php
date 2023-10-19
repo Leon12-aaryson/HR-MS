@@ -20,9 +20,9 @@ class ShifttypeController extends BaseController
     public function fetchshiftype()
     {
         // Select branch table 
-        $builder = $this->db->table('shift');
+        $builder = $this->db->table('shift_table');
 
-        $builder->select('shift.*'); 
+        $builder->select('shift_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');

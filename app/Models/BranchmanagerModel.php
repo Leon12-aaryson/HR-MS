@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class BranchmanagerModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'branch_manager';
+    protected $table            = 'branch_manager_table';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

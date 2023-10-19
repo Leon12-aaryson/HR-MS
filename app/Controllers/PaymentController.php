@@ -20,9 +20,9 @@ class PaymentController extends BaseController
     public function fetchpayment()
     {
         // Select payment table 
-        $builder = $this->db->table('payement');
+        $builder = $this->db->table('payement_table');
 
-        $builder->select('payement.*'); 
+        $builder->select('payement_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');

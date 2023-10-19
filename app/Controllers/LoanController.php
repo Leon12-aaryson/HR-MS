@@ -20,9 +20,9 @@ class LoanController extends BaseController
     public function fetchloan()
     {
         // Select loan table 
-        $builder = $this->db->table('loan');
+        $builder = $this->db->table('loan_table');
 
-        $builder->select('loan.*'); 
+        $builder->select('loan_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');

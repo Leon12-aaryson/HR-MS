@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class ContractModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'contract';
-    protected $primaryKey       = 'id';
+    protected $table            = 'contract_table';
+    protected $primaryKey       = 'contract_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

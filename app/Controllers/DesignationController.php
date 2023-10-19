@@ -20,9 +20,9 @@ class DesignationController extends BaseController
     public function fetchdesignation()
     {
         // Select designation table 
-        $builder = $this->db->table('designation');
+        $builder = $this->db->table('designation_table');
 
-        $builder->select('designation.*'); 
+        $builder->select('designation_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');

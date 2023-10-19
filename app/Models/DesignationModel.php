@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class DesignationModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'designation';
-    protected $primaryKey       = 'id';
+    protected $table            = 'designation_table';
+    protected $primaryKey       = 'designation_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

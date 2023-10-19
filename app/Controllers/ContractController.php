@@ -20,9 +20,9 @@ class ContractController extends BaseController
     public function fetchcontract()
     {
         // Select contract table 
-        $builder = $this->db->table('contract');
+        $builder = $this->db->table('contract_table');
 
-        $builder->select('contract.*'); 
+        $builder->select('contract_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');
