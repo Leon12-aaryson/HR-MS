@@ -131,17 +131,23 @@ class Home extends BaseController
     }
 
 
-    public function Permission()
+    public function Payroll()
     {
-        $title = [
-            'page_title' => "Manage Permissions",
-            'head' => "Permissions",
-            'link' => "Asign Permission"
-        ];
-        $data = [
-            'active' => 'active-list',
-        ];
-        return view('permission', array_merge($data, $title));
+        return view('payroll');
+    }
+    public function CreatePayroll()
+    {
+        return view('create-payroll');
+    }
+    public function CreateAttendance()
+    {
+        return view('create-attendance');
+    }
+
+    // The following method is not yet linked anywhere
+    public function ViewEmployee()
+    {
+        return view('view-employee');
     }
         
 }

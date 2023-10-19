@@ -9,14 +9,14 @@
                     <li><a href="#">Home</a></li>
                     <li class="divider">/</li>
                     <li><a href="#" class="active">Employee</a></li>
-                    <li><a href="#"  class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add Employee</a></li>
+                    <li><a href="add-employee"  class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add Employee</a></li>
                 </ul> 
                 <div class="hr"></div>
 
                 <div class="event-table mt-3">
                     <div class="color-top" style="left: -22px;"></div>
                 
-                    <table>
+                    <table class="table-responsive" id="employeeDataTable">
                         <thead>
                             <tr>
                                 <th>Employee_ID</th>
