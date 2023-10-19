@@ -79,6 +79,9 @@ $routes->post('fetchpayment', 'PaymentController::fetchpayment');
 // Working with contract
 $routes->post('fetchcontract', 'ContractController::fetchcontract');
 
+//working with job type
+$routes->post('fetchjobtype', 'JobtypeController::fetchjobtype');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

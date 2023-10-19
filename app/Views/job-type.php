@@ -19,7 +19,7 @@
             </div>
             <div>
                 <div class="event-table mt-3">
-                    <table>
+                    <table id="jobtypeDataTable">
                         <thead>
                             <tr>
                                 <th>s.n</th>
@@ -27,32 +27,6 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Admin </td>
-                                <td>
-
-                                    <div class="dropdown">
-                                        <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical" style="color: var(--skin-color);"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="#" class=" dropdown-item update btn-sm btn"><i class="bx bx-edit"></i> Edit</a>
-                                            </li>
-                                            <li>
-                                                <button type="submit" class="dropdown-item btn-sm btn delete">
-                                                    <i class="bx bx-trash"></i>
-                                                    Delete
-                                                </button>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
                     </table>
                 </div>
             </div>

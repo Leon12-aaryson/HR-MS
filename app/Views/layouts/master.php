@@ -109,21 +109,7 @@
                     <li class="no-list"><a href="#" class="link_name">Jobs</a></li>
                 </ul>
             </li>
-
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bx-walk'></i>
-                        <span class="link_name">Shift</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <ul class="sub-menu">
-                    <li class="no-list"><a href="#" class="link_name">Shift</a></li>
-                    <li><a href="#">Add shift</a></li>
-                    <li><a href="#">shift Employee</a></li>
-                </ul>
-            </li>
+            
             <li>
                 <a href="#">
                     <i class='bx bx-message-dots'></i>
@@ -638,6 +624,22 @@
         "order": [],
         "ajax": {
             url: "fetchcontract",
+            method: "POST",
+        },
+        "columnDefs": [{
+            "orderable": false,
+            "targets": [2]
+        }],
+    })
+
+    //job type
+    let jobtypeDataTable = $("#jobtypeDataTable").dataTable({
+        "processing": true,
+        "serverSide": true,
+        "stateSave": false, // Remembers data table state
+        "order": [],
+        "ajax": {
+            url: "fetchjobtype",
             method: "POST",
         },
         "columnDefs": [{
