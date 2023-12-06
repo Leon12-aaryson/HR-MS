@@ -13,6 +13,8 @@
     <link href='public/assets/boxicons/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="public/assets/css/style.css">
 
+    <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
+
     <!--========= Style switcher========= -->
     <link rel="stylesheet" href="public/assets/css/skin/color-3.css">
     <link rel="stylesheet" href="public/assets/css/skin/color-1.css" class="alternate-style" title="color-1" disabled>
@@ -109,7 +111,7 @@
                     <li class="no-list"><a href="#" class="link_name">Jobs</a></li>
                 </ul>
             </li>
-            
+
             <li>
                 <a href="#">
                     <i class='bx bx-message-dots'></i>
@@ -410,245 +412,355 @@
         <script src="public/assets/js/notification.js"></script>
         <script src="public/assets/js/color-picker.js"></script>
 
+        <?= script_tag('public/assets/sweetalert/js/sweetalert2@11.js') ?>
 
 </body>
 <script>
-    /**@abstract
-     * Employee
-     */
-    let employeeDataTable = $("#employeeDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchemployees",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [7]
-        }],
-        // <'col-sm-12 col-md-6'B> // Enabling buttons
-        dom: "<'row gx-0 pl-0'<'col-sm-12 col-md-3'l>\
+    $(document).ready(function() {
+        /**@abstract
+         * Employee
+         */
+        let employeeDataTable = $("#employeeDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+            "ajax": {
+                url: "fetchemployees",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [7]
+            }],
+            // <'col-sm-12 col-md-6'B> // Enabling buttons
+            dom: "<'row gx-0 pl-0'<'col-sm-12 col-md-3'l>\
                     <'col-sm-12 col-md-6'>\
                     <'col-sm-12 col-md-3'f>>" +
-            "<'row gx-0'<'col-sm-12'tr>>" +
-            "<'row gx-0'<'col-sm-12 col-md-5'i>\
+                "<'row gx-0'<'col-sm-12'tr>>" +
+                "<'row gx-0'<'col-sm-12 col-md-5'i>\
                     <'col-sm-12 col-md-7'p>>",
-        buttons: [{
-                extend: 'excelHtml5',
-                text: 'Excel <i class="bi bi-file-earmark-excel"></i> ',
-                titleAttr: 'Export to Excel',
-                className: 'btn btn-sm btn-danger',
-                exportOptions: {
-                    columns: [0, 1],
-                    search: 'applied',
-                    order: 'applied',
-                }
+            buttons: [{
+                    extend: 'excelHtml5',
+                    text: 'Excel <i class="bi bi-file-earmark-excel"></i> ',
+                    titleAttr: 'Export to Excel',
+                    className: 'btn btn-sm btn-danger',
+                    exportOptions: {
+                        columns: [0, 1],
+                        search: 'applied',
+                        order: 'applied',
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    text: 'PDF <i class="bi bi-file-earmark-pdf"></i> ',
+                    titleAttr: 'Export to PDF',
+                    className: 'btn btn-sm btn-danger',
+                    filename: 'employees_pdf',
+                    exportOptions: {
+                        columns: [0, 1],
+                        search: 'applied',
+                        order: 'applied',
+                    }
+                },
+                {
+                    extend: 'print',
+                    text: 'Print <i class="bi bi-printer"></i> ',
+                    titleAttr: 'Print',
+                    className: 'btn btn-sm btn-danger',
+                    exportOptions: {
+                        columns: [0, 1],
+                        search: 'applied',
+                        order: 'applied',
+                    }
+                },
+                {
+                    extend: "copyHtml5",
+                    text: 'Copy <i class="bi bi-file-earmark"></i> ',
+                    titleAttr: 'Copy',
+                    className: 'btn btn-sm btn-danger',
+                    exportOptions: {
+                        columns: [0, 1]
+                    }
+                },
+            ]
+
+        });
+
+
+        /**@abstract
+         * HR System Setup
+         */
+
+        // Branch Manager
+        let branchmanagerDataTable = $("#branchmanagerDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+            // dom: 'frtip',
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+
+            "ajax": {
+                url: "fetchbranchmanager",
+                method: "POST",
             },
-            {
-                extend: 'pdfHtml5',
-                text: 'PDF <i class="bi bi-file-earmark-pdf"></i> ',
-                titleAttr: 'Export to PDF',
-                className: 'btn btn-sm btn-danger',
-                filename: 'employees_pdf',
-                exportOptions: {
-                    columns: [0, 1],
-                    search: 'applied',
-                    order: 'applied',
-                }
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Department
+        let departmentDataTable = $("#departmentDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchdepartment",
+                method: "POST",
             },
-            {
-                extend: 'print',
-                text: 'Print <i class="bi bi-printer"></i> ',
-                titleAttr: 'Print',
-                className: 'btn btn-sm btn-danger',
-                exportOptions: {
-                    columns: [0, 1],
-                    search: 'applied',
-                    order: 'applied',
-                }
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [4]
+            }],
+        })
+
+        // Designation
+        let designationDataTable = $("#designationDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchdesignation",
+                method: "POST",
             },
-            {
-                extend: "copyHtml5",
-                text: 'Copy <i class="bi bi-file-earmark"></i> ',
-                titleAttr: 'Copy',
-                className: 'btn btn-sm btn-danger',
-                exportOptions: {
-                    columns: [0, 1]
-                }
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Leave Type
+        let leaveDataTable = $("#leaveDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchleave",
+                method: "POST",
             },
-        ]
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Loan
+        let loanDataTable = $("#loanDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchloan",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Shift type
+        let shiftypeDataTable = $("#shiftypeDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchshiftype",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Deduction Options
+        let deductionDataTable = $("#deductionDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchdeduction",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Payment
+        let paymentDataTable = $("#paymentDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchpayment",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        // Contract
+        let contractDataTable = $("#contractDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchcontract",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        //job type
+        let jobtypeDataTable = $("#jobtypeDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchjobtype",
+                method: "POST",
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [2]
+            }],
+        })
+
+        fetch_payroll('no')
 
     });
 
 
-    /**@abstract
-     * HR System Setup
-     */
 
-    // Branch Manager
-    let branchmanagerDataTable = $("#branchmanagerDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchbranchmanager",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
+    function fetch_payroll(is_date_search, year = '', month = '') {
+        // Manage Payroll
+        let managepayrollDataTable = $("#managepayrollDataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "stateSave": false, // Remembers data table state
+            "order": [],
+
+            "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+                '<"row"<"col-md-12"t>>' +
+                '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+            "ajax": {
+                url: "fetchmanagepayroll",
+                method: "POST",
+                data: {
+                    is_date_search: is_date_search,
+                    year: year,
+                    month: month
+                }
+            },
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [5]
+            }],
+        })
+
+    }
+
+    $("#managepayrollfind").click(function() {
+        let year = $("#managepayrollyear").val();
+        let month = $("#managepayrollmonth").val();
+
+        if (year != '') {
+
+            $("#managepayrollDataTable").DataTable().destroy();
+            fetch_payroll('yes', year, month);
+
+        } else {
+            // Here i will reinitialize the table if no dates specified
+            Swal.fire({
+                title: "Search error",
+                text: "You have to select a year",
+                icon: "error"
+            }).then(() => {
+
+                $("#managepayrollDataTable").DataTable().destroy();
+                fetch_payroll('no');
+            });
+        }
     })
-
-    // Department
-    let departmentDataTable = $("#departmentDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchdepartment",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [4]
-        }],
-    })
-
-    // Designation
-    let designationDataTable = $("#designationDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchdesignation",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    // Leave Type
-    let leaveDataTable = $("#leaveDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchleave",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    // Loan
-    let loanDataTable = $("#loanDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchloan",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    // Shift type
-    let shiftypeDataTable = $("#shiftypeDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchshiftype",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    // Deduction Options
-    let deductionDataTable = $("#deductionDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchdeduction",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    // Payment
-    let paymentDataTable = $("#paymentDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchpayment",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    // Contract
-    let contractDataTable = $("#contractDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchcontract",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-    //job type
-    let jobtypeDataTable = $("#jobtypeDataTable").dataTable({
-        "processing": true,
-        "serverSide": true,
-        "stateSave": false, // Remembers data table state
-        "order": [],
-        "ajax": {
-            url: "fetchjobtype",
-            method: "POST",
-        },
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2]
-        }],
-    })
-
-
 </script>
 
 </html>
