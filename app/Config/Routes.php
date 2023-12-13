@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Car;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -79,8 +81,13 @@ $routes->post('fetchpayment', 'PaymentController::fetchpayment');
 // Working with contract
 $routes->post('fetchcontract', 'ContractController::fetchcontract');
 
-//working with job type
+// Working with job type
 $routes->post('fetchjobtype', 'JobtypeController::fetchjobtype');
+
+// Working with payroll
+$routes->post('fetchmanagepayroll', 'ManagepayrollController::fetchmanagepayroll');
+
+
 
 /*
  * --------------------------------------------------------------------

@@ -1,10 +1,20 @@
 <?php
+
 namespace App\Controllers;
+
+use App\Models\PayrollModel;
+
 class Home extends BaseController
 {
+    private $payroll;
+    protected $db;
+
     public function __construct()
     {
-        helper(['html','form']);
+        // Loading the database service via dependency injection
+        $this->db = \Config\Database::connect();
+        $this->payroll = new PayrollModel();
+        helper(['html', 'form']);
     }
 
     public function index(): string
@@ -85,7 +95,7 @@ class Home extends BaseController
             'head' => 'Payements',
             'link' => 'Add payement method'
         ];
-        return view('payement',$data);
+        return view('payement', $data);
     }
 
     public function Designation()
@@ -96,7 +106,7 @@ class Home extends BaseController
             'head' => 'Designation',
             'link' => 'Add designation'
         ];
-        return view('designation',$data);
+        return view('designation', $data);
     }
 
     public function Leave()
@@ -117,7 +127,7 @@ class Home extends BaseController
             'head' => 'Loans',
             'link' => 'Add loan'
         ];
-        return view('loan',$data);
+        return view('loan', $data);
     }
     public function Shift()
     {
@@ -127,14 +137,28 @@ class Home extends BaseController
             'head' => 'Shifts',
             'link' => 'Add shift type'
         ];
-        return view('shift',$data);
+        return view('shift', $data);
     }
 
 
-    public function Payroll()
+    public function payroll()
     {
-        return view('payroll');
+        // Custom SQL query to retrieve the first found payroll_id per distinct year
+        $yearQuery = "SELECT DISTINCT YEAR(pay_date) AS year, MIN(payroll_id) AS year_id FROM payroll_table GROUP BY year";
+
+        // Custom SQL query to retrieve the first found payroll_id per distinct month
+        $monthQuery = "SELECT DISTINCT MONTH(pay_date) AS month, MIN(payroll_id) AS month_id FROM payroll_table GROUP BY month";
+
+        // Execute the SQL queries
+        $yearResults = $this->db->query($yearQuery)->getResultArray();
+        $monthResults = $this->db->query($monthQuery)->getResultArray();
+
+        $results = ['year' => $yearResults, 'month' => $monthResults];
+
+        // Pass the results to the view
+        return view('payroll', ['results' => $results]);
     }
+
     public function CreatePayroll()
     {
         return view('create-payroll');
@@ -149,5 +173,4 @@ class Home extends BaseController
     {
         return view('view-employee');
     }
-        
 }
