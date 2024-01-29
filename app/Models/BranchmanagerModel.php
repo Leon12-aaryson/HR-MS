@@ -8,12 +8,12 @@ class BranchmanagerModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'branch_manager_table';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'branch_manager_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['branch'];
 
     // Dates
     protected $useTimestamps = false;

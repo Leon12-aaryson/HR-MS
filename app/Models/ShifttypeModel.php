@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class ShifttypeModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'shift';
-    protected $primaryKey       = 'id';
+    protected $table            = 'shift_table';
+    protected $primaryKey       = 'shift_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['shift'];
 
     // Dates
     protected $useTimestamps = false;

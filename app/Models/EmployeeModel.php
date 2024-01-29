@@ -13,7 +13,33 @@ class EmployeeModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        
+                                'first_name',	
+                                'last_name',	
+                                'date_of_birth'	,
+                                'gender',	
+                                'contact_number',	
+                                'email',
+                                'password',	
+                                'address',
+                                'department',
+                                'branch',
+                                'designation',	
+                                'payement_type',	
+                                'contract_type',	
+                                'job_type',	
+                                'permission',	
+                                'position',	
+                                'hire_date',	
+                                'termination_date',	
+                                'bank_name',	
+                                'account_holder_name',	
+                                'bank_branch',	
+                                'account_number',	
+                                'bank_identifier_code',	
+                                'tax_payer_id'	
+                        ];
 
     // Dates
     protected $useTimestamps = false;

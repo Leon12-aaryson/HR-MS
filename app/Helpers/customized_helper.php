@@ -31,4 +31,16 @@ if (!function_exists("table_count")) {
     }
 }
 
+if (!function_exists("fetch_table")) {
+    function fetch_table($table)
+    {
+        $conn = dbconn();
+        $query = $conn->prepare("SELECT * FROM " . $table);
+        $query->execute();
+        $result = $query->fetchAll();
+        return $result;
+    }
+}
+
+
 

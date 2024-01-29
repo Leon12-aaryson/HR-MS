@@ -17,9 +17,9 @@ class LeaveController extends BaseController
         $this->leave = new LeaveModel();
     }
 
-    public function fetchleave()
+    public function fetchleaves()
     {
-        // Select leave table 
+        // Select Leave table 
         $builder = $this->db->table('leave_type_table');
 
         $builder->select('leave_type_table.*'); 
@@ -69,23 +69,18 @@ class LeaveController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['leave_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['leave_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['leave_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="leaveupdatebtn" class="dropdown-item" value="' . $row['leave_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="leavedeletebtn" class="dropdown-item" value="' . $row['leave_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -102,5 +97,82 @@ class LeaveController extends BaseController
         return $this->response->setJSON($output);
     
     }
+
+
+
+    // Fetch Leave
+    public function fetchleave()
+    {
+        $id = $this->request->getPost('leaveid');
+
+        $leave = $this->leave->find($id);
+
+        if ($leave) {
+            return $this->response->setJSON($leave);
+        } else {
+            // Prepare sweet alert response data
+            $data = [
+                'status' => 'error',
+                'message' => 'Leave not found'
+            ];
+
+            return $this->response->setJSON($data);
+        }
+    }
+
+    // Add Leave
+    public function addleave()
+    {
+        // Prepare leave data
+        $leaveData = [
+            'leave_type' => $this->request->getPost('leavetype')
+        ];
+
+        // Insert the Leave data into the database
+        $this->leave->insert($leaveData);
+
+        // Prepare sweet alert response data
+        $response = [
+            'status' => 'success',
+            'message' => 'Leave added successfully'
+        ];
+
+        return $this->response->setJSON($response);
+    }
+
+    // Update Leave
+    public function updateleave()
+    {
+
+        $id = $this->request->getPost('leaveid');
+
+        $data = [
+            'leave_type' => $this->request->getPost('leavetype'),
+        ];
+
+        $this->leave->update($id, $data);
+
+        $data = [
+            'status' => 'success',
+            'message' => 'Leave updated successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+    // Delete Leave
+    public function deleteleave()
+    {
+        $data = [
+            'id' => $this->request->getPost('leaveid'),
+        ];
+        $this->leave->delete($data);
+        $data = [
+            'status' => 'success',
+            'message' => 'Leave deleted successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+
 
 }

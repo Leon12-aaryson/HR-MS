@@ -8,12 +8,12 @@ class DepartmentModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'department_table';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'department_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['branch','department_name','salary'];
 
     // Dates
     protected $useTimestamps = false;

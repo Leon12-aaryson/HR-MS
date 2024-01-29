@@ -17,9 +17,9 @@ class ShifttypeController extends BaseController
         $this->shiftype = new ShifttypeModel();
     }
 
-    public function fetchshiftype()
+    public function fetchshiftypes()
     {
-        // Select branch table 
+        // Select Shift table 
         $builder = $this->db->table('shift_table');
 
         $builder->select('shift_table.*'); 
@@ -69,23 +69,18 @@ class ShifttypeController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['shift_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['shift_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['shift_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="shiftupdatebtn" class="dropdown-item" value="' . $row['shift_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="shiftdeletebtn" class="dropdown-item" value="' . $row['shift_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -102,4 +97,82 @@ class ShifttypeController extends BaseController
         return $this->response->setJSON($output);
     
     }
+
+
+    
+    // Fetch shift
+    public function fetchshiftype()
+    {
+        $id = $this->request->getPost('shiftid');
+
+        $shiftype = $this->shiftype->find($id);
+
+        if ($shiftype) {
+            return $this->response->setJSON($shiftype);
+        } else {
+            // Prepare sweet alert response data
+            $data = [
+                'status' => 'error',
+                'message' => 'Shift not found'
+            ];
+
+            return $this->response->setJSON($data);
+        }
+    }
+
+    // Add Shift
+    public function addshiftype()
+    {
+
+        // Prepare Shift data
+        $shiftData = [
+            'shift' => $this->request->getPost('shiftype')
+        ];
+
+        // Insert the Shift data into the database
+        $this->shiftype->insert($shiftData);
+
+        // Prepare sweet alert response data
+        $response = [
+            'status' => 'success',
+            'message' => 'Shift added successfully'
+        ];
+
+        return $this->response->setJSON($response);
+    }
+
+    // Update Shift
+    public function updateshiftype()
+    {
+
+        $id = $this->request->getPost('shiftid');
+
+        $data = [
+            'shift' => $this->request->getPost('shift'),
+        ];
+
+        $this->shiftype->update($id, $data);
+
+        $data = [
+            'status' => 'success',
+            'message' => 'Shift updated successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+    // Delete Shift
+    public function deleteshiftype()
+    {
+        $data = [
+            'id' => $this->request->getPost('shiftid'),
+        ];
+        $this->shiftype->delete($data);
+        $data = [
+            'status' => 'success',
+            'message' => 'Shift deleted successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+
 }

@@ -13,7 +13,7 @@ class LeaveModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['leave_type'];
 
     // Dates
     protected $useTimestamps = false;
