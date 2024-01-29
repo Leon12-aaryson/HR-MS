@@ -1,7 +1,6 @@
-
 <ul>
     <li class="<?= basename($_SERVER['PHP_SELF']) == 'branch-master' ? 'active-list' : '' ?>">
-        <a href="<?=base_url('branch-master')?>">Branch Manager</a>
+        <a href="<?= base_url('branch-master') ?>">Branch Manager</a>
         <i class='bx bxs-chevron-right arrow'></i>
     </li>
     <li class="<?= basename($_SERVER['PHP_SELF']) == 'department' ? 'active-list' : '' ?>">

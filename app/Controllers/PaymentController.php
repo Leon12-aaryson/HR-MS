@@ -17,9 +17,9 @@ class PaymentController extends BaseController
         $this->payment = new PaymentModel();
     }
 
-    public function fetchpayment()
+    public function fetchpayments()
     {
-        // Select payment table 
+        // Select Payment table 
         $builder = $this->db->table('payement_table');
 
         $builder->select('payement_table.*'); 
@@ -69,23 +69,18 @@ class PaymentController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['payement_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['payement_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['payement_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="paymentupdatebtn" class="dropdown-item" value="' . $row['payement_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="paymentdeletebtn" class="dropdown-item" value="' . $row['payement_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -100,6 +95,83 @@ class PaymentController extends BaseController
         ];
 
         return $this->response->setJSON($output);
-    
     }
+
+
+     // Fetch Payment type
+     public function fetchpayment()
+     {
+         $id = $this->request->getPost('paymentid');
+ 
+         $paymenttype = $this->payment->find($id);
+ 
+         if ($paymenttype) {
+             return $this->response->setJSON($paymenttype);
+         } else {
+             // Prepare sweet alert response data
+             $data = [
+                 'status' => 'error',
+                 'message' => 'Payment not found'
+             ];
+ 
+             return $this->response->setJSON($data);
+         }
+     }
+ 
+     // Add Payment type
+     public function addpayment()
+     {
+ 
+         // Prepare Payment type data
+         $paymentData = [
+             'payement_type' => $this->request->getPost('payment')
+         ];
+ 
+         // Insert the Payment data into the database
+         $this->payment->insert($paymentData);
+ 
+         // Prepare sweet alert response data
+         $response = [
+             'status' => 'success',
+             'message' => 'Payment type added successfully'
+         ];
+ 
+         return $this->response->setJSON($response);
+     }
+ 
+     // Update Payment type
+     public function updatepayment()
+     {
+ 
+         $id = $this->request->getPost('paymentid');
+ 
+         $data = [
+             'payement_type' => $this->request->getPost('payment'),
+         ];
+ 
+         $this->payment->update($id, $data);
+ 
+         $data = [
+             'status' => 'success',
+             'message' => 'Payment type updated successfully'
+         ];
+         return $this->response->setJSON($data);
+     }
+ 
+     // Delete Payment type
+     public function deletepayment()
+     {
+         $data = [
+             'id' => $this->request->getPost('paymentid'),
+         ];
+         $this->payment->delete($data);
+         $data = [
+             'status' => 'success',
+             'message' => 'Payment type deleted successfully'
+         ];
+         return $this->response->setJSON($data);
+     }
+ 
+
+
 }

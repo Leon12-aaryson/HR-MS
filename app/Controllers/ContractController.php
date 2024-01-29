@@ -17,9 +17,9 @@ class ContractController extends BaseController
         $this->contract = new ContractModel();
     }
 
-    public function fetchcontract()
+    public function fetchcontracts()
     {
-        // Select contract table 
+        // Select Contract table 
         $builder = $this->db->table('contract_table');
 
         $builder->select('contract_table.*'); 
@@ -69,23 +69,18 @@ class ContractController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['contract_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['contract_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['contract_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="contractupdatebtn" class="dropdown-item" value="' . $row['contract_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="contractdeletebtn" class="dropdown-item" value="' . $row['contract_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -100,6 +95,82 @@ class ContractController extends BaseController
         ];
 
         return $this->response->setJSON($output);
-    
     }
+
+
+       // Fetch Contract
+       public function fetchcontract()
+       {
+           $id = $this->request->getPost('contractid');
+   
+           $contracttype = $this->contract->find($id);
+   
+           if ($contracttype) {
+               return $this->response->setJSON($contracttype);
+           } else {
+               // Prepare sweet alert response data
+               $data = [
+                   'status' => 'error',
+                   'message' => 'Contract type not found'
+               ];
+   
+               return $this->response->setJSON($data);
+           }
+       }
+   
+       // Add Contract
+       public function addcontract()
+       {
+   
+           // Prepare Contract data
+           $contractData = [
+               'contract_type' => $this->request->getPost('contracttype')
+           ];
+   
+           // Insert the Contract data into the database
+           $this->contract->insert($contractData);
+   
+           // Prepare sweet alert response data
+           $response = [
+               'status' => 'success',
+               'message' => 'Contract type added successfully'
+           ];
+   
+           return $this->response->setJSON($response);
+       }
+   
+       // Update Contract
+       public function updatecontract()
+       {
+   
+           $id = $this->request->getPost('contractid');
+   
+           $data = [
+               'contract_type' => $this->request->getPost('contract'),
+           ];
+   
+           $this->contract->update($id, $data);
+   
+           $data = [
+               'status' => 'success',
+               'message' => 'Contract type updated successfully'
+           ];
+           return $this->response->setJSON($data);
+       }
+   
+       // Delete Contract
+       public function deletecontract()
+       {
+           $data = [
+               'id' => $this->request->getPost('contractid'),
+           ];
+           $this->contract->delete($data);
+           $data = [
+               'status' => 'success',
+               'message' => 'Contract deleted successfully'
+           ];
+           return $this->response->setJSON($data);
+       }
+
+
 }

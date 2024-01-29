@@ -55,37 +55,81 @@ $routes->get('view-employee', 'Home::ViewEmployee');
 $routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
 
 // Working with branch manager
+$routes->post('fetchbranchmanagers', 'BranchmasterController::fetchbranchmanagers');
 $routes->post('fetchbranchmanager', 'BranchmasterController::fetchbranchmanager');
+$routes->post('addbranchmanager', 'BranchmasterController::addbranchmanager');
+$routes->post('updatebranchmanager', 'BranchmasterController::updatebranchmanager');
+$routes->post('deletebranchmanager', 'BranchmasterController::deletebranchmanager');
+
 
 // Working with department
+$routes->post('fetchdepartments', 'DepartmentController::fetchdepartments');
 $routes->post('fetchdepartment', 'DepartmentController::fetchdepartment');
+$routes->post('adddepartment', 'DepartmentController::adddepartment');
+$routes->post('updatedepartment', 'DepartmentController::updatedepartment');
+$routes->post('deletedepartment', 'DepartmentController::deletedepartment');
 
 // Working with designation
+$routes->post('fetchdesignations', 'DesignationController::fetchdesignations');
 $routes->post('fetchdesignation', 'DesignationController::fetchdesignation');
+$routes->post('adddesignation', 'DesignationController::adddesignation');
+$routes->post('updatedesignation', 'DesignationController::updatedesignation');
+$routes->post('deletedesignation', 'DesignationController::deletedesignation');
 
 // Working with leave
+$routes->post('fetchleaves', 'LeaveController::fetchleaves');
 $routes->post('fetchleave', 'LeaveController::fetchleave');
+$routes->post('addleave', 'LeaveController::addleave');
+$routes->post('updateleave', 'LeaveController::updateleave');
+$routes->post('deleteleave', 'LeaveController::deleteleave');
 
 // Working with loan
+$routes->post('fetchloans', 'LoanController::fetchloans');
 $routes->post('fetchloan', 'LoanController::fetchloan');
+$routes->post('addloan', 'LoanController::addloan');
+$routes->post('updateloan', 'LoanController::updateloan');
+$routes->post('deleteloan', 'LoanController::deleteloan');
 
 // Working with shift type
+$routes->post('fetchshiftypes', 'ShifttypeController::fetchshiftypes');
 $routes->post('fetchshiftype', 'ShifttypeController::fetchshiftype');
+$routes->post('addshiftype', 'ShifttypeController::addshiftype');
+$routes->post('updateshiftype', 'ShifttypeController::updateshiftype');
+$routes->post('deleteshiftype', 'ShifttypeController::deleteshiftype');
 
 // Working with deduction options
+$routes->post('fetchdeductions', 'DeductionController::fetchdeductions');
 $routes->post('fetchdeduction', 'DeductionController::fetchdeduction');
+$routes->post('adddeduction', 'DeductionController::adddeduction');
+$routes->post('updatededuction', 'DeductionController::updatededuction');
+$routes->post('deletededuction', 'DeductionController::deletededuction');
 
 // Working with payment
+$routes->post('fetchpayments', 'PaymentController::fetchpayments');
 $routes->post('fetchpayment', 'PaymentController::fetchpayment');
+$routes->post('addpayment', 'PaymentController::addpayment');
+$routes->post('updatepayment', 'PaymentController::updatepayment');
+$routes->post('deletepayment', 'PaymentController::deletepayment');
 
 // Working with contract
+$routes->post('fetchcontracts', 'ContractController::fetchcontracts');
 $routes->post('fetchcontract', 'ContractController::fetchcontract');
+$routes->post('addcontract', 'ContractController::addcontract');
+$routes->post('updatecontract', 'ContractController::updatecontract');
+$routes->post('deletecontract', 'ContractController::deletecontract');
 
 // Working with job type
+$routes->post('fetchjobtypes', 'JobtypeController::fetchjobtypes');
 $routes->post('fetchjobtype', 'JobtypeController::fetchjobtype');
+$routes->post('addjobtype', 'JobtypeController::addjobtype');
+$routes->post('updatejobtype', 'JobtypeController::updatejobtype');
+$routes->post('deletejobtype', 'JobtypeController::deletejobtype');
 
 // Working with payroll
 $routes->post('fetchmanagepayroll', 'ManagepayrollController::fetchmanagepayroll');
+
+//insert data in employee table
+$routes->post('insertintoemployee', 'EmployeeDataInsert::index');
 
 
 

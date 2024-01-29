@@ -17,9 +17,9 @@ class DesignationController extends BaseController
         $this->designation = new DesignationModel();
     }
 
-    public function fetchdesignation()
+    public function fetchdesignations()
     {
-        // Select designation table 
+        // Select Designation table 
         $builder = $this->db->table('designation_table');
 
         $builder->select('designation_table.*'); 
@@ -69,23 +69,18 @@ class DesignationController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="designationupdatebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="designationdeletebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -102,4 +97,80 @@ class DesignationController extends BaseController
         return $this->response->setJSON($output);
     
     }
+
+
+    // Fetch Designation
+    public function fetchdesignation()
+    {
+        $id = $this->request->getPost('designationid');
+
+        $designation = $this->designation->find($id);
+
+        if ($designation) {
+            return $this->response->setJSON($designation);
+        } else {
+            // Prepare sweet alert response data
+            $data = [
+                'status' => 'error',
+                'message' => 'Designation not found'
+            ];
+
+            return $this->response->setJSON($data);
+        }
+    }
+
+    // Add Designation
+    public function adddesignation()
+    {
+        // Prepare Designation data
+        $branchData = [
+            'designation' => $this->request->getPost('designation')
+        ];
+
+        // Insert the Designation data into the database
+        $this->designation->insert($branchData);
+
+        // Prepare sweet alert response data
+        $response = [
+            'status' => 'success',
+            'message' => 'Designation added successfully'
+        ];
+
+        return $this->response->setJSON($response);
+    }
+
+    // Update Designation
+    public function updatedesignation()
+    {
+
+        $id = $this->request->getPost('designationid');
+
+        $data = [
+            'designation' => $this->request->getPost('designation'),
+        ];
+
+        $this->designation->update($id, $data);
+
+        $data = [
+            'status' => 'success',
+            'message' => 'Designation updated successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+    // Delete Designation
+    public function deletedesignation()
+    {
+        $data = [
+            'id' => $this->request->getPost('designationid'),
+        ];
+        $this->designation->delete($data);
+        $data = [
+            'status' => 'success',
+            'message' => 'Designation deleted successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+
 }

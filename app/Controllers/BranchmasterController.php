@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\BranchmanagerModel;
+
 class BranchmasterController extends BaseController
 {
     private $branchmanager;
@@ -16,12 +17,13 @@ class BranchmasterController extends BaseController
         $this->branchmanager = new BranchmanagerModel();
     }
 
-    public function fetchbranchmanager()
+    // Fetch Branch Managers
+    public function fetchbranchmanagers()
     {
-        // Select branchmanager table 
+        // Select Branch Manager table 
         $builder = $this->db->table('branch_manager_table');
 
-        $builder->select('branch_manager_table.*'); 
+        $builder->select('branch_manager_table.*');
         // Handle search value
         $searchData = $this->request->getPost('search');
         if (isset($searchData['value']) && !empty($searchData['value'])) {
@@ -67,23 +69,18 @@ class BranchmasterController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['branch_manager_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['branch_manager_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['branch_manager_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="branchupdatebtn" class="dropdown-item" value="' . $row['branch_manager_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="branchdeletebtn" class="dropdown-item" value="' . $row['branch_manager_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -99,4 +96,77 @@ class BranchmasterController extends BaseController
 
         return $this->response->setJSON($output);
     }
+
+    // Fetch Branch Manaher
+    public function fetchbranchmanager()
+    {
+        $id = $this->request->getPost('branchid');
+
+        $branch = $this->branchmanager->find($id);
+
+        if ($branch) {
+            return $this->response->setJSON($branch);
+        } else {
+            // Prepare sweet alert response data
+            $data = [
+                'status' => 'error',
+                'message' => 'Branch not found'
+            ];
+
+            return $this->response->setJSON($data);
+        }
+    }
+
+    // Add Branch Manager
+    public function addbranchmanager()
+    {
+        // Prepare Branch Manager data
+        $branchData = [
+            'branch' => $this->request->getPost('branchname')
+        ];
+
+        // Insert the Branch Manager data into the database
+        $this->branchmanager->insert($branchData);
+
+        // Prepare sweet alert response data
+        $response = [
+            'status' => 'success',
+            'message' => 'Branch Manager  added successfully'
+        ];
+
+        return $this->response->setJSON($response);
+    }
+
+    // Update Branch Manager
+    public function updatebranchmanager()
+    {
+        $id = $this->request->getPost('branchid');
+
+        $data = [
+            'branch' => $this->request->getPost('branchname'),
+        ];
+
+        $this->branchmanager->update($id, $data);
+
+        $data = [
+            'status' => 'success',
+            'message' => 'Branch Manager updated successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
+    // Delete Branch Manager
+    public function deletebranchmanager()
+    {
+        $data = [
+            'id' => $this->request->getPost('branchid'),
+        ];
+        $this->branchmanager->delete($data);
+        $data = [
+            'status' => 'success',
+            'message' => 'Branch Manager deleted successfully'
+        ];
+        return $this->response->setJSON($data);
+    }
+
 }

@@ -9,7 +9,7 @@
             <li><a href="#">Home</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active"><?= $head ?></a></li>
-            <li><a href="#" class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><?= $link ?></a></li>
+            <li><a href="#" class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#shiftModal"><?= $link ?></a></li>
         </ul>
         <div class="hr"></div>
 
@@ -36,25 +36,49 @@
 </main>
 <!-- html for main part ends here -->
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="shiftModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="shiftModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Add Shift</h2>
+            <div class="modal-header pt-1 pb-1">
+                <h2 class="modal-title fs-5 text-primary">Add Shift</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form>
+            <form action="" method="POST" id="shiftform">
+                <div class="modal-body">
                     <div class="mb-3">
-                        <label for="exampleInput1" class="form-label text-primary"> Shift</label>
-                        <input type="text" class="form-control" id="exampleInput1">
+                        <label for="shiftype" class="form-label text-primary"> Shiftype</label>
+                        <input type="text" class="form-control" id="shiftype" name="shiftype">
                     </div>
-                </form>
+                </div>
+                <div class="modal-footer pt-1 pb-1">
+                    <input type="submit" value="Add" class="btn btn-sm btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Update -->
+<div class="modal fade" id="updateshiftModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="updateshiftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header pt-1 pb-1">
+                <h2 class="modal-title fs-5 text-primary" id="updateshiftModalLabel">Update Shift</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-primary">Add</button>
-            </div>
+            <form action="" method="POST" id="updateshiftform">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="updateshiftype" class="form-label text-primary"> Shiftype</label>
+                        <input type="text" class="form-control" id="updateshiftype" name="updateshiftype">
+                    </div>
+                </div>
+                <div class="modal-footer pt-1 pb-1">
+                    <input type="hidden" name="shiftid" id="shiftid">
+                    <input type="submit" value="Update" class="btn btn-sm btn-primary">
+                </div>
+            </form>
         </div>
     </div>
 </div>

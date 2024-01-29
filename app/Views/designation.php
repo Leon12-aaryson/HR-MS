@@ -9,7 +9,7 @@
             <li><a href="#">Home</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active"><?= $head ?></a></li>
-            <li><a href="#" class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><?= $link ?></a></li>
+            <li><a href="#" class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#designationModal"><?= $link ?></a></li>
         </ul>
         <div class="hr"></div>
 
@@ -36,25 +36,48 @@
 </main>
 <!-- html for main part ends here -->
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="designationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="designationModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Add Designation</h2>
+            <div class="modal-header pt-1 pb-1">
+                <h2 class="modal-title fs-5 text-primary" id="designationModalLabel">Add Designation</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form>
+            <form action="" method="POST" id="designationform">
+                <div class="modal-body">
                     <div class="mb-3">
-                        <label for="exampleInput1" class="form-label text-primary">Designation</label>
-                        <input type="text" class="form-control" id="exampleInput1">
+                        <label for="designation" class="form-label text-primary">Designation</label>
+                        <input type="text" class="form-control" id="designation" name="designation">
                     </div>
-                </form>
+                </div>
+                <div class="modal-footer pt-1 pb-1">
+                    <input type="submit" value="Add" class="btn btn-sm btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Update Designation -->
+<div class="modal fade" id="updatedesignationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="updatedesignationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header pt-1 pb-1">
+                <h2 class="modal-title fs-5 text-primary" id="updatedesignationModalLabel">Update Designation</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-primary">Add</button>
-            </div>
+            <form action="" method="POST" id="updatedesignationform">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="updatedesignation" class="form-label text-primary">Designation</label>
+                        <input type="text" class="form-control" id="updatedesignation" name="updatedesignation">
+                    </div>
+                </div>
+                <div class="modal-footer pt-1 pb-1">
+                    <input type="hidden" name="designationid" id="designationid">
+                    <input type="submit" value="Update" class="btn btn-sm btn-primary">
+                </div>
+            </form>
         </div>
     </div>
 </div>

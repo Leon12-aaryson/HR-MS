@@ -17,9 +17,9 @@ class DeductionController extends BaseController
         $this->deduction = new DeductionModel();
     }
 
-    public function fetchdeduction()
+    public function fetchdeductions()
     {
-        // Select deduction option table 
+        // Select Deduction option table 
         $builder = $this->db->table('deduction_table');
 
         $builder->select('deduction_table.*'); 
@@ -69,23 +69,18 @@ class DeductionController extends BaseController
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['deduction_id'] . '">
-                                <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['deduction_id'] . '">
-                                <i class="bi bi-trash" style="color:red"></i> Delete
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['deduction_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
-                            </button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" id="deductionupdatebtn" class="dropdown-item" value="' . $row['deduction_id'] . '">
+                                    <i class="bi bi-pencil" style="color:green"></i> Edit
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" id="deductiondeletebtn" class="dropdown-item" value="' . $row['deduction_id'] . '">
+                                    <i class="bi bi-trash" style="color:red"></i> Delete
+                                </button>
+                            </li>
+                        </ul>
                 </div>',
             ];
 
@@ -100,6 +95,83 @@ class DeductionController extends BaseController
         ];
 
         return $this->response->setJSON($output);
-    
     }
+
+
+     // Fetch Deduction
+     public function fetchdeduction()
+     {
+         $id = $this->request->getPost('deductionid');
+ 
+         $deductiontype = $this->deduction->find($id);
+ 
+         if ($deductiontype) {
+             return $this->response->setJSON($deductiontype);
+         } else {
+             // Prepare sweet alert response data
+             $data = [
+                 'status' => 'error',
+                 'message' => 'Deduction not found'
+             ];
+ 
+             return $this->response->setJSON($data);
+         }
+     }
+ 
+     // Add Deduction
+     public function adddeduction()
+     {
+ 
+         // Prepare Deduction data
+         $deductionData = [
+             'deduction_option' => $this->request->getPost('deductiontype')
+         ];
+ 
+         // Insert the Deduction data into the database
+         $this->deduction->insert($deductionData);
+ 
+         // Prepare sweet alert response data
+         $response = [
+             'status' => 'success',
+             'message' => 'Deduction added successfully'
+         ];
+ 
+         return $this->response->setJSON($response);
+     }
+ 
+     // Update Deduction
+     public function updatededuction()
+     {
+ 
+         $id = $this->request->getPost('deductionid');
+ 
+         $data = [
+             'deduction_option' => $this->request->getPost('deduction'),
+         ];
+ 
+         $this->deduction->update($id, $data);
+ 
+         $data = [
+             'status' => 'success',
+             'message' => 'Deduction updated successfully'
+         ];
+         return $this->response->setJSON($data);
+     }
+ 
+     // Delete Deduction
+     public function deletededuction()
+     {
+         $data = [
+             'id' => $this->request->getPost('deductionid'),
+         ];
+         $this->deduction->delete($data);
+         $data = [
+             'status' => 'success',
+             'message' => 'Deduction deleted successfully'
+         ];
+         return $this->response->setJSON($data);
+     }
+ 
+
+
 }

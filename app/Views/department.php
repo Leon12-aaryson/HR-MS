@@ -1,6 +1,8 @@
 <?= $this->extend('layouts/master') ?>
 <?= $this->section('body-contents') ?>
 
+<?php $branches = fetch_table('branch_manager_table') ?>
+
 <!-- html for main part starts here -->
 <main>
     <div class="container">
@@ -9,7 +11,7 @@
             <li><a href="#">Home</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active">Department</a></li>
-            <li><a href="#" class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Department</a></li>
+            <li><a href="#" class="btn btn-sm" style="background: var(--skin-color); color: #fff" data-bs-toggle="modal" data-bs-target="#departmentModal">Add Department</a></li>
         </ul>
         <div class="hr"></div>
 
@@ -37,34 +39,95 @@
     </div>
 </main>
 <!-- html for main part ends here -->
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+<!-- Add Department -->
+<div class="modal fade" id="departmentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="departmentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Add Department</h2>
+            <div class="modal-header pt-1 pb-1">
+                <h2 class="modal-title fs-5 text-primary" id="departmentModalLabel">Add Department</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInput1" class="form-label text-primary">Branch</label>
-                        <input type="text" class="form-control" id="exampleInput1">
+            <form action="" method="POST" id="departmentform">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="branchname" class="form-label text-primary">Branch</label>
+                                <select class="form-select form-select-md" name="branchname" id="branchname">
+                                    <option value="">Select Branch</option>
+                                    <?php foreach ($branches as $branch) : ?>
+                                        <option value="<?=$branch['branch_manager_id']?>"><?=$branch['branch']?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="departmentname" class="form-label text-primary">Department</label>
+                                <input type="text" class="form-control" id="departmentname" name="departmentname">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="salary" class="form-label text-primary">Salary</label>
+                                <input type="text" class="form-control" id="salary" name="salary">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInput2" class="form-label text-primary">Department</label>
-                        <input type="text" class="form-control" id="exampleInput2">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInput3" class="form-label text-primary">Salary</label>
-                        <input type="text" class="form-control" id="exampleInput3">
-                    </div>
-                </form>
+
+                </div>
+                <div class="modal-footer pt-1 pb-1">
+                    <input type="submit" value="Add" class="btn btn-sm btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Update Department Modal -->
+<div class="modal fade" id="updatedepartmentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="updatedepartmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header pt-1 pb-1">
+                <h2 class="modal-title fs-5 text-primary">Update Department</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-primary">Add</button>
-            </div>
+            <form action="" method="POST" id="updatedepartmentform">
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="updatebranchname" class="form-label text-primary">Branch</label>
+                                <select class="form-select form-select-md" name="updatebranchname" id="updatebranchname">
+                                    <option selected>Select Branch</option>
+                                    <?php foreach ($branches as $branch) : ?>
+                                        <option value="<?=$branch['branch_manager_id']?>"><?=$branch['branch']?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="updatedepartmentname" class="form-label text-primary">Department</label>
+                                <input type="text" class="form-control" id="updatedepartmentname" name="updatedepartmentname">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="updatesalary" class="form-label text-primary">updateSalary</label>
+                                <input type="number" class="form-control" id="updatesalary" name="updatesalary">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer pt-1 pb-1">
+                    <input type="hidden" name="departmentid" id="departmentid">
+                    <input type="submit" value="Update" class="btn btn-sm btn-primary">
+                </div>
+            </form>
         </div>
     </div>
 </div>
