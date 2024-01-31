@@ -39,6 +39,6 @@ class EmployeeDataInsert extends BaseController
         ];
 
         $modal->insert($userdata);
-        return redirect()->to('branch-master');
+        return redirect()->to('employee');
     }
 }
