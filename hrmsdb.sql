@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 02:32 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jan 31, 2024 at 07:27 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -76,14 +76,6 @@ CREATE TABLE `attendance_table` (
   `clock_out_time` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `attendance_table`
---
-
-INSERT INTO `attendance_table` (`attendance_id`, `employee_id`, `date`, `clock_in_time`, `clock_out_time`) VALUES
-(1, 1, '2023-10-17', '00:00:00', '12:57:28'),
-(2, 2, '2023-10-23', '00:00:00', '13:57:28');
-
 -- --------------------------------------------------------
 
 --
@@ -100,7 +92,7 @@ CREATE TABLE `branch_manager_table` (
 --
 
 INSERT INTO `branch_manager_table` (`branch_manager_id`, `branch`) VALUES
-(1, 'Kawuku'),
+(1, 'Ntungamo'),
 (3, 'Mbarara'),
 (4, 'Wakiso'),
 (5, 'Entebbe');
@@ -198,18 +190,54 @@ CREATE TABLE `employee_table` (
   `password` varchar(255) DEFAULT NULL,
   `address` varchar(50) NOT NULL,
   `department` int(11) DEFAULT NULL,
+  `branch` varchar(30) NOT NULL,
+  `designation` varchar(100) NOT NULL,
+  `payement_type` varchar(100) NOT NULL,
+  `contract_type` varchar(100) NOT NULL,
+  `job_type` varchar(100) NOT NULL,
+  `permission` int(11) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
-  `hire_date` date NOT NULL,
-  `termination_date` date NOT NULL
+  `hire_date` date NOT NULL DEFAULT current_timestamp(),
+  `termination_date` date NOT NULL,
+  `bank_name` varchar(100) NOT NULL,
+  `account_holder_name` varchar(100) NOT NULL,
+  `bank_branch` varchar(100) DEFAULT NULL,
+  `account_number` varchar(100) NOT NULL,
+  `bank_identifier_code` varchar(100) NOT NULL,
+  `tax_payer_id` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee_table`
 --
 
-INSERT INTO `employee_table` (`employee_id`, `first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `position`, `hire_date`, `termination_date`) VALUES
-(1, 'George', 'Adrian', '2023-10-01', 'M', '8888888888', 'george@gmail.com', 'george123', 'Masaka', 2, 2, '2023-10-02', '2023-10-08'),
-(2, 'Lisa', 'Don Lisa', '2023-10-09', 'F', '98888888888', 'lisa@gmail.com', 'lisa4445', 'Kololo', 1, 1, '2023-10-16', '2023-10-31');
+INSERT INTO `employee_table` (`employee_id`, `first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `permission`, `position`, `hire_date`, `termination_date`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES
+(28, 'Ava', 'Drake', '2024-07-14', '', '862', 'becanecev@mailinator.com', 'Pa$$w0rd!', 'Hic dolores dolorem ', NULL, 'Ntungamo', 'Teacher', 'Cash', 'Adhesion', '0', NULL, 1, '0000-00-00', '0000-00-00', 'Piper Bradford', 'Chester Travis', 'Velit labore aperiam', '466', 'Dolor consequatur f', 'Dolorem facere esse '),
+(31, 'Gabriel', 'Mendez', '2020-10-05', '', '157', 'povin@mailinator.com', 'Pa$$w0rd!', 'Nostrud quod et qui ', NULL, 'Entebbe', 'Teacher', 'Mobile Money', 'Sales', '0', NULL, 1, '0000-00-00', '0000-00-00', 'Eric Talley', 'Sybil Parker', 'Dolore maxime et nat', '354', 'Omnis aperiam sunt a', 'Harum fuga Sunt cup'),
+(32, 'Amela', 'Schultz', '1991-02-22', '', '790', 'xoti@mailinator.com', 'Pa$$w0rd!', 'Excepteur ea laborum', NULL, 'Entebbe', 'supervisor', 'Mobile Money', 'Adhesion', '0', NULL, 1, '0000-00-00', '0000-00-00', 'Kessie Martinez', 'Brady Camacho', 'A architecto quasi v', '363', 'Id fugiat expedita ', 'Dolor vero architect'),
+(35, 'Ina', 'Decker', '1991-03-25', '', '50', 'daqip@mailinator.com', 'Pa$$w0rd!', 'Tempore irure volup', NULL, 'Mbarara', 'supervisor', 'Credit', 'Adhesion', '0', NULL, 1, '0000-00-00', '0000-00-00', 'Carol Petersen', 'Melvin Head', 'Id nulla iusto esse', '226', 'Fuga Ut animi vita', 'Consectetur similiqu'),
+(36, 'Todd', 'Bush', '1987-02-28', '', '826', 'mywopi@mailinator.com', 'Pa$$w0rd!', 'Consequatur non exp', NULL, 'Entebbe', 'Teacher', 'Mobile Money', 'Adhesion', '0', NULL, 1, '0000-00-00', '0000-00-00', 'Jescie Slater', 'Eve Gould', 'Assumenda et libero ', '911', 'Quas in aut excepteu', 'Provident molestias'),
+(37, 'Idola', 'Hines', '1994-12-24', '', '145', 'syruz@mailinator.com', 'Pa$$w0rd!', 'Ratione ut culpa min', NULL, 'Mbarara', 'supervisor', 'Cash', 'Sales', '0', NULL, 1, '0000-00-00', '0000-00-00', 'Philip Rivers', 'Yoshi Poole', 'Voluptatem Velit su', '31', 'Voluptatem magna ad', 'Sit sed vitae nostr'),
+(38, 'Dora', 'Crane', '2024-10-03', '', '282', 'vema@mailinator.com', 'Pa$$w0rd!', 'Odit explicabo Ut c', NULL, 'Wakiso', 'Teacher', 'Cash', 'Adhesion', '0', NULL, 2, '0000-00-00', '0000-00-00', 'Melissa Leonard', 'Vernon Mcgee', 'Dolores voluptatem ', '501', 'Odit excepteur minim', 'Facere est velit c'),
+(39, 'Dora', 'Crane', '2024-10-03', '', '282', 'vema@mailinator.com', '', 'Odit explicabo Ut c', NULL, 'Wakiso', 'Teacher', 'Cash', 'Adhesion', '0', NULL, 2, '0000-00-00', '0000-00-00', 'Melissa Leonard', 'Vernon Mcgee', 'Dolores voluptatem ', '501', 'Odit excepteur minim', 'Facere est velit c'),
+(47, 'Baxter', 'Rollins', '2017-07-28', '', '155', 'qynytem@mailinator.com', 'Pa$$w0rd!', 'Reprehenderit cupida', 1, 'Mbarara', 'supervisor', 'Cash', 'Adhesion', '0', NULL, NULL, '0000-00-00', '0000-00-00', 'Ezekiel Decker', 'Dawn Hale', 'Do aliquip numquam n', '237', 'Consectetur esse qua', 'Ullam nulla ipsum in'),
+(48, 'Kenneth', 'Conley', '1985-09-19', '', '509', 'cahytubuw@mailinator.com', 'Pa$$w0rd!', 'At voluptate corpori', 2, 'Mbarara', 'supervisor', 'Credit', 'Adhesion', '0', NULL, NULL, '0000-00-00', '0000-00-00', 'Cody Berg', 'Brock Cabrera', 'Consequatur Adipisi', '801', 'Totam laborum vitae ', 'Necessitatibus quas '),
+(49, 'Urielle', 'Foley', '1997-02-26', '', '813', 'noxi@mailinator.com', 'Pa$$w0rd!', 'Magni obcaecati iste', 2, 'Ntungamo', 'supervisor', 'Cash', 'Adhesion', '2', NULL, NULL, '0000-00-00', '0000-00-00', 'Acton Sparks', 'Karleigh Kaufman', 'Quidem sequi repelle', '831', 'Officia reprehenderi', 'Est repudiandae dolo'),
+(50, 'Brent', 'Pierce', '1985-01-17', '', '968', 'gytonaqa@mailinator.com', 'Pa$$w0rd!', 'Ad voluptatibus irur', 2, 'Ntungamo', 'supervisor', 'Cash', 'Sales', '1', NULL, NULL, '2024-01-29', '0000-00-00', 'David Ward', 'Odette Potts', 'Eum officia voluptat', '867', 'Et sed nihil maiores', 'Adipisci ea ullam la'),
+(51, 'Adrienne', 'Rutledge', '1982-05-20', '', '361', 'lole@mailinator.com', 'Pa$$w0rd!', 'Reprehenderit quo u', 1, 'Mbarara', 'supervisor', 'Mobile Money', 'Sales', '0', NULL, NULL, '2024-01-29', '0000-00-00', 'Madonna Lane', 'Audra Mitchell', 'Quos molestiae fugit', '620', 'Sunt atque dolorum ', 'Ut praesentium labor'),
+(53, 'Cleo', 'Leach', '1975-07-05', '', '939', 'vovimaziz@mailinator.com', 'Pa$$w0rd!', 'Laboris quaerat amet', 2, 'Entebbe', 'Teacher', 'Mobile Money', 'Adhesion', '0', NULL, 1, '2024-01-29', '0000-00-00', 'Erasmus Hurst', 'Casey Ratliff', 'Ea et pariatur Id ', '71', 'Incididunt sed quasi', 'In perspiciatis quo'),
+(54, 'Debra', 'Bates', '2008-10-09', '', '663', 'pecere@mailinator.com', 'Pa$$w0rd!', 'Aliquam id veniam ', 2, 'Mbarara', 'supervisor', 'Cash', 'Sales', '0', NULL, 2, '2024-01-29', '0000-00-00', 'Caesar Parsons', 'Hannah Kirby', 'Repudiandae enim ist', '603', 'Nihil maxime ut nemo', 'Esse architecto est'),
+(55, 'Ryan', 'Caldwell', '2021-12-09', '', '950', 'samap@mailinator.com', 'Pa$$w0rd!', 'Nostrud temporibus u', 2, 'Wakiso', 'Teacher', 'Cash', 'Adhesion', 'Betting', NULL, 1, '2024-01-29', '0000-00-00', 'Xanthus Harvey', 'Alan Morris', 'Recusandae Nihil iu', '198', 'Ex expedita ex expli', 'Cum exercitation qui'),
+(56, 'Nicole', 'Farrell', '1991-05-10', '', '463', 'tidubocy@mailinator.com', 'Pa$$w0rd!', 'Veritatis perferendi', 1, 'Wakiso', 'Teacher', 'Cash', 'Adhesion', 'Farming', NULL, 2, '2024-01-29', '0000-00-00', 'Plato Owen', 'Maggie Schwartz', 'Fugiat quaerat occae', '828', 'Nihil incididunt sit', 'Velit saepe ullam of'),
+(57, 'Quentin', 'Lindsey', '1973-03-23', '', '280', 'conuruha@mailinator.com', 'Pa$$w0rd!', 'Adipisci sunt nihil ', 2, 'Entebbe', 'Teacher', 'Cash', 'Sales', 'Teaching', NULL, 2, '2024-01-29', '0000-00-00', 'Ainsley Castro', 'Kim Goodwin', 'Error nemo do quis n', '274', 'Temporibus ea ex lab', 'Quod vitae repudiand'),
+(58, 'Amal', 'Burton', '2008-06-20', '', '299', 'comylyf@mailinator.com', 'Pa$$w0rd!', 'Nulla nemo consequat', 2, 'Entebbe', 'supervisor', 'Cash', 'Adhesion', 'betpawa', NULL, 2, '2024-01-29', '0000-00-00', 'Sydnee Hood', 'Eden Roth', 'Et incidunt aliqua', '321', 'Sapiente tempor dolo', 'Nobis incididunt et '),
+(59, 'Amal', 'Burton', '2008-06-20', '', '299', 'comylyf@mailinator.com', '', 'Nulla nemo consequat', 2, 'Entebbe', 'supervisor', 'Cash', 'Adhesion', 'betpawa', NULL, 2, '2024-01-29', '0000-00-00', 'Sydnee Hood', 'Eden Roth', 'Et incidunt aliqua', '321', 'Sapiente tempor dolo', 'Nobis incididunt et '),
+(60, 'Norman', 'Hategyekamukama', '2003-08-07', '', '358', 'normanmukama11@gmail.com', 'Pa$$w0rd!', 'Inventore eveniet c', 2, 'Wakiso', 'supervisor', 'Mobile Money', 'Adhesion', 'cleanig', NULL, 2, '2024-01-29', '0000-00-00', 'Mark Branch', 'Ocean Rose', 'Dolore consequuntur ', '788', 'Reprehenderit et lor', 'Dicta sequi consequu'),
+(61, 'Merrill', 'Sykes', '2001-07-02', '', '960', 'nuvacumow@mailinator.com', 'Pa$$w0rd!', 'Velit in sit qui non', 1, 'Mbarara', 'Teacher', 'Cash', 'Adhesion', 'betpawa', NULL, 2, '2024-01-29', '0000-00-00', 'Melvin Chambers', 'Alexis Hopper', 'Voluptatibus aut qui', '547', 'Ea sequi quia cillum', 'Corporis incidunt i'),
+(62, 'Yuri', 'Nolan', '1998-11-19', '', '937', 'muzohu@mailinator.com', 'Pa$$w0rd!', 'Incididunt sunt in q', 1, 'Entebbe', 'supervisor', 'Mobile Money', 'Adhesion', 'cleanig', NULL, 2, '2024-01-29', '0000-00-00', 'Azalia Jennings', 'Blythe Collins', 'Beatae a aspernatur ', '961', 'Alias natus obcaecat', 'Quasi pariatur Impe'),
+(63, 'George', 'Woods', '1971-10-07', '', '743', 'subib@mailinator.com', 'Pa$$w0rd!', 'Quis asperiores temp', 1, 'Ntungamo', 'supervisor', 'Credit', 'Adhesion', 'cleanig', NULL, 2, '2024-01-31', '0000-00-00', 'Nora Andrews', 'Joy Flores', 'Cumque ipsa adipisc', '304', 'Elit unde quia ut n', 'Dolor omnis id culpa'),
+(64, 'Priscilla', 'Hampton', '1993-03-18', '', '22', 'jobukul@mailinator.com', 'Pa$$w0rd!', 'Omnis lorem ut provi', 2, 'Wakiso', 'Teacher', 'Credit', 'Sales', 'Farming', NULL, 1, '2024-01-31', '0000-00-00', 'Noel Wong', 'Dora Baxter', 'Reprehenderit nisi d', '999', 'Illo exercitationem ', 'Nihil magnam maxime '),
+(65, 'Priscilla', 'Hampton', '1993-03-18', '', '22', 'jobukul@mailinator.com', '', 'Omnis lorem ut provi', 2, 'Wakiso', 'Teacher', 'Credit', 'Sales', 'Farming', NULL, 1, '2024-01-31', '0000-00-00', 'Noel Wong', 'Dora Baxter', 'Reprehenderit nisi d', '999', 'Illo exercitationem ', 'Nihil magnam maxime ');
 
 -- --------------------------------------------------------
 
@@ -228,7 +256,10 @@ CREATE TABLE `job_type_table` (
 
 INSERT INTO `job_type_table` (`job_type_id`, `job_type`) VALUES
 (1, 'cleanig'),
-(2, 'Teaching');
+(2, 'Teaching'),
+(4, 'Farming'),
+(5, 'Betting'),
+(6, 'betpawa');
 
 -- --------------------------------------------------------
 
@@ -247,7 +278,8 @@ CREATE TABLE `leave_type_table` (
 
 INSERT INTO `leave_type_table` (`leave_id`, `leave_type`) VALUES
 (1, 'Maternal'),
-(2, 'sick');
+(2, 'sick'),
+(3, 'sick');
 
 -- --------------------------------------------------------
 
@@ -326,10 +358,8 @@ CREATE TABLE `payroll_table` (
 --
 
 INSERT INTO `payroll_table` (`payroll_id`, `employee_id`, `pay_period_start`, `pay_period_end`, `pay_date`, `bank_name`, `account_number`, `net_pay`) VALUES
-(1, 2, '2023-10-16', '2023-10-18', '2023-10-18', 'Equity', '998585858585', 20000000),
-(2, 1, '2023-10-21', '2023-10-23', '2023-10-23', 'Centenary', '888838388383', 1400000),
-(3, 2, '2023-10-20', '2023-10-20', '2024-10-01', 'Equity', '473749895560', 4500000),
-(4, 1, '2023-10-20', '2023-10-20', '2025-01-20', 'ABSA', '895895958775', 100000000);
+(5, 60, '2024-01-01', '2024-01-02', '2024-01-02', 'Stanbic bank', '8585858', 47777755),
+(6, 59, '2024-01-09', '2024-01-17', '2024-01-17', 'Centenary', '75757', 8666666);
 
 -- --------------------------------------------------------
 
@@ -345,14 +375,6 @@ CREATE TABLE `payslip_table` (
   `deductions` double NOT NULL,
   `net_pay` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `payslip_table`
---
-
-INSERT INTO `payslip_table` (`payslip_id`, `payroll_id`, `gross_pay`, `overtime_pay`, `deductions`, `net_pay`) VALUES
-(1, 2, 20000, 50000, 10000, 40000),
-(2, 1, 90000, 40000, 30000, 110000);
 
 -- --------------------------------------------------------
 
@@ -390,7 +412,8 @@ CREATE TABLE `shift_table` (
 
 INSERT INTO `shift_table` (`shift_id`, `shift`) VALUES
 (1, 'Night'),
-(2, 'Day');
+(2, 'Day'),
+(4, 'Morning');
 
 --
 -- Indexes for dumped tables
@@ -550,7 +573,7 @@ ALTER TABLE `contract_table`
 -- AUTO_INCREMENT for table `deduction_table`
 --
 ALTER TABLE `deduction_table`
-  MODIFY `deduction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `deduction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `department_table`
@@ -562,25 +585,25 @@ ALTER TABLE `department_table`
 -- AUTO_INCREMENT for table `designation_table`
 --
 ALTER TABLE `designation_table`
-  MODIFY `designation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `designation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employee_table`
 --
 ALTER TABLE `employee_table`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `job_type_table`
 --
 ALTER TABLE `job_type_table`
-  MODIFY `job_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `job_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `leave_type_table`
 --
 ALTER TABLE `leave_type_table`
-  MODIFY `leave_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `leave_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `loan_table`
@@ -604,7 +627,7 @@ ALTER TABLE `payement_table`
 -- AUTO_INCREMENT for table `payroll_table`
 --
 ALTER TABLE `payroll_table`
-  MODIFY `payroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `payroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `payslip_table`
@@ -622,7 +645,7 @@ ALTER TABLE `position_table`
 -- AUTO_INCREMENT for table `shift_table`
 --
 ALTER TABLE `shift_table`
-  MODIFY `shift_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `shift_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
