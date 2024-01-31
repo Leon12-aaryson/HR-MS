@@ -1,0 +1,119 @@
+CRITICAL - 2023-09-17 10:57:45 --> View themes, no current section.
+in SYSTEMPATH\View\View.php on line 415.
+ 1 APPPATH\Views\employee.php(74): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\appstarter\\app\\Views\\employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 5 APPPATH\Controllers\Home.php(20): view('employee')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 10:57:59 --> View themes, no current section.
+in SYSTEMPATH\View\View.php on line 415.
+ 1 APPPATH\Views\employee.php(74): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\appstarter\\app\\Views\\employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 5 APPPATH\Controllers\Home.php(20): view('employee')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 11:05:38 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 77.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 11:06:43 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 77.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 11:07:35 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 77.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 11:13:12 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 11:20:47 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HR-MS\\appstarter\\public\\index.php')
+CRITICAL - 2023-09-17 11:21:12 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-17 11:21:39 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-17 11:21:47 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-17 11:26:54 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-17 11:27:05 --> syntax error, unexpected token ";"
+in APPPATH\Views\employee.php on line 76.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('employee')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Employee()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,427 @@
+CRITICAL - 2023-10-20 08:42:20 --> Cannot use object of type stdClass as array
+in APPPATH\Views\payroll.php on line 43.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 4 APPPATH\Controllers\Home.php(164): view('payroll', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 08:42:35 --> Cannot use object of type stdClass as array
+in APPPATH\Views\payroll.php on line 43.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 4 APPPATH\Controllers\Home.php(163): view('payroll', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 08:46:49 --> Cannot access offset of type string on string
+in APPPATH\Views\payroll.php on line 43.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 4 APPPATH\Controllers\Home.php(164): view('payroll', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 08:49:03 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\payroll.php on line 42.
+ 1 APPPATH\Views\payroll.php(42): date('Y', '2023-10-18')
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(164): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 08:59:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`' at line 1 in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\Home.php(159): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 08:59:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`', [], false)
+ 5 APPPATH\Controllers\Home.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 08:59:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`' at line 1 in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\Home.php(159): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 08:59:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll_table`.*, DISTINCT YEAR(pay_date) from payroll_table
+FROM `payroll_table`', [], false)
+ 5 APPPATH\Controllers\Home.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 08:59:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR('pay_date') from payroll_table
+FROM `payroll_table`' at line 1 in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\Home.php(159): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 08:59:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR('pay_date') from payroll_table
+FROM `payroll_table`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll_table`.*, DISTINCT YEAR(\'pay_date\') from payroll_table
+FROM `payroll_table`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll_table`.*, DISTINCT YEAR(\'pay_date\') from payroll_table
+FROM `payroll_table`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll_table`.*, DISTINCT YEAR(\'pay_date\') from payroll_table
+FROM `payroll_table`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll_table`.*, DISTINCT YEAR(\'pay_date\') from payroll_table
+FROM `payroll_table`', [], false)
+ 5 APPPATH\Controllers\Home.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:07:03 --> Undefined array key "pay_date"
+in APPPATH\Views\payroll.php on line 45.
+ 1 APPPATH\Views\payroll.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pay_date"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(170): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:10:29 --> Undefined array key "pay_date"
+in APPPATH\Views\payroll.php on line 43.
+ 1 APPPATH\Views\payroll.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pay_date"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(167): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:13:26 --> Undefined array key "year"
+in APPPATH\Views\payroll.php on line 43.
+ 1 APPPATH\Views\payroll.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(176): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:17:18 --> Undefined array key "payroll_id"
+in APPPATH\Views\payroll.php on line 24.
+ 1 APPPATH\Views\payroll.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payroll_id"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(176): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 09:18:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR(pay_date) as year
+FROM `payroll_table`' at line 1 in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\Home.php(160): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 09:18:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT YEAR(pay_date) as year
+FROM `payroll_table`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `payroll_id`, DISTINCT YEAR(pay_date) as year
+FROM `payroll_table`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `payroll_id`, DISTINCT YEAR(pay_date) as year
+FROM `payroll_table`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `payroll_id`, DISTINCT YEAR(pay_date) as year
+FROM `payroll_table`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `payroll_id`, DISTINCT YEAR(pay_date) as year
+FROM `payroll_table`', [], false)
+ 5 APPPATH\Controllers\Home.php(160): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:24:25 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::subquery()
+in APPPATH\Controllers\Home.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:26:57 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::subquery()
+in APPPATH\Controllers\Home.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:27:49 --> Undefined array key "year_id"
+in APPPATH\Views\payroll.php on line 43.
+ 1 APPPATH\Views\payroll.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year_id"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(178): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 09:29:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(payroll_id) as year_id
+FROM `payroll_table`
+GROUP BY `year`' at line 1 in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\Home.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 09:29:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(payroll_id) as year_id
+FROM `payroll_table`
+GROUP BY `year`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT DISTINCT YEAR(pay_date) as year LIMIT 1, GROUP_CONCAT(payroll_id) as year_id
+FROM `payroll_table`
+GROUP BY `year`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT YEAR(pay_date) as year LIMIT 1, GROUP_CONCAT(payroll_id) as year_id
+FROM `payroll_table`
+GROUP BY `year`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT YEAR(pay_date) as year LIMIT 1, GROUP_CONCAT(payroll_id) as year_id
+FROM `payroll_table`
+GROUP BY `year`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT YEAR(pay_date) as year LIMIT 1, GROUP_CONCAT(payroll_id) as year_id
+FROM `payroll_table`
+GROUP BY `year`', [], false)
+ 5 APPPATH\Controllers\Home.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:32:18 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::subquery()
+in APPPATH\Controllers\Home.php on line 158.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:33:26 --> Undefined array key "year"
+in APPPATH\Views\payroll.php on line 23.
+ 1 APPPATH\Views\payroll.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 23)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(169): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:33:37 --> Undefined array key "year"
+in APPPATH\Views\payroll.php on line 23.
+ 1 APPPATH\Views\payroll.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "year"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 23)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(169): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 09:47:29 --> mysqli_sql_exception: Unknown column 'month' in 'group statement' in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\Home.php(159): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...')
+#4 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->payroll()
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-10-20 09:47:29 --> Unknown column 'month' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT DISTINCT MONTH(pay_date) AS themonth, MIN(payroll_id) AS month_id FROM payroll_table GROUP BY month', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT MONTH(pay_date) AS themonth, MIN(payroll_id) AS month_id FROM payroll_table GROUP BY month')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT MONTH(pay_date) AS themonth, MIN(payroll_id) AS month_id FROM payroll_table GROUP BY month')
+ 4 APPPATH\Controllers\Home.php(159): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT MONTH(pay_date) AS themonth, MIN(payroll_id) AS month_id FROM payroll_table GROUP BY month')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 09:48:28 --> Undefined array key "themonth"
+in APPPATH\Views\payroll.php on line 33.
+ 1 APPPATH\Views\payroll.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "themonth"', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\HR-MS\\app\\Views\\payroll.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('payroll', [], true)
+ 5 APPPATH\Controllers\Home.php(164): view('payroll', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 15:08:53 --> file_get_contents(C:\xampp\htdocs\ci4\HR-MS\writable\debugbar/debugbar_1697794931.035246.json): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\xampp\\htdocs\\ci4\\HR-MS\\writable\\debugbar/debugbar_1697794931.035246.json): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\vendor\\codeigniter4\\framework\\system\\Debug\\Toolbar\\Collectors\\History.php', 82)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): file_get_contents('C:\\xampp\\htdocs\\ci4\\HR-MS\\writable\\debugbar/debugbar_1697794931.035246.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(495): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1697814520.397769', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(148): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 15:08:53 --> file_get_contents(C:\xampp\htdocs\ci4\HR-MS\writable\debugbar/debugbar_1697794931.035246.json): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\xampp\\htdocs\\ci4\\HR-MS\\writable\\debugbar/debugbar_1697794931.035246.json): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\vendor\\codeigniter4\\framework\\system\\Debug\\Toolbar\\Collectors\\History.php', 82)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): file_get_contents('C:\\xampp\\htdocs\\ci4\\HR-MS\\writable\\debugbar/debugbar_1697794931.035246.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(495): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1697814513.900209', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(148): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 17:51:38 --> mysqli_sql_exception: Unknown column 'createdat' in 'where clause' in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\ManagepayrollController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\ManagepayrollController->fetchmanagepayroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManagepayrollController))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 17:51:38 --> Unknown column 'createdat' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = \'2023\'
+AND MONTH(createdat) = \'10\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = \'2023\'
+AND MONTH(createdat) = \'10\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = \'2023\'
+AND MONTH(createdat) = \'10\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = :YEAR(createdat):
+AND MONTH(createdat) = :MONTH(createdat):', [...], false)
+ 5 APPPATH\Controllers\ManagepayrollController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ManagepayrollController->fetchmanagepayroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManagepayrollController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 17:51:50 --> mysqli_sql_exception: Unknown column 'createdat' in 'where clause' in C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ci4\HR-MS\app\Controllers\ManagepayrollController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\ManagepayrollController->fetchmanagepayroll()
+#6 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManagepayrollController))
+#7 C:\xampp\htdocs\ci4\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-20 17:51:50 --> Unknown column 'createdat' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = \'2023\'
+AND MONTH(createdat) = \'10\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = \'2023\'
+AND MONTH(createdat) = \'10\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = \'2023\'
+AND MONTH(createdat) = \'10\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `payroll_table`
+INNER JOIN `employee_table` ON `payroll_table`.`employee_id` = `employee_table`.`employee_id`
+WHERE YEAR(createdat) = :YEAR(createdat):
+AND MONTH(createdat) = :MONTH(createdat):', [...], false)
+ 5 APPPATH\Controllers\ManagepayrollController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ManagepayrollController->fetchmanagepayroll()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManagepayrollController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 18:58:35 --> unlink(C:\xampp\htdocs\ci4\HR-MS\writable\debugbar/debugbar_1697826835.322733.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\ci4\\HR-MS\\writable\\debugbar/debugbar_1697826835.322733.json): No such file or directory', 'C:\\xampp\\htdocs\\ci4\\HR-MS\\vendor\\codeigniter4\\framework\\system\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('C:\\xampp\\htdocs\\ci4\\HR-MS\\writable\\debugbar/debugbar_1697826835.322733.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(495): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1697828307.795836', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(148): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(348): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
