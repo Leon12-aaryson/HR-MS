@@ -3,6 +3,7 @@
 
 <!-- html for main part starts here -->
 <main>
+    
     <div class="container">
         <h1 class="title"><?= $page_title ?></h1>
         <ul class=" emp" style="line-height: none;">

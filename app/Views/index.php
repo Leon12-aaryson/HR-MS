@@ -86,7 +86,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>5</h2>
+                            <h2><?= $leave_count ?></h2>
                                 <p>Leaves</p>
                             </div>
 
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="head">
-                                <h2>30</h2>
+                            <h2><?= $leave_count ?></h2>
                                 <p>Loans</p>
                             </div>
 
@@ -136,7 +136,7 @@
             <div class="event-form">
                 <div class="color-top"></div>
                 <h2>Add an Event</h2>
-                <form action="#">
+                <form action="<?= base_url('insertintoevents') ?>" method="post">
                     <div class="mb-2">
                         <label for="title" class="form-label">Annoucement  Title</label>
                         <input class="form-control form-control-sm" type="text" placeholder="name" aria-label=".form-control-sm example">
@@ -155,7 +155,7 @@
                     </div>
 
                     <div class="mb-2 button">
-                        <button class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add</button>
+                        <button type="submit" class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add</button>
                     </div>
                 </form>
             </div>
@@ -172,6 +172,7 @@
                         </tr>
                     </thead>
                     <tbody>
+              
                         <tr>
                             <td>Meeting</td>
                             <td>9/4/2023</td>

@@ -135,6 +135,17 @@ $routes->post('fetchmanagepayroll', 'ManagepayrollController::fetchmanagepayroll
 //insert data in employee table
 $routes->post('insertintoemployee', 'EmployeeDataInsert::index');
 
+//fetching department on dashboard
+// $routes->get('countdepartment', 'DashboardController::department');
+$routes->get('home', 'Home::Dashboard');
+
+//inserting data into events table
+$routes->post('insertintoevents','Home::add_event');
+
+
+$routes->get('getevents','Home::fetchDataFromEventsTable');
+
+
 
 
 /*
