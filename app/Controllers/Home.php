@@ -209,4 +209,10 @@ class Home extends BaseController
     {
         return view('view-employee');
     }
+
+
+    //The following method is for employee dashboard
+    public function employeeDashboard(){
+        return view('employee-dashboard');
+    }
 }
