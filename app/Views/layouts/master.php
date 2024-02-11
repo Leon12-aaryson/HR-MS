@@ -47,7 +47,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <ul class="nav-links">
             <li>
-                <a href="<?= base_url("/") ?>">
+                <a href="<?= base_url("home") ?>">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>

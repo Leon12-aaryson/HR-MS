@@ -1,3 +1,80 @@
+CRITICAL - 2024-02-11 13:24:13 --> Undefined variable $dept_count
+in APPPATH\Views\index.php on line 28.
+ 1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:24:16 --> Undefined variable $events
+in APPPATH\Views\index.php on line 173.
+ 1 APPPATH\Views\index.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:24:20 --> Undefined variable $events
+in APPPATH\Views\index.php on line 173.
+ 1 APPPATH\Views\index.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:24:24 --> Undefined variable $events
+in APPPATH\Views\index.php on line 173.
+ 1 APPPATH\Views\index.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:26:01 --> Undefined variable $event
+in APPPATH\Views\index.php on line 183.
+ 1 APPPATH\Views\index.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $event', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 183)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:26:28 --> Undefined variable $event
+in APPPATH\Views\index.php on line 183.
+ 1 APPPATH\Views\index.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $event', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 183)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:26:29 --> Undefined variable $event
+in APPPATH\Views\index.php on line 183.
+ 1 APPPATH\Views\index.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $event', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 183)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-02-11 14:23:09 --> Class "Locale" not found
 in SYSTEMPATH\CodeIgniter.php on line 195.
  1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
@@ -184,3 +261,4 @@ FROM `branch_manager_table`', [], false)
  5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+

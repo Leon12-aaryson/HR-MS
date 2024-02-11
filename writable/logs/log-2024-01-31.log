@@ -60,3 +60,34 @@ INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manag
  7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 10:27:09 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\app\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#7 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-31 10:27:09 --> Unknown column 'department_table.branch' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', [], false)
+ 5 APPPATH\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
