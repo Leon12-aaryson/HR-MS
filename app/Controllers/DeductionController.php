@@ -171,7 +171,4 @@ class DeductionController extends BaseController
          ];
          return $this->response->setJSON($data);
      }
- 
-
-
 }

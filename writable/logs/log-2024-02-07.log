@@ -1,0 +1,9 @@
+CRITICAL - 2024-02-07 05:55:36 --> syntax error, unexpected string content "Employee"
+in APPPATH\Controllers\EmployeeController.php on line 197.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\EmployeeController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EmployeeController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EmployeeController')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\EmployeeController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

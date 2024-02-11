@@ -25,8 +25,9 @@
 
                             </div>
                             <div class="head">
-                                <h2>10</h2>
+                                <h2><?= $dept_count ?></h2>
                                 <p>Departments</p>
+                                
                             </div>
 
                         </div>
@@ -43,7 +44,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>200</h2>
+                            <h2><?= $emp_count ?></h2>
                                 <p>Employees</p>
                             </div>
 
@@ -61,7 +62,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>50</h2>
+                            <h2><?= $job_count ?></h2>
                                 <p>Jobs</p>
                             </div>
 
@@ -83,7 +84,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>5</h2>
+                            <h2><?= $leave_count ?></h2>
                                 <p>Leaves</p>
                             </div>
 
@@ -119,7 +120,7 @@
                                 </div>
                             </div>
                             <div class="head">
-                                <h2>30</h2>
+                            <h2><?= $leave_count ?></h2>
                                 <p>Loans</p>
                             </div>
 
@@ -133,29 +134,24 @@
             <div class="event-form">
                 <div class="color-top"></div>
                 <h2>Add an Event</h2>
-                <form action="#">
+                <form action="<?= base_url('insertintoevents') ?>" method="post">
                     <div class="mb-2">
                         <label for="title" class="form-label">Event's Name</label>
-                        <input class="form-control form-control-sm" type="text" placeholder="name" aria-label=".form-control-sm example">
+                        <input name="event_name" class="form-control form-control-sm" type="text" placeholder="name" aria-label=".form-control-sm example">
                     </div>
 
                     <div class="mb-2">
                         <label for="start-date" class="form-label">Start Date</label>
-                        <input class="form-control form-control-sm" type="date" placeholder="Start date" aria-label=".form-control-sm example">
+                        <input name="start_date" class="form-control form-control-sm" type="date" placeholder="Start date" aria-label=".form-control-sm example">
                     </div>
 
                     <div class="mb-2">
                         <label for="end-date" class="form-label">End Date</label>
-                        <input class="form-control form-control-sm" type="date" placeholder="End date" aria-label=".form-control-sm example">
-                    </div>
-
-                    <div class="mb-2">
-                        <label for="Time" class="form-label">Time</label>
-                        <input class="form-control form-control-sm" type="time" placeholder="Time" aria-label=".form-control-sm example">
+                        <input name="end_date" class="form-control form-control-sm" type="date" placeholder="End date" aria-label=".form-control-sm example">
                     </div>
 
                     <div class="mb-2 button">
-                        <button class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add</button>
+                        <button type="submit" class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add</button>
                     </div>
                 </form>
             </div>
@@ -168,11 +164,12 @@
                             <th>Event Name</th>
                             <th>Start Date</th>
                             <th>End Date</th>
-                            <th>Time</th>
+                            <!-- <th>Time</th> -->
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+              
                         <tr>
                             <td>Meeting</td>
                             <td>9/4/2023</td>
