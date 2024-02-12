@@ -138,8 +138,18 @@ $routes->get('home', 'Home::Dashboard');
 //inserting data into events table
 $routes->post('insertintoevents','Home::add_event');
 
-
 $routes->get('getevents','Home::fetchDataFromEventsTable');
+
+
+
+
+
+// ROUTES FOR HANDLING EMPLOYEE USER 
+  //returns the emp-dashboard view
+$routes->get('emp-dashboard','EmpHomeController::index');
+
+//returns the emp-attendance view
+$routes->get('emp-attendance','EmpHomeController::EmpAttendance');
 
 
 
