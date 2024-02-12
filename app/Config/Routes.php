@@ -51,6 +51,10 @@ $routes->get('create-attendance', 'Home::CreateAttendance');
 //The following route is not yet linked anywhere
 $routes->get('view-employee', 'Home::ViewEmployee');
 
+
+//The following routes are for employee's dashboard
+$routes->get('employee-dashboard', 'Home::employeeDashboard');
+
 // Working with employees
 $routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
 
