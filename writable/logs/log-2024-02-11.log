@@ -262,6 +262,15 @@ FROM `branch_manager_table`', [], false)
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 
+CRITICAL - 2024-02-11 15:29:18 --> Undefined variable $dept_count
+in APPPATH\Views\index.php on line 28.
+ 1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 
 ERROR - 2024-02-11 17:21:10 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
 Stack trace:
