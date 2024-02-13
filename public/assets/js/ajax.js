@@ -1,3 +1,118 @@
+/**
+ * Employee
+ */
+let employeeDataTable = $("#employeeDataTable").DataTable({
+    "processing": true,
+    "serverSide": true,
+    "stateSave": false, // Remembers data table state
+    "order": [],
+    "ajax": {
+        url: "fetchemployees",
+        method: "POST",
+    },
+    "columnDefs": [{
+        "orderable": false,
+        "targets": [7]
+    }],
+    // <'col-sm-12 col-md-6'B> // Enabling buttons
+    dom: "<'row gx-0 pl-0'<'col-sm-12 col-md-3'l>\
+    <'col-sm-12 col-md-6'>\
+    <'col-sm-12 col-md-3'f>>" +
+        "<'row gx-0'<'col-sm-12'tr>>" +
+        "<'row gx-0'<'col-sm-12 col-md-5'i>\
+    <'col-sm-12 col-md-7'p>>",
+    buttons: [{
+        extend: 'excelHtml5',
+        text: 'Excel <i class="bi bi-file-earmark-excel"></i> ',
+        titleAttr: 'Export to Excel',
+        className: 'btn btn-sm btn-danger',
+        exportOptions: {
+            columns: [0, 1],
+            search: 'applied',
+            order: 'applied',
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+        text: 'PDF <i class="bi bi-file-earmark-pdf"></i> ',
+        titleAttr: 'Export to PDF',
+        className: 'btn btn-sm btn-danger',
+        filename: 'employees_pdf',
+        exportOptions: {
+            columns: [0, 1],
+            search: 'applied',
+            order: 'applied',
+        }
+    },
+    {
+        extend: 'print',
+        text: 'Print <i class="bi bi-printer"></i> ',
+        titleAttr: 'Print',
+        className: 'btn btn-sm btn-danger',
+        exportOptions: {
+            columns: [0, 1],
+            search: 'applied',
+            order: 'applied',
+        }
+    },
+    {
+        extend: "copyHtml5",
+        text: 'Copy <i class="bi bi-file-earmark"></i> ',
+        titleAttr: 'Copy',
+        className: 'btn btn-sm btn-danger',
+        exportOptions: {
+            columns: [0, 1]
+        }
+    },
+    ]
+
+});
+
+$(document).on('click', '#employeedeletebtn', function (event) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            $.ajax({
+                method: "POST",
+                url: "deleteemployee",
+                data: {
+                    employeeid: employeeid = $(this).val()
+                },
+                success: function (response) {
+
+                    Swal.fire({
+                        position: 'center',
+                        icon: response.status,
+                        title: response.message,
+                        showConfirmButton: false,
+                        timer: 2000 // 2 seconds
+                    })
+
+                    employeeDataTable.ajax.reload();
+                }
+            });
+        } else if (
+
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            Swal.fire(
+                'Cancelled',
+                'Employee data is safe :)',
+                'error'
+            )
+        }
+    });
+
+});
+
 
 /**
 * HR System Setup
@@ -305,8 +420,8 @@ $(document).ready(function () {
     });
 
 
-     // Department Validation
-     $("#departmentform").validate({
+    // Department Validation
+    $("#departmentform").validate({
         rules: {
             'branchname': {
                 required: true
@@ -475,8 +590,8 @@ $(document).ready(function () {
     });
 
 
-    
-     // Designationform Validation
+
+    // Designationform Validation
     $("#designationform").validate({
         rules: {
             'designation': {
@@ -633,20 +748,20 @@ $(document).ready(function () {
 
     });
 
-// Designationform Validation
-$("#leaveform").validate({
-    rules: {
-        'leavetype': {
-            required: true
+    // Designationform Validation
+    $("#leaveform").validate({
+        rules: {
+            'leavetype': {
+                required: true
+            },
         },
-    },
-    messages: {
-        'leavetype': {
-            required: "Leave type is required!"
-        }
-    },
+        messages: {
+            'leavetype': {
+                required: "Leave type is required!"
+            }
+        },
 
-})
+    })
 
     // Loan
     let loanDataTable = $("#loanDataTable").DataTable({

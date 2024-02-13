@@ -32,8 +32,6 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('employee', 'Home::Employee');
-$routes->get('add-employee', 'Home::CreateEmployee');
 $routes->get('department', 'Home::Department');
 $routes->get('branch-master', 'Home::BranchMaster');
 $routes->get('job', 'Home::Job');
@@ -48,11 +46,19 @@ $routes->get('permission', 'Home::Permission');
 $routes->get('payroll', 'Home::Payroll');
 $routes->get('create-payroll', 'Home::CreatePayroll');
 $routes->get('create-attendance', 'Home::CreateAttendance');
-//The following route is not yet linked anywhere
-$routes->get('view-employee', 'Home::ViewEmployee');
+
 
 // Working with employees
-$routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
+$routes->get('employeespage', 'EmployeeController::page');
+$routes->get('createpage', 'EmployeeController::createpage');
+$routes->post('fetchemployees', 'EmployeeController::index');
+$routes->post('addemployee', 'EmployeeController::create');
+$routes->get('employee/edit/(:num)', 'EmployeeController::edit/$1');
+$routes->post('employee/update/(:num)', 'EmployeeController::update/$1');
+$routes->post('deleteemployee', 'EmployeeController::delete');
+
+
+// $routes->get('update-employee/:id', 'EmployeeController::updateEmployee');
 
 // Working with branch manager
 $routes->post('fetchbranchmanagers', 'BranchmasterController::fetchbranchmanagers');

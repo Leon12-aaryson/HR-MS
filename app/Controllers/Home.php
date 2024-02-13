@@ -25,52 +25,6 @@ class Home extends BaseController
         return view('index');
     }
 
-    public function CreateEmployee()
-    {
-        // SQL query for retrieving distinct branches
-        $distinctBranchQuery = "SELECT DISTINCT branch FROM branch_manager_table";
-        $branchResult = $this->db->query($distinctBranchQuery)->getResultArray();
-        
-        // SQL query for retrieving distinct designations
-        $distinctDesignationQuery = "SELECT DISTINCT designation FROM designation_table";
-        $designationResult = $this->db->query($distinctDesignationQuery)->getResultArray();
-        
-        // sql query for retrieving payement type
-        $distinctPayement = "SELECT DISTINCT payement_type FROM payement_table";
-        $payementResult = $this->db->query($distinctPayement)->getResultArray();
-
-        // sql query for retrieving department type
-        $distinctDepartment = "SELECT DISTINCT department_id, department_name FROM department_table";
-        $departmentResult = $this->db->query( $distinctDepartment)->getResultArray();
-
-        // sql query for retrieving contract type
-        $distinctContract = "SELECT DISTINCT contract_type FROM contract_table";
-        $contractResults = $this->db->query($distinctContract)->getResultArray();
-
-        //sql query for retrieving job type
-        $distinctJob = "SELECT DISTINCT job_type FROM job_type_table";
-        $jobResult = $this->db->query($distinctJob)->getResultArray();
-
-        //sql query for retrieving positions
-        $distinctPosition = "SELECT DISTINCT position_id, position_name FROM position_table";
-        $positionResult = $this->db->query($distinctPosition)->getResultArray();
-
-        // Pass the results to the view with separate keys
-        return view('create-employee', ['results' => [
-            'branch' => $branchResult, 
-            'designation' => $designationResult,
-            'payement' => $payementResult,
-            'department' => $departmentResult,
-            'contract'   => $contractResults,
-            'job'        =>$jobResult,
-            'position' => $positionResult
-        ]]);
-    }
-
-    public function Employee()
-    {
-        return view("employee");
-    }
 
     public function Department()
     {

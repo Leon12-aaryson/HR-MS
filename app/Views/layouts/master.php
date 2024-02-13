@@ -6,36 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR-MS</title>
 
-    <link rel="stylesheet" href="public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css">
-    <link href='public/assets/datatables/datatables.min.css' rel='stylesheet'>
-    <link href='public/assets/datatables/responsive.bootstrap5.min.css' rel='stylesheet'>
-    <link href='public/assets/bootstrap-icons/bootstrap-icons.css' rel='stylesheet'>
-    <link href='public/assets/boxicons/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="public/assets/css/style.css">
+    <?= link_tag("public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css") ?>
+    <?= link_tag("public/assets/datatables/datatables.min.css") ?>
+    <?= link_tag("public/assets/datatables/responsive.bootstrap5.min.css") ?>
+    <?= link_tag("public/assets/bootstrap-icons/bootstrap-icons.css") ?>
+    <?= link_tag("public/assets/boxicons/css/boxicons.min.css") ?>
+    <?= link_tag("public/assets/css/style.css") ?>
 
     <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
 
     <!--========= Style switcher========= -->
-    <link rel="stylesheet" href="public/assets/css/skin/color-3.css">
-    <link rel="stylesheet" href="public/assets/css/skin/color-1.css" class="alternate-style" title="color-1" disabled>
+    <?= link_tag("public/assets/css/skin/color-3.css") ?>
+    <!-- <link rel="stylesheet" href="public/assets/css/skin/color-1.css" class="alternate-style" title="color-1" disabled> -->
+    <?= link_tag("public/assets/css/skin/color-1.css") ?>
     <link rel="stylesheet" href="public/assets/css/skin/color-2.css" class="alternate-style" title="color-2" disabled>
     <link rel="stylesheet" href="public/assets/css/skin/color-3.css" class="alternate-style" title="color-3" disabled>
     <link rel="stylesheet" href="public/assets/css/skin/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="public/assets/css/skin/color-5.css" class="alternate-style" title="color-5" disabled>
 
     <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/65c8cdc68d261e1b5f5ec2af/1hmc67kaa';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/65c8cdc68d261e1b5f5ec2af/1hmc67kaa';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -54,7 +57,7 @@ s0.parentNode.insertBefore(s1,s0);
             </li>
 
             <li>
-                <a href="<?= base_url('employee'); ?>">
+                <a href="<?= base_url('employeespage'); ?>">
                     <i class="bx bx-user icon"></i>
                     <span class="link_name">Employee</span>
                 </a>
@@ -415,92 +418,23 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
         </footer>
 
-        <script src="public/assets/jquery-3.6.1.min.js"></script>
-        <script src="public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="public/assets/datatables/datatables.min.js"></script>
-        <script src="public/assets/datatables/dataTables.responsive.min.js"></script>
-        <script src="public/assets/datatables/pdfmake.min.js"></script>
-        <script src="public/assets/datatables/vfs_fonts.js"></script>
-        <script src="public/assets/js/sidebar.js"></script>
-        <script src="public/assets/js/theme-color.js"></script>
-        <script src="public/assets/js/notification.js"></script>
-        <script src="public/assets/js/color-picker.js"></script>
-        <script src="public/assets/sweetalert/js/sweetalert2@11.js"></script>
-        <script src="public/assets/jquery.validate.min.js"></script>
-        <script src="public/assets/js/ajax.js"></script>
+        <?= script_tag("public/assets/jquery-3.6.1.min.js") ?>
+        <?= script_tag("public/assets/bootstrap/js/bootstrap.bundle.min.js") ?>
+        <?= script_tag("public/assets/datatables/datatables.min.js") ?>
+        <?= script_tag("public/assets/datatables/dataTables.responsive.min.js") ?>
+        <?= script_tag("public/assets/datatables/pdfmake.min.js") ?>
+        <?= script_tag("public/assets/datatables/vfs_fonts.js") ?>
+        <?= script_tag("public/assets/js/sidebar.js") ?>
+        <?= script_tag("public/assets/js/theme-color.js") ?>
+        <?= script_tag("public/assets/js/notification.js") ?>
+        <?= script_tag("public/assets/js/color-picker.js") ?>
+        <?= script_tag("public/assets/sweetalert/js/sweetalert2@11.js") ?>
+        <?= script_tag("public/assets/jquery.validate.min.js") ?>
+        <?= script_tag("public/assets/js/ajax.js") ?>
 
         <script>
             $(document).ready(function() {
-                /**@abstract
-                 * Employee
-                 */
-                let employeeDataTable = $("#employeeDataTable").DataTable({
-                    "processing": true,
-                    "serverSide": true,
-                    "stateSave": false, // Remembers data table state
-                    "order": [],
-                    "ajax": {
-                        url: "fetchemployees",
-                        method: "POST",
-                    },
-                    "columnDefs": [{
-                        "orderable": false,
-                        "targets": [7]
-                    }],
-                    // <'col-sm-12 col-md-6'B> // Enabling buttons
-                    dom: "<'row gx-0 pl-0'<'col-sm-12 col-md-3'l>\
-                    <'col-sm-12 col-md-6'>\
-                    <'col-sm-12 col-md-3'f>>" +
-                        "<'row gx-0'<'col-sm-12'tr>>" +
-                        "<'row gx-0'<'col-sm-12 col-md-5'i>\
-                    <'col-sm-12 col-md-7'p>>",
-                    buttons: [{
-                            extend: 'excelHtml5',
-                            text: 'Excel <i class="bi bi-file-earmark-excel"></i> ',
-                            titleAttr: 'Export to Excel',
-                            className: 'btn btn-sm btn-danger',
-                            exportOptions: {
-                                columns: [0, 1],
-                                search: 'applied',
-                                order: 'applied',
-                            }
-                        },
-                        {
-                            extend: 'pdfHtml5',
-                            text: 'PDF <i class="bi bi-file-earmark-pdf"></i> ',
-                            titleAttr: 'Export to PDF',
-                            className: 'btn btn-sm btn-danger',
-                            filename: 'employees_pdf',
-                            exportOptions: {
-                                columns: [0, 1],
-                                search: 'applied',
-                                order: 'applied',
-                            }
-                        },
-                        {
-                            extend: 'print',
-                            text: 'Print <i class="bi bi-printer"></i> ',
-                            titleAttr: 'Print',
-                            className: 'btn btn-sm btn-danger',
-                            exportOptions: {
-                                columns: [0, 1],
-                                search: 'applied',
-                                order: 'applied',
-                            }
-                        },
-                        {
-                            extend: "copyHtml5",
-                            text: 'Copy <i class="bi bi-file-earmark"></i> ',
-                            titleAttr: 'Copy',
-                            className: 'btn btn-sm btn-danger',
-                            exportOptions: {
-                                columns: [0, 1]
-                            }
-                        },
-                    ]
 
-                });
-                
                 fetch_payroll('no')
 
             });
@@ -557,10 +491,18 @@ s0.parentNode.insertBefore(s1,s0);
                         fetch_payroll('no');
                     });
                 }
+
             })
+
+            // Update
+            // STEP 1: Fetch employee data and populate the update form
+            $(document).on('click', '#employeeupdatebtn', function() {
+                const id = $(this).val();
+
+                alert(id)
+            });
         </script>
 
 </body>
-
 
 </html>
