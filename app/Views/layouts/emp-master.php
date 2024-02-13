@@ -4,44 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR-MS</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="public/emp-assets/css/style.css">
 
-    <?= link_tag("public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css") ?>
-    <?= link_tag("public/assets/datatables/datatables.min.css") ?>
-    <?= link_tag("public/assets/datatables/responsive.bootstrap5.min.css") ?>
-    <?= link_tag("public/assets/bootstrap-icons/bootstrap-icons.css") ?>
-    <?= link_tag("public/assets/boxicons/css/boxicons.min.css") ?>
-    <?= link_tag("public/assets/css/style.css") ?>
-
-    <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
+    <link rel="stylesheet" href="public/emp-assets/css/skin/color-3.css">
 
     <!--========= Style switcher========= -->
-    <?= link_tag("public/assets/css/skin/color-3.css") ?>
-    <!-- <link rel="stylesheet" href="public/assets/css/skin/color-1.css" class="alternate-style" title="color-1" disabled> -->
-    <?= link_tag("public/assets/css/skin/color-1.css") ?>
-    <link rel="stylesheet" href="public/assets/css/skin/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="public/assets/css/skin/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="public/assets/css/skin/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="public/assets/css/skin/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="public/emp-assets/css/skin/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="public/emp-assets/css/skin/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="public/emp-assets/css/skin/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="public/emp-assets/css/skin/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="public/emp-assets/css/skin/color-5.css" class="alternate-style" title="color-5" disabled>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/65c8cdc68d261e1b5f5ec2af/1hmc67kaa';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
+    <link rel="stylesheet" href="public/emp-assets/css/clock.css" />
 </head>
 
 <body>
+
     <!-- html for sidedar start here -->
     <div class="sidebar">
         <div class="logo-details">
@@ -49,113 +30,71 @@
             <span class="logo_name">HR<span style="color: var(--skin-color);">MS</span></span>
         </div>
         <ul class="nav-links">
-            <li>
-                <a href="<?= base_url("home") ?>">
+            <li class="active-bar">
+                <a href="employee-dashboard.html">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
-            </li>
-
-            <li>
-                <a href="<?= base_url('employeespage'); ?>">
-                    <i class="bx bx-user icon"></i>
-                    <span class="link_name">Employee</span>
-                </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="<?= base_url('add-employee'); ?>" class="link_name">Employee</a></li>
+                    <li class="no-list"><a href="employee-dashboard.html" class="link_name">Dashboard</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="<?= base_url('payroll'); ?>">
-                    <!-- It fails to load whenever i use base_url('employee') -->
-                    <i class='bx bx-spreadsheet'></i>
+                <a href="./attendance.html">
+                    <i class='bx bx-timer icon'></i>
+                    <span class="link_name">Attendance </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li class="no-list"><a href="./attendance.html" class="link_name">Attendance</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./grievence.html">
+                    <i class='bx bx-user-voice icon'></i>
+                    <span class="link_name">Grievence </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li class="no-list"><a href="./grievence.html" class="link_name">Grievence</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./leave.html">
+                    <i class='bx bx-walk icon'></i>
+                    <span class="link_name">Leave</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li class="no-list"><a href="leave.html" class="link_name">Leave</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="./loan.html">
+                    <i class='bx bx-credit-card-front icon'></i>
+                    <span class="link_name">Loan</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li class="no-list"><a href="loan.html" class="link_name">Loan</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="payroll1.html">
+                    <i class='bx bx-money icon'></i>
                     <span class="link_name">Payroll</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Payroll</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bxs-report'></i>
-                        <span class="link_name">Report</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <ul class="sub-menu">
-                    <li class="no-list"><a href="#" class="link_name">Report</a></li>
-                    <li><a href="#">Monthly Attendance</a></li>
-                    <li><a href="#">Leave</a></li>
-                    <li><a href="#">Payroll</a></li>
-                    <li><a href="#">Timesheet</a></li>
-
-                </ul>
-            </li>
-
-            <li>
-                <div class="icon-link">
-                    <a href="<?= base_url('create-attendance'); ?>">
-                        <i class='bx bx-timer'></i>
-                        <span class="link_name">Attendance</span>
-                    </a>
-                </div>
-            </li>
-
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bx-check-square'></i>
-                        <span class="link_name">Approval</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <ul class="sub-menu">
-                    <li class="no-list"><a href="#" class="link_name">Approval</a></li>
-                    <li><a href="#">Answer grievance</a></li>
-                    <li><a href="#">Loan Approval</a></li>
-                    <li><a href="#">Manage Leave</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-briefcase'></i>
-                    <span class="link_name">Jobs</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Jobs</a></li>
+                    <li class="no-list"><a href="payroll1.html" class="link_name">Payroll</a></li>
                 </ul>
             </li>
 
             <li>
                 <a href="#">
-                    <i class='bx bx-message-dots'></i>
-                    <span class="link_name">Message</span>
+                    <i class='bx bx-log-out icon'></i>
+                    <span class="link_name">Logout</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Message</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class='bx bx-user-x'></i>
-                    <span class="link_name">Disciplinary</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Disciplinary</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="<?= base_url('branch-master'); ?>">
-                    <i class='bx bx-cog'></i>
-                    <span class="link_name">HR system setup</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li class="no-list"><a href="<?= base_url('branch-master'); ?>" class="link_name">HR system setup</a></li>
+                    <li class="no-list"><a href="#" class="link_name">Logout</a></li>
                 </ul>
             </li>
 
@@ -164,12 +103,9 @@
     <!-- html for sidedar ends here -->
 
 
-
-
-
-    <section class="content">
-        <!-- html for nanbar start here -->
-        <nav>
+    <div class="content">
+         <!-- html for nanbar start here -->
+         <nav>
             <div class="two">
                 <i class="bx bx-menu"></i>
                 <input class="search" type="search" placeholder="Type to search"><i class='bx bx-search-alt-2'></i>
@@ -200,7 +136,8 @@
                                             Lorem, ipsum dolor.
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -216,7 +153,8 @@
                                             Lorem, ipsum dolor.
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -232,7 +170,8 @@
                                             Lorem, ipsum dolor.
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -248,7 +187,8 @@
                                             Lorem, ipsum dolor.
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -264,19 +204,20 @@
                                             Lorem, ipsum dolor.
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
                                         <p>9/4/2023</p>
                                     </div>
                                 </li>
+                                <li class="show_all">
+                                    <p class="link">Show All Activities</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
-
-
-
                     <div class="message">
                         <div class="icon_wrap">
                             <a href="#">
@@ -287,15 +228,16 @@
                         <div class="message_dd">
                             <ul class="message_ul">
                                 <li class="starbucks success">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
                                     </div>
                                     <div class="notify_data">
                                         <div class="title">
                                             ssewankamboderick@gmail.com
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -303,15 +245,16 @@
                                     </div>
                                 </li>
                                 <li class="baskin_robbins failed">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
                                     </div>
                                     <div class="notify_data">
                                         <div class="title">
                                             ssewankamboderick@gmail.com
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -319,15 +262,16 @@
                                     </div>
                                 </li>
                                 <li class="mcd success">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
                                     </div>
                                     <div class="notify_data">
                                         <div class="title">
                                             rickrambo78@gmail.com
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -335,15 +279,16 @@
                                     </div>
                                 </li>
                                 <li class="pizzahut failed">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
                                     </div>
                                     <div class="notify_data">
                                         <div class="title">
                                             ssewankamboderick@gmail.com
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
@@ -351,20 +296,24 @@
                                     </div>
                                 </li>
                                 <li class="kfc success">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
+                                    <div class="notify_icon">
+                                        <span class="icon"></span>
                                     </div>
                                     <div class="notify_data">
                                         <div class="title">
                                             kikajjosda@gmail.com
                                         </div>
                                         <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
+                                            Lorem ipsum dolor sit amet
+                                            consectetur.
                                         </div>
                                     </div>
                                     <div class="notify_status">
                                         <p>9/4/2023</p>
                                     </div>
+                                </li>
+                                <li class="show_all">
+                                    <p class="link">Show All Activities</p>
                                 </li>
                             </ul>
                         </div>
@@ -387,122 +336,38 @@
                 <div class="profile">
                     <div class="info">
                         <p>Hey, <b>Ssewankambo Derick</b></p>
-                        <small class="text-muted1">Admin</small>
+                        <small class="text-muted1">Employee</small>
                     </div>
                     <div class="profile-photo icon_wrap" style="cursor: pointer;">
-                        <img src="public/assets/img/face girl.jpg" alt="">
+                        <img src="public/emp-assets/img/face girl.jpg" alt>
                     </div>
 
-                    <div class="profile_dd">
-                        <ul class="profile_ul">
-                            <li><a class="logout" href="#"><span class="picon"><i class='bx bxs-user'></i></span>
-                                    &nbsp;Profile</a></li>
-                            <li><a class="logout" href="#"><span class="picon"><i class='bx bx-log-out'></i></span>&nbsp;Logout</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
         </nav>
         <!-- html for nanbar ends here -->
 
-
-
-
         <?= $this->renderSection('body-contents') ?>
 
-        <!--Html for the footer-->
+
         <footer class="footer">
-            <!-- <div class="hr"></div> -->
-            <div class="last">
-                <p>&copy;copyright all rights reserved by Ssewankambo Derick</p>
-            </div>
-        </footer>
+        <!-- <div class="hr"></div> -->
+        <div class="last">
+            <p>&copy;copyright all rights reserved by
+                Ssewankambo Derick</p>
+        </div>
+    </footer>
 
-        <?= script_tag("public/assets/jquery-3.6.1.min.js") ?>
-        <?= script_tag("public/assets/bootstrap/js/bootstrap.bundle.min.js") ?>
-        <?= script_tag("public/assets/datatables/datatables.min.js") ?>
-        <?= script_tag("public/assets/datatables/dataTables.responsive.min.js") ?>
-        <?= script_tag("public/assets/datatables/pdfmake.min.js") ?>
-        <?= script_tag("public/assets/datatables/vfs_fonts.js") ?>
-        <?= script_tag("public/assets/js/sidebar.js") ?>
-        <?= script_tag("public/assets/js/theme-color.js") ?>
-        <?= script_tag("public/assets/js/notification.js") ?>
-        <?= script_tag("public/assets/js/color-picker.js") ?>
-        <?= script_tag("public/assets/sweetalert/js/sweetalert2@11.js") ?>
-        <?= script_tag("public/assets/jquery.validate.min.js") ?>
-        <?= script_tag("public/assets/js/ajax.js") ?>
-
-        <script>
-            $(document).ready(function() {
-
-                fetch_payroll('no')
-
-            });
-
-
-
-            function fetch_payroll(is_date_search, year = '', month = '') {
-                // Manage Payroll
-                let managepayrollDataTable = $("#managepayrollDataTable").DataTable({
-                    "processing": true,
-                    "serverSide": true,
-                    "stateSave": false, // Remembers data table state
-                    "order": [],
-
-                    "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
-                        '<"row"<"col-md-12"t>>' +
-                        '<"row"<"col-md-5"i><"col-md-7"p>>',
-
-                    "ajax": {
-                        url: "fetchmanagepayroll",
-                        method: "POST",
-                        data: {
-                            is_date_search: is_date_search,
-                            year: year,
-                            month: month
-                        }
-                    },
-                    "columnDefs": [{
-                        "orderable": false,
-                        "targets": [5]
-                    }],
-                })
-
-            }
-
-            $("#managepayrollfind").click(function() {
-                let year = $("#managepayrollyear").val();
-                let month = $("#managepayrollmonth").val();
-
-                if (year != '') {
-
-                    $("#managepayrollDataTable").DataTable().destroy();
-                    fetch_payroll('yes', year, month);
-
-                } else {
-                    // Here i will reinitialize the table if no dates specified
-                    Swal.fire({
-                        title: "Search error",
-                        text: "You have to select a year",
-                        icon: "error"
-                    }).then(() => {
-
-                        $("#managepayrollDataTable").DataTable().destroy();
-                        fetch_payroll('no');
-                    });
-                }
-
-            })
-
-            // Update
-            // STEP 1: Fetch employee data and populate the update form
-            $(document).on('click', '#employeeupdatebtn', function() {
-                const id = $(this).val();
-
-                alert(id)
-            });
-        </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="public/emp-assets/js/sidebar.js"></script>
+    <script src="public/emp-assets/js/theme-color.js"></script>
+    <script src="public/emp-assets/js/notification.js"></script>
+    <script src="public/emp-assets/js/color-picker.js"></script>
+    <script src="public/emp-assets/js/script.js" defer></script>
 </body>
 
 </html>
+    </div>

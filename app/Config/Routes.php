@@ -48,6 +48,10 @@ $routes->get('create-payroll', 'Home::CreatePayroll');
 $routes->get('create-attendance', 'Home::CreateAttendance');
 
 
+
+//The following routes are for employee's dashboard
+$routes->get('employee-dashboard', 'Home::employeeDashboard');
+
 // Working with employees
 $routes->get('employeespage', 'EmployeeController::page');
 $routes->get('createpage', 'EmployeeController::createpage');
@@ -144,8 +148,18 @@ $routes->get('home', 'Home::Dashboard');
 //inserting data into events table
 $routes->post('insertintoevents','Home::add_event');
 
-
 $routes->get('getevents','Home::fetchDataFromEventsTable');
+
+
+
+
+
+// ROUTES FOR HANDLING EMPLOYEE USER 
+  //returns the emp-dashboard view
+$routes->get('emp-dashboard','EmpHomeController::index');
+
+//returns the emp-attendance view
+$routes->get('emp-attendance','EmpHomeController::EmpAttendance');
 
 
 

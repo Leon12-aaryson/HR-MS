@@ -45,7 +45,7 @@
             </div>
             <form action="" method="POST" id="leaveform">
                 <div class="modal-body">
-                    <div class="mb-3">
+                    <div class="mb-3">pla
                         <label for="leavetype" class="form-label text-primary">Leave</label>
                         <input type="text" class="form-control" id="leavetype" name="leavetype">
                     </div>
@@ -63,7 +63,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header pt-1 pb-1">
-                <h2 class="modal-title fs-5 text-primary" id="updateleaveModalLabel">Update  leave type</h2>
+                <h2 class="modal-title fs-5 text-primary" id="updateleaveModalLabel">Update leave type</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="" method="POST" id="updateleaveform">
