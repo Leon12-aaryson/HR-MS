@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="public/emp-assets/css/skin/color-5.css" class="alternate-style" title="color-5" disabled>
 
     <link rel="stylesheet" href="public/emp-assets/css/clock.css" />
+    <style>
+        .event-form{
+    position: relative;
+    top: 210px;
+    left: 188px;
+    width: 350px;
+}
+    </style>
 </head>
 
 <body>
@@ -47,15 +55,6 @@
                 </a>
                 <ul class="sub-menu blank">
                     <li class="no-list"><a href="./attendance.html" class="link_name">Attendance</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="./grievence.html">
-                    <i class='bx bx-user-voice icon'></i>
-                    <span class="link_name">Grievence </span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li class="no-list"><a href="./grievence.html" class="link_name">Grievence</a></li>
                 </ul>
             </li>
             <li>
