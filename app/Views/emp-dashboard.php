@@ -59,23 +59,20 @@
                     </div>
 
                     <div id="start" class="btn" style="background: var(--skin-color); color: #fff">
-                    <form action="login-user2" method="POST">
-                            <?php
-                            date_default_timezone_set('Africa/Kampala');
-                            $time = date('H:i', strtotime('+0 HOURS'));
-                             ?>
-                            <input type="hidden" name="email" value="{{$login_user->email}}">
-                            <input type="hidden" name="password" value="<?= $time ?>">
+                    <form action="<?= base_url('insertintoattendance'); ?>" method="POST">
+                        <?php
+                        date_default_timezone_set('Africa/Kampala');
+                        $time = date('H:', strtotime('+0 HOURS'));
+                        ?>
+                        <input type="hidden" name="time" value="<?= $time ?>">
                         <div class="row d-flex justify-content-center align-items-center" style="max-width: 6rem;">
-                            <button id="start" class="btn" style="background: var(--skin-color); color: #fff">start time</button>
+                            <button id="start" class="btn" style="background: var(--skin-color); color: #fff">End Session</button>
                         </div>
                     </form>
-                    Start
+            </div>
 
-                        time</div>
-
-                    <p id="display-start"></p>
-                    <p id="display-end"></p>
+                    <!-- <p id="display-start"></p>
+                    <p id="display-end"></p> -->
                 </div>
             </div>
 
