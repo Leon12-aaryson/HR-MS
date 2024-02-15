@@ -44,6 +44,7 @@ $routes->get('loan', 'Home::Loan');
 $routes->get('shift', 'Home::Shift');
 $routes->get('permission', 'Home::Permission');
 $routes->get('payroll', 'Home::Payroll');
+$routes->get('allowances', 'Home::Allowances');
 $routes->get('create-payroll', 'Home::CreatePayroll');
 $routes->get('create-attendance', 'Home::CreateAttendance');
 
@@ -131,11 +132,15 @@ $routes->post('addjobtype', 'JobtypeController::addjobtype');
 $routes->post('updatejobtype', 'JobtypeController::updatejobtype');
 $routes->post('deletejobtype', 'JobtypeController::deletejobtype');
 
+// Working with Allowances
+$routes->post('fetchallowances', 'AllowanceController::fetchallowances');
+$routes->post('fetchallowance', 'AllowanceController::fetchallowance');
+$routes->post('addallowance', 'AllowanceController::addallowance');
+$routes->post('updateallowance', 'AllowanceController::updateallowance');
+$routes->post('deleteallowance', 'AllowanceController::deleteallowance');
+
 // Working with payroll
 $routes->post('fetchmanagepayroll', 'ManagepayrollController::fetchmanagepayroll');
-
-//insert data in employee table
-$routes->post('insertintoemployee', 'EmployeeDataInsert::index');
 
 //fetching department on dashboard
 // $routes->get('countdepartment', 'DashboardController::department');

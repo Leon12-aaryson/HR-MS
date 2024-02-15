@@ -91,6 +91,17 @@ class Home extends BaseController
         return view('payement', $data);
     }
 
+    public function Allowances()
+    {
+        $data = [
+            'active' => 'active-list',
+            'page_title' => "Allowances",
+            'head' => 'Manage Allowances',
+            'link' => 'Add allowance'
+        ];
+        return view('allowances', $data);
+    }
+
     public function Designation()
     {
         $data = [

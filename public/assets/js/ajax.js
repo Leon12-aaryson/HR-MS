@@ -275,6 +275,183 @@ $(document).ready(function () {
     })
 
 
+    // Allowances
+    let allowanceDataTable = $("#allowanceDataTable").DataTable({
+        "processing": true,
+        "serverSide": true,
+        "stateSave": false, // Remembers data table state
+        "order": [],
+
+        "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+            '<"row"<"col-md-12"t>>' +
+            '<"row"<"col-md-5"i><"col-md-7"p>>',
+
+
+        "ajax": {
+            url: "fetchallowances",
+            method: "POST",
+        },
+        "columnDefs": [{
+            "orderable": false,
+            "targets": [3]
+        }],
+    })
+
+    // Add allowance
+    $(document).on("submit", "#allowanceform", (event) => {
+        event.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "addallowance",
+            data: new FormData($("#allowanceform")[0]),
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                $("#allowanceModal").modal('hide');
+                Swal.fire({
+                    position: 'center',
+                    icon: response.status,
+                    title: response.message,
+                    showConfirmButton: false,
+                    timer: 2000 // 2 seconds
+                })
+
+                $("#allowanceform").trigger('reset');
+                allowanceDataTable.ajax.reload();
+            }
+        });
+    });
+
+
+    // Update
+    // STEP 1: Fetch allowance data and populate the update form
+    $(document).on('click', '#allowanceupdatebtn', function (event) {
+        event.preventDefault();
+        const id = $(this).val();
+
+        $.ajax({
+            method: 'POST',
+            url: 'fetchallowance',
+            data: { allowanceid: id },
+            success: function (response) {
+                $('#updateallowancename').val(response.allowance_name);
+                $('#updateallowanceamount').val(response.allowance_amount);
+                $('#allowanceid').val(id);
+                $('#updateallowanceModal').modal('show');
+            }
+        });
+    });
+
+    // STEP 2: Submit the updated allowance data
+    $(document).on('submit', '#updateallowanceform', function (event) {
+        event.preventDefault();
+
+        $.ajax({
+            method: 'POST',
+            url: 'updateallowance',
+            data: {
+                'allowancename': $("#updateallowancename").val(),
+                'allowanceamount': $("#updateallowanceamount").val(),
+                'allowanceid': $('#allowanceid').val(),
+            },
+            success: function (response) {
+                $('#updateallowanceModal').modal('hide');
+
+                Swal.fire({
+                    position: 'center',
+                    icon: response.status,
+                    title: response.message,
+                    showConfirmButton: false,
+                    timer: 2000 // 2 seconds
+                })
+
+                $('#updateallowanceModal').trigger('reset');
+                allowanceDataTable.ajax.reload();
+            }
+        });
+    });
+
+    // Delete
+    $(document).on('click', '#allowancedeletebtn', function (event) {
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                $.ajax({
+                    method: "POST",
+                    url: "deleteallowance",
+                    data: {
+                        allowanceid: allowanceid = $(this).val()
+                    },
+                    success: function (response) {
+
+                        Swal.fire({
+                            position: 'center',
+                            icon: response.status,
+                            title: response.message,
+                            showConfirmButton: false,
+                            timer: 2000 // 2 seconds
+                        })
+
+                        allowanceDataTable.ajax.reload();
+                    }
+                });
+            } else if (
+
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                Swal.fire(
+                    'Cancelled',
+                    'Allowance data is safe :)',
+                    'error'
+                )
+            }
+        });
+
+    });
+
+    // Branch Manager Validation
+    $("#allowanceform").validate({
+        rules: {
+            'allowancename': {
+                required: true
+            },
+            'allowanceamount': {
+                required: true
+            },
+        },
+        messages: {
+            'allowancename': {
+                required: 'Enter allowance type'
+            },
+            'allowanceamount': {
+                required: 'Enter allowance amount'
+            },
+        },
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Department
     let departmentDataTable = $("#departmentDataTable").DataTable({
         "processing": true,
@@ -780,7 +957,7 @@ $(document).ready(function () {
         },
         "columnDefs": [{
             "orderable": false,
-            "targets": [2]
+            "targets": [3]
         }],
     })
 
@@ -837,6 +1014,7 @@ $(document).ready(function () {
             url: 'updateloan',
             data: {
                 'loantype': $("#updateloantype").val(),
+                'loanamount': $("#updateloanamount").val(),
                 'loanid': $('#loanid').val(),
             },
             success: function (response) {
