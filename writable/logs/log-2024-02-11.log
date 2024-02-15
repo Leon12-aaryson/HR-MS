@@ -453,6 +453,9 @@ FROM `branch_manager_table`', [], false)
  5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
 
 ERROR - 2024-02-11 17:21:10 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
 Stack trace:
@@ -547,3 +550,4 @@ INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manag
  7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> 748d75954eee0ddbb858616c01fda174f4bdbc2f
