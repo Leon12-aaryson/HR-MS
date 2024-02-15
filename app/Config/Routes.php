@@ -51,6 +51,10 @@ $routes->get('create-attendance', 'Home::CreateAttendance');
 //The following route is not yet linked anywhere
 $routes->get('view-employee', 'Home::ViewEmployee');
 
+
+//The following routes are for employee's dashboard
+$routes->get('employee-dashboard', 'Home::employeeDashboard');
+
 // Working with employees
 $routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
 
@@ -138,8 +142,18 @@ $routes->get('home', 'Home::Dashboard');
 //inserting data into events table
 $routes->post('insertintoevents','Home::add_event');
 
-
 $routes->get('getevents','Home::fetchDataFromEventsTable');
+
+
+
+
+
+// ROUTES FOR HANDLING EMPLOYEE USER 
+  //returns the emp-dashboard view
+$routes->get('emp-dashboard','EmpHomeController::index');
+
+//returns the emp-attendance view
+$routes->get('emp-attendance','EmpHomeController::EmpAttendance');
 
 
 
