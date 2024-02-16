@@ -86,7 +86,7 @@
 
                             </div>
                             <div class="head">
-                            <h2><?= $leave_count ?></h2>
+                            <h2>500</h2>
                                 <p>Leaves</p>
                             </div>
 
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="head">
-                            <h2><?= $leave_count ?></h2>
+                            <h2>5</h2>
                                 <p>Loans</p>
                             </div>
 

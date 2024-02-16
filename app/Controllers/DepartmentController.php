@@ -3,36 +3,33 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\DepartmentModel;
+use App\Models\DesignationModel;
 
-class DepartmentController extends BaseController
+class DesignationController extends BaseController
 {
-    private $department;
+    private $designation;
     protected $db;
 
     public function __construct()
     {
         // Loading the database service via dependency injection
         $this->db = \Config\Database::connect();
-        $this->department = new DepartmentModel();
+        $this->designation = new DesignationModel();
     }
 
-    public function fetchdepartments()
+    public function fetchdesignations()
     {
-        // Select Department table 
-        $builder = $this->db->table('department_table');
+        // Select Designation table 
+        $builder = $this->db->table('designation_table');
 
-        $builder->select('department_table.*, branch_manager_table.branch');
-        $builder->join('branch_manager_table', 'department_table.branch = branch_manager_table.branch_manager_id', 'inner'); // Join with the "branch_manager_table" table
+        $builder->select('designation_table.*'); 
 
         // Handle search value
         $searchData = $this->request->getPost('search');
         if (isset($searchData['value']) && !empty($searchData['value'])) {
             $searchValue = $searchData['value'];
             $builder->groupStart()
-                ->like('branch', $searchValue)
-                ->orLike('department_name', $searchValue)
-                ->orLike('salary', $searchValue)
+                ->like('designation', $searchValue)
                 ->groupEnd();
         }
 
@@ -43,7 +40,7 @@ class DepartmentController extends BaseController
             $dir = $order[0]['dir'];
             $builder->orderBy($column, $dir);
         } else {
-            $builder->orderBy('department_id', 'DESC');
+            $builder->orderBy('designation_id', 'DESC');
         }
 
         // Handle pagination
@@ -66,22 +63,20 @@ class DepartmentController extends BaseController
 
             // Columns to be returned back in DataTable
             $sub_array = [
-                $row['department_id'],
-                $row['branch'],
-                $row['department_name'],
-                number_format(floatval($row['salary'])),
+                $row['designation_id'],
+                $row['designation'],
                 '<div class="dropdown">
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <button type="button" id="departmentupdatebtn" class="dropdown-item" value="' . $row['department_id'] . '">
+                                <button type="button" id="designationupdatebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
                                     <i class="bi bi-pencil" style="color:green"></i> Edit
                                 </button>
                             </li>
                             <li>
-                                <button type="button" id="departmentdeletebtn" class="dropdown-item" value="' . $row['department_id'] . '">
+                                <button type="button" id="designationdeletebtn" class="dropdown-item" value="' . $row['designation_id'] . '">
                                     <i class="bi bi-trash" style="color:red"></i> Delete
                                 </button>
                             </li>
@@ -100,81 +95,82 @@ class DepartmentController extends BaseController
         ];
 
         return $this->response->setJSON($output);
+    
     }
 
 
-    // Fetch Department
-    public function fetchdepartment()
+    // Fetch Designation
+    public function fetchdesignation()
     {
-        $id = $this->request->getPost('departmentid');
+        $id = $this->request->getPost('designationid');
 
-        $department = $this->department->find($id);
+        $designation = $this->designation->find($id);
 
-        if ($department) {
-            return $this->response->setJSON($department);
+        if ($designation) {
+            return $this->response->setJSON($designation);
         } else {
             // Prepare sweet alert response data
             $data = [
                 'status' => 'error',
-                'message' => 'Department not found'
+                'message' => 'Designation not found'
             ];
 
             return $this->response->setJSON($data);
         }
     }
 
-    // Add Department
-    public function adddepartment()
+    // Add Designation
+    public function adddesignation()
     {
-        // Prepare Department data
-        $departmentData = [
-            'branch' => $this->request->getPost('branchname'),
-            'department_name' => $this->request->getPost('departmentname'),
-            'salary' => $this->request->getPost('salary')
+        // Prepare Designation data
+        $branchData = [
+            'designation' => $this->request->getPost('designation')
         ];
 
-        // Insert the Department data into the database
-        $this->department->insert($departmentData);
+        // Insert the Designation data into the database
+        $this->designation->insert($branchData);
 
         // Prepare sweet alert response data
         $response = [
             'status' => 'success',
-            'message' => 'Department added successfully'
+            'message' => 'Designation added successfully'
         ];
 
         return $this->response->setJSON($response);
     }
 
-    // Update Department
-    public function updatedepartment()
+    // Update Designation
+    public function updatedesignation()
     {
-        $id = $this->request->getPost('departmentid');
+
+        $id = $this->request->getPost('designationid');
+
         $data = [
-            'branch' => $this->request->getPost('branchname'),
-            'department_name' => $this->request->getPost('departmentname'),
-            'salary' => $this->request->getPost('salary')
+            'designation' => $this->request->getPost('designation'),
         ];
 
-        $this->department->update($id, $data);
+        $this->designation->update($id, $data);
 
         $data = [
             'status' => 'success',
-            'message' => 'Department updated successfully'
+            'message' => 'Designation updated successfully'
         ];
         return $this->response->setJSON($data);
     }
 
-    // Delete Department
-    public function deletedepartment()
+    // Delete Designation
+    public function deletedesignation()
     {
         $data = [
-            'id' => $this->request->getPost('departmentid'),
+            'id' => $this->request->getPost('designationid'),
         ];
-        $this->department->delete($data);
+        $this->designation->delete($data);
         $data = [
             'status' => 'success',
-            'message' => 'Department deleted successfully'
+            'message' => 'Designation deleted successfully'
         ];
         return $this->response->setJSON($data);
     }
+
+
 }

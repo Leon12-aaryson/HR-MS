@@ -159,6 +159,34 @@ $(document).ready(function () {
 
     })
 
+    //displinary
+    let disciplinaryTable = $("#disciplinaryTable").DataTable({
+        "processing": true,
+        "serverSide": true,
+        "stateSave": false,
+        "order": [],
+        "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+            '<"row"<"col-md-12"t>>' +
+            '<"row"<"col-md-5"i><"col-md-7"p>>',
+        "ajax": {
+            url: "fetchDisplinary",
+            method: "POST",
+            error: function(xhr, error, thrown) {
+                console.log("XHR:", xhr);
+                console.log("Error:", error);
+                console.log("Thrown:", thrown);
+            }
+        },
+        "columnDefs": [{
+            "orderable": false,
+            "targets": [5] // Assuming Action column is at index 5
+        }],
+        "initComplete": function(settings, json) {
+            console.log("Data Tables Init Complete:", json);
+        }
+    });
+    
+
 
     // Department
     let departmentDataTable = $("#departmentDataTable").DataTable({

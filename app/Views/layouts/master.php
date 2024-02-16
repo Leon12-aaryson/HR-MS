@@ -12,8 +12,7 @@
     <link href='public/assets/bootstrap-icons/bootstrap-icons.css' rel='stylesheet'>
     <link href='public/assets/boxicons/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="public/assets/css/style.css">
-
-    <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
+    <link rel="stylesheet" href="public/assets/sweetalert/css/sweetalert.min.css">
 
     <!--========= Style switcher========= -->
     <link rel="stylesheet" href="public/assets/css/skin/color-3.css">
@@ -107,7 +106,6 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
                 <ul class="sub-menu">
                     <li class="no-list"><a href="#" class="link_name">Approval</a></li>
-                    <li><a href="<?= base_url('manage-grievance'); ?>">Answer grievance</a></li>
                     <li><a href="<?= base_url('manage-loan'); ?>">Loan Approval</a></li>
                     <li><a href="<?= base_url('manage-leave'); ?>">Manage Leave</a></li>
                 </ul>
@@ -138,7 +136,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </ul>
             </li>
             <li>
-                <a href="#">
+                <a href="<?= base_url('disciplinary'); ?>">
                     <i class='bx bx-user-x'></i>
                     <span class="link_name">Disciplinary</span>
                 </a>
@@ -148,7 +146,7 @@ s0.parentNode.insertBefore(s1,s0);
             </li>
 
             <li>
-                <a href="<?= base_url('branch-master'); ?>">
+                <a href="<?= base_url('department'); ?>">
                     <i class='bx bx-cog'></i>
                     <span class="link_name">HR system setup</span>
                 </a>
@@ -191,7 +189,7 @@ s0.parentNode.insertBefore(s1,s0);
                             <ul class="notification_ul">
                                 <li class="starbucks success">
                                     <div class="notify_icon">
-                                        <span class="icon"></span>
+                                        
                                     </div>
                         </div>
 

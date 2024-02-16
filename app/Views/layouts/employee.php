@@ -50,15 +50,6 @@
                 </ul>
             </li>
             <li>
-                <a href="./grievence.html">
-                    <i class='bx bx-user-voice icon'></i>
-                    <span class="link_name">Grievence </span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li class="no-list"><a href="./grievence.html" class="link_name">Grievence</a></li>
-                </ul>
-            </li>
-            <li>
                 <a href="./leave.html">
                     <i class='bx bx-walk icon'></i>
                     <span class="link_name">Leave</span>

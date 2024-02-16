@@ -22,7 +22,6 @@
                         <th>Employee_ID</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Branch</th>
                         <th>Department</th>
                         <th>Designation</th>
                         <th>Date of joining</th>
@@ -34,7 +33,7 @@
                         <td>Emp_0000001</td>
                         <td>Ssewankambo Derick</td>
                         <td>ssewankamboderick@gmail.com</td>
-                        <td>Main Branch</td>
+
                         <td>IT Dept</td>
                         <td>Software Engineer</td>
                         <td>9/6/2023</td>
