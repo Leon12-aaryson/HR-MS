@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2024-02-13 10:28:16 --> Undefined variable $leave_count
 in APPPATH\Views\index.php on line 89.
  1 APPPATH\Views\index.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $leave_count', 'D:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 89)
@@ -141,3 +142,489 @@ in APPPATH\Views\emp-dashboard.php on line 68.
  7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2024-02-13 08:18:32 --> Undefined variable $results
+in APPPATH\Views\update-employee.php on line 147.
+ 1 APPPATH\Views\update-employee.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 147)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(249): view('update-employee')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 08:26:35 --> mysqli_sql_exception: Unknown column 'employee_table.id' in 'where clause' in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '72')
+#6 C:\xampp\htdocs\HR-MS\app\Controllers\Employees.php(251): CodeIgniter\BaseModel->find('72')
+#7 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+#8 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+#9 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-13 08:26:35 --> Unknown column 'employee_table.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`id` = \'72\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`id` = \'72\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`id` = \'72\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`id` = :employee_table.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '72')
+ 7 APPPATH\Controllers\Employees.php(251): CodeIgniter\BaseModel->find('72')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:36:11 --> Undefined variable $employee
+in APPPATH\Views\update-employee.php on line 3.
+ 1 APPPATH\Views\update-employee.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $employee', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(255): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:39:38 --> Undefined variable $employee
+in APPPATH\Views\update-employee.php on line 3.
+ 1 APPPATH\Views\update-employee.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $employee', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(255): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:39:50 --> Undefined variable $data
+in APPPATH\Views\update-employee.php on line 3.
+ 1 APPPATH\Views\update-employee.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(255): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:41:39 --> compact(): Undefined variable $72
+in APPPATH\Controllers\Employees.php on line 255.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $72', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\Employees.php', 255)
+ 2 APPPATH\Controllers\Employees.php(255): compact([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:42:36 --> compact(): Undefined variable $72
+in APPPATH\Controllers\Employees.php on line 255.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $72', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\Employees.php', 255)
+ 2 APPPATH\Controllers\Employees.php(255): compact([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:43:07 --> Undefined variable $data
+in APPPATH\Views\update-employee.php on line 3.
+ 1 APPPATH\Views\update-employee.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [...], true)
+ 5 APPPATH\Controllers\Employees.php(255): view('update-employee', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:43:32 --> Undefined variable $results
+in APPPATH\Views\update-employee.php on line 148.
+ 1 APPPATH\Views\update-employee.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 148)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [...], true)
+ 5 APPPATH\Controllers\Employees.php(255): view('update-employee', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 08:47:03 --> mysqli_sql_exception: Table 'hrmsdb.payment_table' doesn't exist in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\xampp\htdocs\HR-MS\app\Controllers\Employees.php(230): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...')
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-13 08:47:03 --> Table 'hrmsdb.payment_table' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT DISTINCT payment_type FROM payment_table', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT payment_type FROM payment_table')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT payment_type FROM payment_table')
+ 4 APPPATH\Controllers\Employees.php(230): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT payment_type FROM payment_table')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 08:48:00 --> Undefined array key "payement"
+in APPPATH\Views\update-employee.php on line 188.
+ 1 APPPATH\Views\update-employee.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payement"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 188)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:07:01 --> Undefined array key "address""
+in APPPATH\Views\update-employee.php on line 82.
+ 1 APPPATH\Views\update-employee.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "address""', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 82)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:10:25 --> Call to undefined function pretify()
+in APPPATH\Views\update-employee.php on line 5.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 4 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:43:48 --> Undefined array key "branch""
+in APPPATH\Views\update-employee.php on line 129.
+ 1 APPPATH\Views\update-employee.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "branch""', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 129)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:50:39 --> Undefined array key "department_name"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department_name"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:51:52 --> Undefined array key "department"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:53:16 --> Undefined array key "department_name"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department_name"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:53:46 --> Undefined array key "department"
+in APPPATH\Views\update-employee.php on line 173.
+ 1 APPPATH\Views\update-employee.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:54:01 --> Undefined array key "department"
+in APPPATH\Views\update-employee.php on line 173.
+ 1 APPPATH\Views\update-employee.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:54:15 --> Undefined array key "department_name"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department_name"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:54:29 --> Undefined array key "department"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 09:57:14 --> Undefined array key "department"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('71')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 10:01:47 --> Undefined array key "department_name"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department_name"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('60')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 10:03:07 --> Undefined array key "department_id"
+in APPPATH\Views\update-employee.php on line 170.
+ 1 APPPATH\Views\update-employee.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department_id"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 170)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('60')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 10:04:08 --> Undefined array key "department"
+in APPPATH\Views\update-employee.php on line 169.
+ 1 APPPATH\Views\update-employee.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('60')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 10:12:06 --> Undefined array key "payment_type"
+in APPPATH\Views\update-employee.php on line 214.
+ 1 APPPATH\Views\update-employee.php(214): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_type"', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php', 214)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\update-employee.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('update-employee', [], true)
+ 5 APPPATH\Controllers\Employees.php(252): view('update-employee', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->edit('72')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 11:30:06 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\HR-MS\\vendor\\codeigniter4\\framework\\system\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`employee_id` IN :employee_table.employee_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`employee_id` IN :employee_table.employee_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [...])
+ 9 APPPATH\Controllers\Employees.php(275): CodeIgniter\BaseModel->find([...])
+10 APPPATH\Controllers\Employees.php(304): App\Controllers\Employees->update([...], [...])
+11 APPPATH\Controllers\Employees.php(304): App\Controllers\Employees->update([...], [...])
+12 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->update('73')
+13 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+14 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 11:31:29 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\HR-MS\\vendor\\codeigniter4\\framework\\system\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`employee_id` IN :employee_table.employee_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee_table`
+WHERE `employee_table`.`employee_id` IN :employee_table.employee_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [...])
+ 9 APPPATH\Controllers\Employees.php(275): CodeIgniter\BaseModel->find([...])
+10 APPPATH\Controllers\Employees.php(303): App\Controllers\Employees->update([...], [...])
+11 APPPATH\Controllers\Employees.php(303): App\Controllers\Employees->update([...], [...])
+12 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->update('73')
+13 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+14 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-13 11:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-13 11:56:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`hrmsdb`.`employee_table`, CONSTRAINT `branch_fk` FOREIGN KEY (`branch`) REFERENCES `branch_manager_table` (`branch_manager_id`) ON DELETE SET NULL ON UPDATE CASCADE) in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\HR-MS\app\Controllers\Employees.php(208): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Employees->create()
+#9 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+#10 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-13 11:56:45 --> Cannot add or update a child row: a foreign key constraint fails (`hrmsdb`.`employee_table`, CONSTRAINT `branch_fk` FOREIGN KEY (`branch`) REFERENCES `branch_manager_table` (`branch_manager_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `hire_date`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (\'Audra\', \'Armstrong\', \'1982-09-24\', \'M\', \'350\', \'gagitec@mailinator.com\', \'Pa$$w0rd!\', \'Reiciendis irure aut\', \'1\', \'Wakiso\', \'Teacher\', \'Cash\', \'Adhesion\', \'cleanig\', \'1\', \'2021-03-04\', \'Phoebe Riley\', \'Elton Kennedy\', \'Quas tempora occaeca\', \'969\', \'Dolore impedit aute\', \'Ex cum rerum quia pa\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `hire_date`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (\'Audra\', \'Armstrong\', \'1982-09-24\', \'M\', \'350\', \'gagitec@mailinator.com\', \'Pa$$w0rd!\', \'Reiciendis irure aut\', \'1\', \'Wakiso\', \'Teacher\', \'Cash\', \'Adhesion\', \'cleanig\', \'1\', \'2021-03-04\', \'Phoebe Riley\', \'Elton Kennedy\', \'Quas tempora occaeca\', \'969\', \'Dolore impedit aute\', \'Ex cum rerum quia pa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `hire_date`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (\'Audra\', \'Armstrong\', \'1982-09-24\', \'M\', \'350\', \'gagitec@mailinator.com\', \'Pa$$w0rd!\', \'Reiciendis irure aut\', \'1\', \'Wakiso\', \'Teacher\', \'Cash\', \'Adhesion\', \'cleanig\', \'1\', \'2021-03-04\', \'Phoebe Riley\', \'Elton Kennedy\', \'Quas tempora occaeca\', \'969\', \'Dolore impedit aute\', \'Ex cum rerum quia pa\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `hire_date`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (:first_name:, :last_name:, :date_of_birth:, :gender:, :contact_number:, :email:, :password:, :address:, :department:, :branch:, :designation:, :payement_type:, :contract_type:, :job_type:, :position:, :hire_date:, :bank_name:, :account_holder_name:, :bank_branch:, :account_number:, :bank_identifier_code:, :tax_payer_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Employees.php(208): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Employees->create()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employees))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-13 12:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 12:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-13 12:44:17 --> mysqli_sql_exception: Table 'hrmsdb.events_table' doesn't exist in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ev...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ev...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ev...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ev...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\HR-MS\app\Controllers\Home.php(231): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->add_event()
+#9 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-13 12:44:17 --> Table 'hrmsdb.events_table' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (\'\', \'\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (\'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (\'\', \'\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (:event_name:, :start_date:, :end_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(231): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->add_event()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 17:42:05 --> mysqli_sql_exception: Table 'hrmsdb.events_table' doesn't exist in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ev...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ev...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ev...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ev...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\HR-MS\app\Controllers\Home.php(231): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->add_event()
+#9 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-13 17:42:05 --> Table 'hrmsdb.events_table' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (\'\', \'\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (\'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (\'\', \'\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `events_table` (`event_name`, `start_date`, `end_date`) VALUES (:event_name:, :start_date:, :end_date:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(231): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->add_event()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-13 17:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 17:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 17:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> cyber

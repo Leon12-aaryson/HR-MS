@@ -3,33 +3,34 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\LoanModel;
+use App\Models\AllowancesModel;
 
-class LoanController extends BaseController
+class AllowanceController extends BaseController
 {
-    private $loan;
+    private $allowance;
     protected $db;
 
     public function __construct()
     {
         // Loading the database service via dependency injection
         $this->db = \Config\Database::connect();
-        $this->loan = new LoanModel();
+        $this->allowance = new AllowancesModel();
     }
 
-    public function fetchloans()
+    public function fetchallowances()
     {
-        // Select Loan table 
-        $builder = $this->db->table('loan_table');
+        // Select Allowance 
+        $builder = $this->db->table('allowance_table');
 
-        $builder->select('loan_table.*');
+        $builder->select('allowance_table.*');
 
         // Handle search value
         $searchData = $this->request->getPost('search');
         if (isset($searchData['value']) && !empty($searchData['value'])) {
             $searchValue = $searchData['value'];
             $builder->groupStart()
-                ->like('loan_type', $searchValue)
+                ->like('allowance_name', $searchValue)
+                ->like('allowance_amount', $searchValue)
                 ->groupEnd();
         }
 
@@ -40,7 +41,7 @@ class LoanController extends BaseController
             $dir = $order[0]['dir'];
             $builder->orderBy($column, $dir);
         } else {
-            $builder->orderBy('loan_id', 'DESC');
+            $builder->orderBy('allowance_id', 'DESC');
         }
 
         // Handle pagination
@@ -63,21 +64,21 @@ class LoanController extends BaseController
 
             // Columns to be returned back in DataTable
             $sub_array = [
-                $row['loan_id'],
-                $row['loan_type'],
-                $row['loan_amount'],
+                $row['allowance_id'],
+                $row['allowance_name'],
+                $row['allowance_amount'],
                 '<div class="dropdown">
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
                     </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <button type="button" id="loanupdatebtn" class="dropdown-item" value="' . $row['loan_id'] . '">
+                                <button type="button" id="allowanceupdatebtn" class="dropdown-item" value="' . $row['allowance_id'] . '">
                                     <i class="bi bi-pencil" style="color:green"></i> Edit
                                 </button>
                             </li>
                             <li>
-                                <button type="button" id="loandeletebtn" class="dropdown-item" value="' . $row['loan_id'] . '">
+                                <button type="button" id="allowancedeletebtn" class="dropdown-item" value="' . $row['allowance_id'] . '">
                                     <i class="bi bi-trash" style="color:red"></i> Delete
                                 </button>
                             </li>
@@ -99,80 +100,79 @@ class LoanController extends BaseController
     }
 
 
-    // Fetch Loan
-    public function fetchloan()
+    // Fetch Allowance
+    public function fetchallowance()
     {
-        $id = $this->request->getPost('loanid');
+        $id = $this->request->getPost('allowanceid');
 
-        $loan = $this->loan->find($id);
+        $allowancetype = $this->allowance->find($id);
 
-        if ($loan) {
-            return $this->response->setJSON($loan);
+        if ($allowancetype) {
+            return $this->response->setJSON($allowancetype);
         } else {
             // Prepare sweet alert response data
             $data = [
                 'status' => 'error',
-                'message' => 'Loan not found'
+                'message' => 'Allowance not found'
             ];
 
             return $this->response->setJSON($data);
         }
     }
 
-    // Add Loan
-    public function addloan()
+    // Add Allowance
+    public function addallowance()
     {
 
-        // Prepare Loan data
-        $loanData = [
-            'loan_type' => $this->request->getPost('loantype'),
-            'loan_amount' => $this->request->getPost('loanamount')
+        // Prepare allowance data
+        $allowancetypeData = [
+            'allowance_name' => $this->request->getPost('allowancename'),
+            'allowance_amount' => $this->request->getPost('allowanceamount'),
         ];
 
-        // Insert the Loan data into the database
-        $this->loan->insert($loanData);
+        // Insert the  allowance data into the database
+        $this->allowance->insert($allowancetypeData);
 
         // Prepare sweet alert response data
         $response = [
             'status' => 'success',
-            'message' => 'Loan added successfully'
+            'message' => 'Allowance added successfully'
         ];
 
         return $this->response->setJSON($response);
     }
 
-    // Update Loan
-    public function updateloan()
+    // Update Allowance
+    public function updateallowance()
     {
 
-        $id = $this->request->getPost('loanid');
+        $id = $this->request->getPost('allowanceid');
 
         $data = [
-            'loan_type' => $this->request->getPost('loantype'),
-            'loan_amount' => $this->request->getPost('loanamount'),
+            'allowance_name' => $this->request->getPost('allowancename'),
+            'allowance_amount' => $this->request->getPost('allowanceamount'),
         ];
 
-        $this->loan->update($id, $data);
+        $this->allowance->update($id, $data);
 
         $data = [
             'status' => 'success',
-            'message' => 'Loan updated successfully'
+            'message' => 'Allowance updated successfully'
         ];
         return $this->response->setJSON($data);
     }
 
-    // Delete Loan
-    public function deleteloan()
+    // Delete Allowance
+    public function deleteallowance()
     {
         $data = [
-            'id' => $this->request->getPost('loanid'),
+            'id' => $this->request->getPost('allowanceid'),
         ];
-        $this->loan->delete($data);
+        $this->allowance->delete($data);
         $data = [
             'status' => 'success',
-            'message' => 'Loan deleted successfully'
+            'message' => 'Allowance deleted successfully'
         ];
         return $this->response->setJSON($data);
     }
-    
 }

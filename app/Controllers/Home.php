@@ -25,6 +25,7 @@ class Home extends BaseController
         return view('index');
     }
 
+<<<<<<< HEAD
     
     public function CreateEmployee()
     {
@@ -67,6 +68,8 @@ class Home extends BaseController
     {
         return view("employee");
     }
+=======
+>>>>>>> cyber
 
     public function Department()
     {
@@ -120,6 +123,17 @@ class Home extends BaseController
             'link' => 'Add payement method'
         ];
         return view('payement', $data);
+    }
+
+    public function Allowances()
+    {
+        $data = [
+            'active' => 'active-list',
+            'page_title' => "Allowances",
+            'head' => 'Manage Allowances',
+            'link' => 'Add allowance'
+        ];
+        return view('allowances', $data);
     }
 
     public function Designation()

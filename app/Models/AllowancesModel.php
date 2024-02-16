@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class LoanModel extends Model
+class AllowancesModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'loan_table';
-    protected $primaryKey       = 'loan_id';
+    protected $table            = 'allowance_table';
+    protected $primaryKey       = 'allowance_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['loan_type','loan_amount'];
+    protected $allowedFields    = ['allowance_name','allowance_amount'];
 
     // Dates
     protected $useTimestamps = false;
