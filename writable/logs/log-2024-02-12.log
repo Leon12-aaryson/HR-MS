@@ -1,0 +1,234 @@
+ERROR - 2024-02-12 06:35:43 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\app\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#7 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-12 06:35:44 --> Unknown column 'department_table.branch' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', [], false)
+ 5 APPPATH\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-12 06:35:48 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\app\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#7 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-12 06:35:48 --> Unknown column 'department_table.branch' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', [], false)
+ 5 APPPATH\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-12 06:38:14 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`hrmsdb`.`employee_table`, CONSTRAINT `position_fk` FOREIGN KEY (`position`) REFERENCES `position_table` (`position_id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\HR-MS\app\Controllers\EmployeeDataInsert.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeDataInsert->index()
+#9 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeDataInsert))
+#10 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-12 06:38:14 --> Cannot add or update a child row: a foreign key constraint fails (`hrmsdb`.`employee_table`, CONSTRAINT `position_fk` FOREIGN KEY (`position`) REFERENCES `position_table` (`position_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (\'Henry\', \'Briggs\', \'1984-11-05\', \'Female\', \'913\', \'visixybihe@mailinator.com\', \'Pa$$w0rd!\', \'Necessitatibus magna\', \'1\', \'Entebbe\', \'supervisor\', \'Cash\', \'Adhesion\', \'software engineering\', \'\', \'Hakeem Drake\', \'Freya Mejia\', \'Asperiores illo occa\', \'131\', \'Non atque magni et d\', \'Ab Nam sit assumenda\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (\'Henry\', \'Briggs\', \'1984-11-05\', \'Female\', \'913\', \'visixybihe@mailinator.com\', \'Pa$$w0rd!\', \'Necessitatibus magna\', \'1\', \'Entebbe\', \'supervisor\', \'Cash\', \'Adhesion\', \'software engineering\', \'\', \'Hakeem Drake\', \'Freya Mejia\', \'Asperiores illo occa\', \'131\', \'Non atque magni et d\', \'Ab Nam sit assumenda\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (\'Henry\', \'Briggs\', \'1984-11-05\', \'Female\', \'913\', \'visixybihe@mailinator.com\', \'Pa$$w0rd!\', \'Necessitatibus magna\', \'1\', \'Entebbe\', \'supervisor\', \'Cash\', \'Adhesion\', \'software engineering\', \'\', \'Hakeem Drake\', \'Freya Mejia\', \'Asperiores illo occa\', \'131\', \'Non atque magni et d\', \'Ab Nam sit assumenda\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employee_table` (`first_name`, `last_name`, `date_of_birth`, `gender`, `contact_number`, `email`, `password`, `address`, `department`, `branch`, `designation`, `payement_type`, `contract_type`, `job_type`, `position`, `bank_name`, `account_holder_name`, `bank_branch`, `account_number`, `bank_identifier_code`, `tax_payer_id`) VALUES (:first_name:, :last_name:, :date_of_birth:, :gender:, :contact_number:, :email:, :password:, :address:, :department:, :branch:, :designation:, :payement_type:, :contract_type:, :job_type:, :position:, :bank_name:, :account_holder_name:, :bank_branch:, :account_number:, :bank_identifier_code:, :tax_payer_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\EmployeeDataInsert.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmployeeDataInsert->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeDataInsert))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 18:52:00 --> Invalid file: "layouts/empmaster.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/empmaster.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/empmaster', [], true)
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('emp-dashboard', [], true)
+ 4 APPPATH\Controllers\EmpHomeController.php(11): view('emp-dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:01:22 --> Attempt to read property "password" on array
+in APPPATH\Controllers\EmpHomeController.php on line 36.
+ 1 APPPATH\Controllers\EmpHomeController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\EmpHomeController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:04:16 --> Attempt to read property "password" on array
+in APPPATH\Controllers\EmpHomeController.php on line 36.
+ 1 APPPATH\Controllers\EmpHomeController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\EmpHomeController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:06:06 --> Array to string conversion
+in APPPATH\Controllers\EmpHomeController.php on line 36.
+ 1 APPPATH\Controllers\EmpHomeController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\EmpHomeController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:07:03 --> Array to string conversion
+in APPPATH\Controllers\EmpHomeController.php on line 36.
+ 1 APPPATH\Controllers\EmpHomeController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\EmpHomeController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:17:24 --> Object of class CodeIgniter\Database\MySQLi\Connection could not be converted to string
+in APPPATH\Controllers\EmpHomeController.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:21:54 --> Attempt to read property "password" on string
+in APPPATH\Controllers\EmpHomeController.php on line 48.
+ 1 APPPATH\Controllers\EmpHomeController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on string', 'C:\\xampp\\htdocs\\HR-MS\\app\\Controllers\\EmpHomeController.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:26:03 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\EmpHomeController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-12 21:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 21:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 21:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 21:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-12 21:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-12 21:35:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''@adminnorman_123' at line 1 in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM e...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM e...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM e...')
+#3 C:\xampp\htdocs\HR-MS\app\Controllers\EmpHomeController.php(56): CodeIgniter\Database\BaseConnection->query('SELECT * FROM e...')
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-12 21:35:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''@adminnorman_123' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM employee_table WHERE email = \'admin@gmail.com\' AND password = \'@adminnorman_123', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM employee_table WHERE email = \'admin@gmail.com\' AND password = \'@adminnorman_123')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM employee_table WHERE email = \'admin@gmail.com\' AND password = \'@adminnorman_123')
+ 4 APPPATH\Controllers\EmpHomeController.php(56): CodeIgniter\Database\BaseConnection->query('SELECT * FROM employee_table WHERE email = \'admin@gmail.com\' AND password = \'@adminnorman_123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-12 21:36:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''Pa$$w0rd!' at line 1 in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM e...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM e...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM e...')
+#3 C:\xampp\htdocs\HR-MS\app\Controllers\EmpHomeController.php(56): CodeIgniter\Database\BaseConnection->query('SELECT * FROM e...')
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-12 21:36:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''Pa$$w0rd!' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!')
+ 4 APPPATH\Controllers\EmpHomeController.php(56): CodeIgniter\Database\BaseConnection->query('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-12 21:37:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''Pa$$w0rd!' at line 1 in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM e...', 0)
+#1 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM e...')
+#2 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM e...')
+#3 C:\xampp\htdocs\HR-MS\app\Controllers\EmpHomeController.php(56): CodeIgniter\Database\BaseConnection->query('SELECT * FROM e...')
+#4 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+#5 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+#6 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-12 21:37:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''Pa$$w0rd!' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!')
+ 4 APPPATH\Controllers\EmpHomeController.php(56): CodeIgniter\Database\BaseConnection->query('SELECT * FROM employee_table WHERE email = \'povin@mailinator.com\' AND password = \'Pa$$w0rd!')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:42:34 --> Call to undefined method stdClass::getNumRows()
+in APPPATH\Controllers\EmpHomeController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:43:57 --> Call to undefined method stdClass::getNumRows()
+in APPPATH\Controllers\EmpHomeController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-12 21:45:21 --> Call to undefined method stdClass::get_num_rows()
+in APPPATH\Controllers\EmpHomeController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmpHomeController->HandleLoginCredentials()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpHomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -154,8 +154,39 @@ $routes->get('home', 'Home::Dashboard');
 //inserting data into events table
 $routes->post('insertintoevents','Home::add_event');
 
-
 $routes->get('getevents','Home::fetchDataFromEventsTable');
+
+
+
+
+
+// ROUTES FOR HANDLING EMPLOYEE USER 
+  //returns the emp-dashboard view
+$routes->get('emp-dashboard','EmpHomeController::index');
+
+//returns the emp-attendance view
+$routes->get('emp-attendance','EmpHomeController::EmpAttendance');
+
+//returns the emp-login view
+$routes->get('emp-login','EmpHomeController::EmpLogin');
+
+//returns the emp-loan view
+$routes->get('emp-loan','EmpHomeController::empLoan');
+
+//returns the emp-leave view
+$routes->get('emp-leave','EmpHomeController::empLeave');
+
+
+//route for login details
+$routes->post('sendlogindetails','EmpHomeController::HandleLoginCredentials');
+
+//route for inserting login time into the database
+$routes->post('insertintoattendance','EmpHomeController::insertTime');
+
+
+
+
+
 
 
 
