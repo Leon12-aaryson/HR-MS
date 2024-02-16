@@ -1,7 +1,7 @@
 <?= $this->extend('layouts/master') ?>
 <?= $this->section('body-contents') ?>
 
-<?php $branches = fetch_table('branch_manager_table') ?>
+<?php //$// = fetch_table('branch_manager_table') ?>
 
 <!-- html for main part starts here -->
 <main>
@@ -25,9 +25,7 @@
                         <thead>
                             <tr>
                                 <th>S.N</th>
-                                <th>Branch</th>
                                 <th>Department</th>
-                                <th>Salary</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -51,29 +49,14 @@
             <form action="" method="POST" id="departmentform">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="branchname" class="form-label text-primary">Branch</label>
-                                <select class="form-select form-select-md" name="branchname" id="branchname">
-                                    <option value="">Select Branch</option>
-                                    <?php foreach ($branches as $branch) : ?>
-                                        <option value="<?=$branch['branch_manager_id']?>"><?=$branch['branch']?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="departmentname" class="form-label text-primary">Department</label>
                                 <input type="text" class="form-control" id="departmentname" name="departmentname">
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="salary" class="form-label text-primary">Salary</label>
-                                <input type="text" class="form-control" id="salary" name="salary">
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </div>
@@ -97,29 +80,14 @@
                 <div class="modal-body">
 
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="updatebranchname" class="form-label text-primary">Branch</label>
-                                <select class="form-select form-select-md" name="updatebranchname" id="updatebranchname">
-                                    <option selected>Select Branch</option>
-                                    <?php foreach ($branches as $branch) : ?>
-                                        <option value="<?=$branch['branch_manager_id']?>"><?=$branch['branch']?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
-                        </div>
+                       
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="updatedepartmentname" class="form-label text-primary">Department</label>
                                 <input type="text" class="form-control" id="updatedepartmentname" name="updatedepartmentname">
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="updatesalary" class="form-label text-primary">updateSalary</label>
-                                <input type="number" class="form-control" id="updatesalary" name="updatesalary">
-                            </div>
-                        </div>
+                       
                     </div>
 
                 </div>

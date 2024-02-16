@@ -158,15 +158,7 @@
                     <!-- <form action="#"> -->
                         
                         <div class="row g-3 mb-3">
-                            <div class="col">
-                                <label for="branch">Select Branch<span>*</span></label>
-                                <select class=" form-select form-select-sm" name="branch" id="managepayrollyear">
-                                   <option value="">Select Branch</option>
-                                   <?php foreach ($results['branch'] as $result) : ?>
-                                   <option value="<?= $result['branch'] ?>"><?= $result['branch'] ?></option>
-                                   <?php endforeach ?>
-                                </select>
-                            </div>
+                          
                             <div class="col">
                                 <label for="Department">Select Department<span>*</span></label>
                                 <select class="form-select form-select-sm" aria-label="Default select example" name="department" id="department">

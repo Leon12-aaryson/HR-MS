@@ -17,6 +17,9 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+$routes->setAutoRoute(true);
+
+$routes->get("genete-pdf", "Student::generatePdf");
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -50,7 +53,10 @@ $routes->get('create-payroll', 'Home::CreatePayroll');
 $routes->get('create-attendance', 'Home::CreateAttendance');
 //The following route is not yet linked anywhere
 $routes->get('view-employee', 'Home::ViewEmployee');
-
+//Route for displinary module
+$routes->get('displinary','Disciplinary::index');
+$routes->post('insert_disciplinary', 'Disciplinary::Insert_displinary');
+$routes->post('fetchDisplinary', 'Disciplinary::fetchDisplinary');
 
 //The following routes are for employee's dashboard
 $routes->get('employee-dashboard', 'Home::employeeDashboard');
@@ -134,6 +140,12 @@ $routes->post('fetchmanagepayroll', 'ManagepayrollController::fetchmanagepayroll
 
 //insert data in employee table
 $routes->post('insertintoemployee', 'EmployeeDataInsert::index');
+
+//insert data into payroll table
+$routes->post('insert_in_to_payroll', 'PayrollDataInsertController::index');
+// $routes->get('update_payroll/' . $row['payroll_id'] . '', 'PayrollDataInsertController::update');
+// $routes->match(['get','post'], 'insert_in_to_payroll','PayrollDataInsertController::index');
+
 
 //fetching department on dashboard
 // $routes->get('countdepartment', 'DashboardController::department');

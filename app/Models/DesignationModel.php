@@ -13,7 +13,7 @@ class DesignationModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['designation'];
+    protected $allowedFields    = ['designation','salary'];
 
     // Dates
     protected $useTimestamps = false;
