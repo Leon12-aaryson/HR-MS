@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR-MS</title>
 
-    <link rel="stylesheet" href="public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css">
-    <link href='public/assets/datatables/datatables.min.css' rel='stylesheet'>
-    <link href='public/assets/datatables/responsive.bootstrap5.min.css' rel='stylesheet'>
-    <link href='public/assets/bootstrap-icons/bootstrap-icons.css' rel='stylesheet'>
-    <link href='public/assets/boxicons/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="public/assets/css/style.css">
+    <?=link_tag("public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css")?>
+    <?=link_tag("public/assets/datatables/datatables.min.css")?>
+    <?=link_tag("public/assets/datatables/responsive.bootstrap5.min.css")?>
+    <?=link_tag("public/assets/bootstrap-icons/bootstrap-icons.css")?>
+    <?=link_tag("public/assets/boxicons/css/boxicons.min.css")?>
+    <?=link_tag("public/assets/css/style.css")?>
 
     <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
 

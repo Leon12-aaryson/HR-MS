@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2024 at 07:27 AM
+-- Generation Time: Feb 15, 2024 at 07:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -71,10 +71,44 @@ CREATE TABLE `allowance_table` (
 CREATE TABLE `attendance_table` (
   `attendance_id` int(11) NOT NULL,
   `employee_id` int(11) DEFAULT NULL,
-  `date` date NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp(),
   `clock_in_time` time NOT NULL DEFAULT current_timestamp(),
-  `clock_out_time` time DEFAULT NULL
+  `clock_out_time` time DEFAULT NULL,
+  `status` varchar(200) NOT NULL DEFAULT 'OFFLINE'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `attendance_table`
+--
+
+INSERT INTO `attendance_table` (`attendance_id`, `employee_id`, `date`, `clock_in_time`, `clock_out_time`, `status`) VALUES
+(3, 28, '0000-00-00', '21:43:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(4, 28, '0000-00-00', '21:46:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(5, 28, '0000-00-00', '23:15:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(6, NULL, '0000-00-00', '23:15:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(7, NULL, '2024-02-13', '23:21:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(8, NULL, '2024-02-13', '23:23:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(9, NULL, '2024-02-13', '23:23:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(10, 28, '2024-02-13', '23:35:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(11, 28, '2024-02-13', '23:41:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(12, 28, '2024-02-13', '23:44:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(13, 32, '2024-02-14', '09:24:00', NULL, '\"ONLINE\",\"OFFLINE\"'),
+(14, 35, '2024-02-14', '09:41:00', NULL, 'OFFLINE'),
+(15, 35, '2024-02-14', '10:44:00', NULL, 'OFFLINE'),
+(16, 35, '2024-02-14', '10:54:00', NULL, 'OFFLINE'),
+(17, 38, '2024-02-14', '11:17:00', NULL, 'OFFLINE'),
+(18, 38, '2024-02-14', '12:35:00', NULL, 'OFFLINE'),
+(19, 38, '2024-02-14', '12:49:00', NULL, 'OFFLINE'),
+(20, 38, '2024-02-14', '12:54:00', NULL, 'OFFLINE'),
+(21, 38, '2024-02-14', '12:57:00', NULL, 'OFFLINE'),
+(22, NULL, '2024-02-14', '12:57:00', NULL, 'OFFLINE'),
+(23, 38, '2024-02-14', '13:00:00', NULL, 'OFFLINE'),
+(24, NULL, '2024-02-14', '13:00:00', NULL, 'OFFLINE'),
+(25, 38, '2024-02-14', '13:06:00', NULL, 'OFFLINE'),
+(26, 31, '2024-02-15', '09:00:00', NULL, 'OFFLINE'),
+(27, 31, '2024-02-15', '09:04:00', NULL, 'OFFLINE'),
+(28, 31, '2024-02-15', '09:09:00', NULL, 'OFFLINE'),
+(29, 31, '2024-02-15', '09:22:00', NULL, 'OFFLINE');
 
 -- --------------------------------------------------------
 
@@ -143,16 +177,17 @@ INSERT INTO `deduction_table` (`deduction_id`, `deduction_option`) VALUES
 
 CREATE TABLE `department_table` (
   `department_id` int(11) NOT NULL,
-  `department_name` varchar(30) NOT NULL
+  `department_name` varchar(30) NOT NULL,
+  `salary` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `department_table`
 --
 
-INSERT INTO `department_table` (`department_id`, `department_name`) VALUES
-(1, 'ICT'),
-(2, 'Security');
+INSERT INTO `department_table` (`department_id`, `department_name`, `salary`) VALUES
+(1, 'ICT', ''),
+(2, 'Security', '');
 
 -- --------------------------------------------------------
 
@@ -237,7 +272,30 @@ INSERT INTO `employee_table` (`employee_id`, `first_name`, `last_name`, `date_of
 (62, 'Yuri', 'Nolan', '1998-11-19', '', '937', 'muzohu@mailinator.com', 'Pa$$w0rd!', 'Incididunt sunt in q', 1, 'Entebbe', 'supervisor', 'Mobile Money', 'Adhesion', 'cleanig', NULL, 2, '2024-01-29', '0000-00-00', 'Azalia Jennings', 'Blythe Collins', 'Beatae a aspernatur ', '961', 'Alias natus obcaecat', 'Quasi pariatur Impe'),
 (63, 'George', 'Woods', '1971-10-07', '', '743', 'subib@mailinator.com', 'Pa$$w0rd!', 'Quis asperiores temp', 1, 'Ntungamo', 'supervisor', 'Credit', 'Adhesion', 'cleanig', NULL, 2, '2024-01-31', '0000-00-00', 'Nora Andrews', 'Joy Flores', 'Cumque ipsa adipisc', '304', 'Elit unde quia ut n', 'Dolor omnis id culpa'),
 (64, 'Priscilla', 'Hampton', '1993-03-18', '', '22', 'jobukul@mailinator.com', 'Pa$$w0rd!', 'Omnis lorem ut provi', 2, 'Wakiso', 'Teacher', 'Credit', 'Sales', 'Farming', NULL, 1, '2024-01-31', '0000-00-00', 'Noel Wong', 'Dora Baxter', 'Reprehenderit nisi d', '999', 'Illo exercitationem ', 'Nihil magnam maxime '),
-(65, 'Priscilla', 'Hampton', '1993-03-18', '', '22', 'jobukul@mailinator.com', '', 'Omnis lorem ut provi', 2, 'Wakiso', 'Teacher', 'Credit', 'Sales', 'Farming', NULL, 1, '2024-01-31', '0000-00-00', 'Noel Wong', 'Dora Baxter', 'Reprehenderit nisi d', '999', 'Illo exercitationem ', 'Nihil magnam maxime ');
+(65, 'Priscilla', 'Hampton', '1993-03-18', '', '22', 'jobukul@mailinator.com', '', 'Omnis lorem ut provi', 2, 'Wakiso', 'Teacher', 'Credit', 'Sales', 'Farming', NULL, 1, '2024-01-31', '0000-00-00', 'Noel Wong', 'Dora Baxter', 'Reprehenderit nisi d', '999', 'Illo exercitationem ', 'Nihil magnam maxime '),
+(66, 'Basil', 'Mccray', '2020-01-11', '', '992', 'zovu@mailinator.com', 'Pa$$w0rd!', 'Ipsum eiusmod nulla', 2, 'Entebbe', 'Teacher', 'Credit', 'Adhesion', 'betpawa', NULL, 1, '2024-01-31', '0000-00-00', 'Jael Norton', 'Gemma Torres', 'Deserunt omnis itaqu', '133', 'Earum tempore aut m', 'Libero amet sit cul');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events_table`
+--
+
+CREATE TABLE `events_table` (
+  `event_id` int(11) NOT NULL,
+  `event_name` varchar(255) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `events_table`
+--
+
+INSERT INTO `events_table` (`event_id`, `event_name`, `start_date`, `end_date`) VALUES
+(1, 'Indigo Wheeler', '1995-12-12', '1974-06-01'),
+(2, 'Lester Gallegos', '2022-10-15', '2019-03-14'),
+(3, 'Cally Villarreal', '2020-05-21', '1986-07-13');
 
 -- --------------------------------------------------------
 
@@ -259,7 +317,9 @@ INSERT INTO `job_type_table` (`job_type_id`, `job_type`) VALUES
 (2, 'Teaching'),
 (4, 'Farming'),
 (5, 'Betting'),
-(6, 'betpawa');
+(6, 'betpawa'),
+(7, 'coding'),
+(8, 'software engineering');
 
 -- --------------------------------------------------------
 
@@ -279,7 +339,8 @@ CREATE TABLE `leave_type_table` (
 INSERT INTO `leave_type_table` (`leave_id`, `leave_type`) VALUES
 (1, 'Maternal'),
 (2, 'sick'),
-(3, 'sick');
+(3, 'sick'),
+(4, 'Chilling');
 
 -- --------------------------------------------------------
 
@@ -359,7 +420,8 @@ CREATE TABLE `payroll_table` (
 
 INSERT INTO `payroll_table` (`payroll_id`, `employee_id`, `pay_period_start`, `pay_period_end`, `pay_date`, `bank_name`, `account_number`, `net_pay`) VALUES
 (5, 60, '2024-01-01', '2024-01-02', '2024-01-02', 'Stanbic bank', '8585858', 47777755),
-(6, 59, '2024-01-09', '2024-01-17', '2024-01-17', 'Centenary', '75757', 8666666);
+(6, 59, '2024-01-09', '2024-01-17', '2024-01-17', 'Centenary', '75757', 8666666),
+(7, 56, '2023-12-04', '2025-03-12', '2026-04-09', 'centenary', '8658686868', 646547564574);
 
 -- --------------------------------------------------------
 
@@ -478,6 +540,12 @@ ALTER TABLE `employee_table`
   ADD KEY `position_fk` (`position`);
 
 --
+-- Indexes for table `events_table`
+--
+ALTER TABLE `events_table`
+  ADD PRIMARY KEY (`event_id`);
+
+--
 -- Indexes for table `job_type_table`
 --
 ALTER TABLE `job_type_table`
@@ -555,7 +623,7 @@ ALTER TABLE `allowance_table`
 -- AUTO_INCREMENT for table `attendance_table`
 --
 ALTER TABLE `attendance_table`
-  MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `branch_manager_table`
@@ -591,19 +659,25 @@ ALTER TABLE `designation_table`
 -- AUTO_INCREMENT for table `employee_table`
 --
 ALTER TABLE `employee_table`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `events_table`
+--
+ALTER TABLE `events_table`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `job_type_table`
 --
 ALTER TABLE `job_type_table`
-  MODIFY `job_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `job_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `leave_type_table`
 --
 ALTER TABLE `leave_type_table`
-  MODIFY `leave_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `leave_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `loan_table`
@@ -627,7 +701,7 @@ ALTER TABLE `payement_table`
 -- AUTO_INCREMENT for table `payroll_table`
 --
 ALTER TABLE `payroll_table`
-  MODIFY `payroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `payroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `payslip_table`
