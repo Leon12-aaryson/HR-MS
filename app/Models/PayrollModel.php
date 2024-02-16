@@ -13,7 +13,18 @@ class PayrollModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields = [
+        'employee_id',
+        'desigination_id',
+        'allowances_id',
+        'deductions_id',
+        'net_pay',
+        'total_deduction',
+        'total_allowance',
+        'payment_type',
+        'status'
+    ];
+    
 
     // Dates
     protected $useTimestamps = false;

@@ -30,6 +30,7 @@ class DesignationController extends BaseController
             $searchValue = $searchData['value'];
             $builder->groupStart()
                 ->like('designation', $searchValue)
+                ->like('salary', $searchValue)
                 ->groupEnd();
         }
 
@@ -65,6 +66,7 @@ class DesignationController extends BaseController
             $sub_array = [
                 $row['designation_id'],
                 $row['designation'],
+                number_format($row['salary'], 2),
                 '<div class="dropdown">
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
@@ -124,7 +126,8 @@ class DesignationController extends BaseController
     {
         // Prepare Designation data
         $branchData = [
-            'designation' => $this->request->getPost('designation')
+            'designation' => $this->request->getPost('designation'),
+            'salary' => $this->request->getPost('salary')
         ];
 
         // Insert the Designation data into the database
@@ -147,6 +150,7 @@ class DesignationController extends BaseController
 
         $data = [
             'designation' => $this->request->getPost('designation'),
+            'salary' => $this->request->getPost('salary')
         ];
 
         $this->designation->update($id, $data);
@@ -174,3 +178,5 @@ class DesignationController extends BaseController
 
 
 }
+
+

@@ -13,7 +13,7 @@ class DepartmentModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['branch','department_name','salary'];
+    protected $allowedFields    = ['department_name'];
 
     // Dates
     protected $useTimestamps = false;
