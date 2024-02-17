@@ -39,35 +39,35 @@
         </div>
         <ul class="nav-links">
             <li class="active-bar">
-                <a href="employee-dashboard.html">
+                <a href="<?= base_url('emp-dashboard'); ?>">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="employee-dashboard.html" class="link_name">Dashboard</a></li>
+                    <li class="no-list"><a href="<?= base_url('emp-dashboard'); ?>" class="link_name">Dashboard</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="./attendance.html">
+                <a href="<?= base_url('emp-attendance'); ?>">
                     <i class='bx bx-timer icon'></i>
                     <span class="link_name">Attendance </span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="./attendance.html" class="link_name">Attendance</a></li>
+                    <li class="no-list"><a href="<?= base_url('emp-attendance'); ?>" class="link_name">Attendance</a></li>
                 </ul>
             </li>
             <li>
-                <a href="./leave.html">
+                <a href="<?= base_url('emp-leave'); ?>">
                     <i class='bx bx-walk icon'></i>
                     <span class="link_name">Leave</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="leave.html" class="link_name">Leave</a></li>
+                    <li class="no-list"><a href="<?= base_url('emp-leave'); ?>" class="link_name">Leave</a></li>
                 </ul>
             </li>
 
-            <li>
+            <!-- <li>
                 <a href="./loan.html">
                     <i class='bx bx-credit-card-front icon'></i>
                     <span class="link_name">Loan</span>
@@ -75,10 +75,10 @@
                 <ul class="sub-menu blank">
                     <li class="no-list"><a href="loan.html" class="link_name">Loan</a></li>
                 </ul>
-            </li>
+            </li> -->
 
             <li>
-                <a href="payroll1.html">
+                <a href="<?= base_url('emp-payroll') ?>">
                     <i class='bx bx-money icon'></i>
                     <span class="link_name">Payroll</span>
                 </a>

@@ -45,6 +45,45 @@ class EmpHomeController extends BaseController
         return view('emp-leave');
     }
 
+    public function Vacancy()
+    {
+        return view('vacancy');
+    }
+
+    public function application()
+    {
+        return view('application');
+    }
+
+    public function User()
+    {
+        return view('user');
+    }
+
+    public function empPayroll()
+    {
+        return view('emp-payroll');
+    }
+
+    public function payrollReport()
+    {
+        return view('emp-report');
+    }
+
+    public function leaveReport()
+    {
+        return view('leave-report');
+    }
+    
+    public function reportAttendance()
+    {
+        return view('report-attendance');
+    }
+
+    public function leaveApprove()
+    {
+        return view('leave-approve');
+    }
     public function handleLoginCredentials()
     {
         $request = $this->request;
@@ -99,6 +138,7 @@ class EmpHomeController extends BaseController
         $time = $request->getPost('time');
         var_dump($_POST);
         exit();
+
     
         return redirect()->to(base_url('emp-login'));
     }

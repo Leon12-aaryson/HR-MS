@@ -107,9 +107,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
                 <ul class="sub-menu">
                     <li class="no-list"><a href="#" class="link_name">Approval</a></li>
-                    <li><a href="<?= base_url('manage-grievance'); ?>">Answer grievance</a></li>
-                    <li><a href="<?= base_url('manage-loan'); ?>">Loan Approval</a></li>
-                    <li><a href="<?= base_url('manage-leave'); ?>">Manage Leave</a></li>
+                    <li><a href="<?= base_url('leave-approve'); ?>">Manage Leave</a></li>
                 </ul>
             </li>
             <li>
@@ -122,14 +120,14 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
                 <ul class="sub-menu">
                     <li class="no-list"><a href="#" class="link_name">Report</a></li>
-                    <li><a href="<?= base_url('report-attendance'); ?>">Monthly Attendance</a></li>
-                    <li><a href="<?= base_url('report-leave'); ?>">Leave</a></li>
-                    <li><a href="<?= base_url('report-payroll'); ?>">Payroll</a></li>
+                    <li><a href="<?= base_url('attendance-report'); ?>">Monthly Attendance</a></li>
+                    <li><a href="<?= base_url('leave-report'); ?>">Leave</a></li>
+                    <li><a href="<?= base_url('payroll-report'); ?>">Payroll</a></li>
 
                 </ul>
             </li>
             <li>
-                <a href="user.html">
+                <a href="<?= base_url('user'); ?>">
                     <i class='bx bx-user'></i>
                     <span class="link_name">Users</span>
                 </a>
