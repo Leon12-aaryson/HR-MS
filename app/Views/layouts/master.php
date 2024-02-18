@@ -113,6 +113,7 @@
                     <li><a href="<?= base_url('leave-approve'); ?>">Manage Leave</a></li>
                     <li><a href="<?= base_url('manage-loan'); ?>">Loan Approval</a></li>
                     <li><a href="<?= base_url('manage-leave'); ?>">Manage Leave</a></li>
+
                 </ul>
             </li>
             <li>
