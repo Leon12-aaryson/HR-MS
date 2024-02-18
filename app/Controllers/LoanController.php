@@ -65,6 +65,7 @@ class LoanController extends BaseController
             $sub_array = [
                 $row['loan_id'],
                 $row['loan_type'],
+                $row['loan_amount'],
                 '<div class="dropdown">
                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical text-danger"></i>
@@ -124,7 +125,8 @@ class LoanController extends BaseController
 
         // Prepare Loan data
         $loanData = [
-            'loan_type' => $this->request->getPost('loantype')
+            'loan_type' => $this->request->getPost('loantype'),
+            'loan_amount' => $this->request->getPost('loanamount')
         ];
 
         // Insert the Loan data into the database
@@ -147,6 +149,7 @@ class LoanController extends BaseController
 
         $data = [
             'loan_type' => $this->request->getPost('loantype'),
+            'loan_amount' => $this->request->getPost('loanamount'),
         ];
 
         $this->loan->update($id, $data);

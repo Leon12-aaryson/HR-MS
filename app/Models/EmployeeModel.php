@@ -8,7 +8,7 @@ class EmployeeModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'employee_table';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'employee_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

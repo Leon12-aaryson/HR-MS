@@ -23,7 +23,8 @@
                         <thead>
                             <tr>
                                 <th>S.N</th>
-                                <th>Designation</th>
+                                <th>Loan Type</th>
+                                <th>Amount</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -46,8 +47,12 @@
             <form action="" method="POST" id="loanform">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="loantype" class="form-label text-primary"> Loan Amount</label>
+                        <label for="loantype" class="form-label text-primary"> Loan Type</label>
                         <input type="text" class="form-control" name="loantype" id="loantype">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loanamount" class="form-label text-primary"> Loan Amount</label>
+                        <input type="number" class="form-control" name="loanamount" id="loanamount">
                     </div>
                 </div>
                 <div class="modal-footer pt-1 pb-1">
@@ -68,9 +73,13 @@
             </div>
             <form action="" method="POST" id="updateloanform">
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="updateloantype" class="form-label text-primary"> Loan Amount</label>
+                <div class="mb-3">
+                        <label for="updateloantype" class="form-label text-primary"> Loan Type</label>
                         <input type="text" class="form-control" name="updateloantype" id="updateloantype">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateloanamount" class="form-label text-primary"> Loan Amount</label>
+                        <input type="number" class="form-control" name="updateloanamount" id="updateloanamount">
                     </div>
                 </div>
                 <div class="modal-footer pt-1 pb-1">

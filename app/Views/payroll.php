@@ -47,7 +47,10 @@
                 <thead>
                     <tr>
                         <th>Employee Name</th>
-                        <th>Amount</th>
+                        <!-- <th>Gross Pay</th> -->
+                        <th>Net Pay</th>
+                        <th>Total Allowance</th>
+                        <th>Total Deduction</th>
                         <th>Year</th>
                         <th>Month</th>
                         <th>Status</th>

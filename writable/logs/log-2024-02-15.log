@@ -1,3 +1,51 @@
+CRITICAL - 2024-02-15 08:20:32 --> Undefined variable $route
+in APPPATH\Config\Routes.php on line 147.
+ 1 APPPATH\Config\Routes.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'D:\\xampp\\htdocs\\HR-MS\\app\\Config\\Routes.php', 147)
+ 2 SYSTEMPATH\Router\RouteCollection.php(267): require('D:\\xampp\\htdocs\\HR-MS\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-15 08:46:27 --> Call to undefined function link_tag()
+in APPPATH\Views\layouts\master.php on line 16.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/master', [], true)
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('displinary', [], true)
+ 5 APPPATH\Controllers\Disciplinary.php(11): view('displinary')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Disciplinary->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Disciplinary))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-15 09:21:06 --> mysqli_sql_exception: Table 'hrmsdb.disciplinaries' doesn't exist in D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `di...', 0)
+#1 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `di...')
+#2 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `di...')
+#3 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `di...', Array, false)
+#4 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\HR-MS\app\Controllers\Disciplinary.php(33): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Disciplinary->Insert_displinary()
+#9 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Disciplinary))
+#10 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-15 09:21:06 --> Table 'hrmsdb.disciplinaries' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `disciplinaries` (`displinary_case`, `victim`, `description`, `warning_letter`) VALUES (\'stealing\', \'derick\', \'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam\', \'uploads/Upload_warning_Letter/Adv CPP Notes.pdf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `disciplinaries` (`displinary_case`, `victim`, `description`, `warning_letter`) VALUES (\'stealing\', \'derick\', \'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam\', \'uploads/Upload_warning_Letter/Adv CPP Notes.pdf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `disciplinaries` (`displinary_case`, `victim`, `description`, `warning_letter`) VALUES (\'stealing\', \'derick\', \'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsam\', \'uploads/Upload_warning_Letter/Adv CPP Notes.pdf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `disciplinaries` (`displinary_case`, `victim`, `description`, `warning_letter`) VALUES (:displinary_case:, :victim:, :description:, :warning_letter:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Disciplinary.php(33): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Disciplinary->Insert_displinary()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Disciplinary))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 
 INFO - 2024-02-15 06:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-15 06:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -8,7 +56,7 @@ INFO - 2024-02-15 06:39:56 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-02-15 06:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-15 06:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-15 06:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-<<<<<<< HEAD
+
 ERROR - 2024-02-15 08:51:48 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
 Stack trace:
 #0 C:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
@@ -83,11 +131,24 @@ in APPPATH\Views\index.php on line 30.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 INFO - 2024-02-15 12:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-=======
+
 CRITICAL - 2024-02-15 07:59:26 --> Undefined variable $dept_count
 in APPPATH\Views\index.php on line 28.
  1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'D:\\Xammp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
  2 SYSTEMPATH\View\View.php(224): include('D:\\Xammp\\htdocs\\HR-MS\\app\\Views\\index.php')
+
+INFO - 2024-02-15 17:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-15 17:34:01 --> Undefined variable $dept_count
+in APPPATH\Views\index.php on line 28.
+ 1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+
  3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
  5 APPPATH\Controllers\Home.php(25): view('index')
@@ -95,6 +156,7 @@ in APPPATH\Views\index.php on line 28.
  7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+
 CRITICAL - 2024-02-15 08:10:30 --> Undefined variable $leave_count
 in APPPATH\Views\index.php on line 89.
  1 APPPATH\Views\index.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $leave_count', 'D:\\Xammp\\htdocs\\HR-MS\\app\\Views\\index.php', 89)
@@ -129,4 +191,437 @@ in APPPATH\Views\index.php on line 89.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 
->>>>>>> b1aa844cdaca2fa660467027ff0cedb66ef3fc5a
+INFO - 2024-02-15 17:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-15 17:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-15 20:25:00 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\AllowanceController.php(156): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AllowanceController->updateallowance()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllowanceController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-15 20:25:07 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\AllowanceController.php(156): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AllowanceController->updateallowance()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllowanceController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-15 20:25:51 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\AllowanceController.php(156): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AllowanceController->updateallowance()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllowanceController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-15 20:25:57 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\AllowanceController.php(156): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AllowanceController->updateallowance()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllowanceController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-15 20:26:18 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\AllowanceController.php(156): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AllowanceController->updateallowance()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AllowanceController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+
+CRITICAL - 2024-02-15 09:23:13 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 09:29:15 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 09:29:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 09:30:28 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 09:30:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 09:30:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 09:30:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 09:30:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 09:30:35 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 09:42:47 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 09:42:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 09:50:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 09:50:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 09:51:54 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 09:52:38 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 09:52:41 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 09:52:42 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 09:52:43 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 10:45:54 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#3 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2024-02-15 10:45:54 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Home.php(228): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+ERROR - 2024-02-15 19:49:27 --> mysqli_sql_exception: Table 'hrmsdb.employee_table' doesn't exist in /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/leon/Desktop/HR-MS/app/Controllers/Home.php(232): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+#6 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#7 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/leon/Desktop/HR-MS/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /home/leon/Desktop/HR-MS/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#10 {main}
+CRITICAL - 2024-02-15 19:49:27 --> Table 'hrmsdb.employee_table' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Home.php(232): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 20:41:35 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')
+CRITICAL - 2024-02-15 20:42:29 --> Undefined variable $leave_count
+in APPPATH/Views/index.php on line 89.
+ 1 APPPATH/Views/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/leon/Desktop/HR-MS/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/leon/Desktop/HR-MS/public/index.php')

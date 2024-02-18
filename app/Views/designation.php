@@ -24,6 +24,7 @@
                             <tr>
                                 <th>S.N</th>
                                 <th>Designation</th>
+                                <th>Salary</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -50,6 +51,12 @@
                         <input type="text" class="form-control" id="designation" name="designation">
                     </div>
                 </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="salary" class="form-label text-primary">Salary</label>
+                        <input type="text" class="form-control" id="salary" name="salary">
+                    </div>
+                </div>
                 <div class="modal-footer pt-1 pb-1">
                     <input type="submit" value="Add" class="btn btn-sm btn-primary">
                 </div>
@@ -71,6 +78,10 @@
                     <div class="mb-3">
                         <label for="updatedesignation" class="form-label text-primary">Designation</label>
                         <input type="text" class="form-control" id="updatedesignation" name="updatedesignation">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updatesalary" class="form-label text-primary">Designation</label>
+                        <input type="text" class="form-control" id="updatesalary" name="updatesalary">
                     </div>
                 </div>
                 <div class="modal-footer pt-1 pb-1">
