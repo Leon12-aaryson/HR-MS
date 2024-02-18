@@ -23,10 +23,7 @@ class Home extends BaseController
     {
         // return view('welcome_message');
         return view('index');
-    }
-
-<<<<<<< HEAD
-    
+    }    
     public function CreateEmployee()
     {
         // SQL query for retrieving distinct designations
@@ -68,8 +65,6 @@ class Home extends BaseController
     {
         return view("employee");
     }
-=======
->>>>>>> cyber
 
     public function Department()
     {
