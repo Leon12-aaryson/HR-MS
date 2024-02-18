@@ -4,16 +4,16 @@
 <main>
 
 <div class="container">
-    <h1 class="title">Requset for a Loan</h1>
+    <h1 class="title">Requset for a Leave</h1>
     <ul class=" emp" style="line-height: none;">
         <li><a href="#">Home</a></li>
         <li class="divider">/</li>
-        <li><a href="#" class="active">Loan</a></li>
+        <li><a href="#" class="active">Leave</a></li>
         <li><a href="#" data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 class="btn btn-sm"
                 style="background: var(--skin-color); color: #fff">Apply
-                for a loan</a></li>
+                for a leave</a></li>
     </ul>
     <div class="hr"></div>
 
@@ -24,9 +24,9 @@
             <thead>
                 <tr>
                     <th>Employee's Name</th>
-                    <th>Loan Type</th>
+                    <th>Leave Type</th>
                     <th>Duration</th>
-                    <th>Loan Status</th>
+                    <th>Leave Status</th>
                     <th>Comment</th>
                 </tr>
             </thead>
@@ -35,8 +35,8 @@
                     <td>Ssewankambo Derick</td>
                     <td>Medical</td>
                     <td>9/02/2024-8/03/2024</td>
-                    <td class="text-success">Approved</td>
-                    <td>Urgent Loan required...</td>
+                    <td class="text-warning">Pending</td>
+                    <td>Urgent Leave required...</td>
                 </tr>
             </tbody>
         </table>
@@ -50,7 +50,8 @@
         <div class="modal-content modal-bg">
             <div class="modal-header">
                 <h1 class="modal-title fs-5"
-                    id="exampleModalLabel">Apply for a Loan</h1>
+                    id="exampleModalLabel">Apply for a
+                    Leave</h1>
                 <button type="button" class="btn-close"
                     style="color: var(--text-color);"
                     data-bs-dismiss="modal"
@@ -61,9 +62,9 @@
 
                 <div class="mb-2"
                     style="width: 80%; margin: 0 auto;">
-                    <label class="form-label">Loan Type</label>
+                    <label class="form-label">Leave Type</label>
                     <select class="form-select">
-                        <option selected>Select Loan
+                        <option selected>Select Leave
                             Type</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -71,6 +72,18 @@
                     </select>
                 </div>
 
+                <div class="mb-2"
+                    style="width: 80%; margin: 0 auto;">
+                    <label class="form-label">Start time</label>
+                    <input type="date"
+                        class="form-control form-name">
+                </div>
+                <div class="mb-2"
+                    style="width: 80%; margin: 0 auto;">
+                    <label class="form-label">End time</label>
+                    <input type="date"
+                        class="form-control form-name">
+                </div>
                 <div class="mb-2"
                     style="width: 80%; margin: 0 auto;">
                     <label for="exampleFormControlTextarea1"

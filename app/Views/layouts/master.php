@@ -5,37 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR-MS</title>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <?=link_tag("public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css")?>
-    <?=link_tag("public/assets/datatables/datatables.min.css")?>
-    <?=link_tag("public/assets/datatables/responsive.bootstrap5.min.css")?>
-    <?=link_tag("public/assets/bootstrap-icons/bootstrap-icons.css")?>
-    <?=link_tag("public/assets/boxicons/css/boxicons.min.css")?>
-    <?=link_tag("public/assets/css/style.css")?>
-
-    <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
-
->>>>>>> e1a24d3320e13c6a696229e40e2b3ae358afac30
-    <link rel="stylesheet" href="public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css">
-    <link href='public/assets/datatables/datatables.min.css' rel='stylesheet'>
-    <link href='public/assets/datatables/responsive.bootstrap5.min.css' rel='stylesheet'>
-    <link href='public/assets/bootstrap-icons/bootstrap-icons.css' rel='stylesheet'>
-    <link href='public/assets/boxicons/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="public/assets/css/style.css">
-    <link rel="stylesheet" href="public/assets/sweetalert/css/sweetalert.min.css">
-=======
+  
     <?= link_tag("public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css") ?>
     <?= link_tag("public/assets/datatables/datatables.min.css") ?>
     <?= link_tag("public/assets/datatables/responsive.bootstrap5.min.css") ?>
     <?= link_tag("public/assets/bootstrap-icons/bootstrap-icons.css") ?>
     <?= link_tag("public/assets/boxicons/css/boxicons.min.css") ?>
     <?= link_tag("public/assets/css/style.css") ?>
-
     <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
->>>>>>> cyber
 
     <!--========= Style switcher========= -->
     <?= link_tag("public/assets/css/skin/color-3.css") ?>
@@ -79,7 +56,6 @@
             </li>
 
             <li>
-<<<<<<< HEAD
                 <div class="icon-link">
                     <a href="#">
                         <i class='bx bxs-report'></i>
@@ -95,9 +71,7 @@
             </li>
             <li>
                 <a href="<?= base_url('employee'); ?>">
-=======
                 <a href="<?= base_url('employeespage'); ?>">
->>>>>>> cyber
                     <i class="bx bx-user icon"></i>
                     <span class="link_name">Employee</span>
                 </a>
@@ -136,6 +110,7 @@
                 </div>
                 <ul class="sub-menu">
                     <li class="no-list"><a href="#" class="link_name">Approval</a></li>
+                    <li><a href="<?= base_url('leave-approve'); ?>">Manage Leave</a></li>
                     <li><a href="<?= base_url('manage-loan'); ?>">Loan Approval</a></li>
                     <li><a href="<?= base_url('manage-leave'); ?>">Manage Leave</a></li>
                 </ul>
@@ -150,14 +125,14 @@
                 </div>
                 <ul class="sub-menu">
                     <li class="no-list"><a href="#" class="link_name">Report</a></li>
-                    <li><a href="<?= base_url('report-attendance'); ?>">Monthly Attendance</a></li>
-                    <li><a href="<?= base_url('report-leave'); ?>">Leave</a></li>
-                    <li><a href="<?= base_url('report-payroll'); ?>">Payroll</a></li>
+                    <li><a href="<?= base_url('attendance-report'); ?>">Monthly Attendance</a></li>
+                    <li><a href="<?= base_url('leave-report'); ?>">Leave</a></li>
+                    <li><a href="<?= base_url('payroll-report'); ?>">Payroll</a></li>
 
                 </ul>
             </li>
             <li>
-                <a href="user.html">
+                <a href="<?= base_url('user'); ?>">
                     <i class='bx bx-user'></i>
                     <span class="link_name">Users</span>
                 </a>
@@ -274,24 +249,7 @@
             </div>
         </footer>
 
-<<<<<<< HEAD
-        <script src="public/assets/jquery-3.6.1.min.js"></script>
-        <script src="public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="public/assets/datatables/datatables.min.js"></script>
-        <script src="public/assets/datatables/dataTables.responsive.min.js"></script>
-        <script src="public/assets/datatables/pdfmake.min.js"></script>
-        <script src="public/assets/datatables/vfs_fonts.js"></script>
-        <script src="public/assets/js/sidebar.js"></script>
-        <script src="public/assets/js/theme-color.js"></script>
-        <script src="public/assets/js/notification.js"></script>
-        <script src="public/assets/js/color-picker.js"></script>
-        <script src="public/assets/sweetalert/js/sweetalert2@11.js"></script>
-        <script src="public/assets/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="public/assets/js/script.js" defer></script>
-        <script src="public/assets/js/ajax.js"></script>
-        <script src="public/assets/js/chart.js"></script>
-=======
         <?= script_tag("public/assets/jquery-3.6.1.min.js") ?>
         <?= script_tag("public/assets/bootstrap/js/bootstrap.bundle.min.js") ?>
         <?= script_tag("public/assets/datatables/datatables.min.js") ?>
@@ -304,17 +262,15 @@
         <?= script_tag("public/assets/js/color-picker.js") ?>
         <?= script_tag("public/assets/sweetalert/js/sweetalert2@11.js") ?>
         <?= script_tag("public/assets/jquery.validate.min.js") ?>
+        <?= script_tag("public/assets/js/script.js") ?>
+        <?= script_tag("public/assets/js/chart.js") ?>
         <?= script_tag("public/assets/js/ajax.js") ?>
->>>>>>> cyber
-
+         
         <script>
             $(document).ready(function() {
 
-<<<<<<< HEAD
                 });
 
-=======
->>>>>>> cyber
                 fetch_payroll('no')
 
             });

@@ -27,7 +27,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>100</h2>
+                            <h2><?= $emp_count ?></h2>
                                 <p>Employess</p>
                             </div>
 
@@ -46,7 +46,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>200</h2>
+                                <h2>3</h2>
                                 <p>Vacancy</p>
                             </div>
 
@@ -64,7 +64,7 @@
 
                             </div>
                             <div class="head">
-                                <h2>50</h2>
+                                <h2>2</h2>
                                 <p>Applications</p>
                             </div>
 
@@ -201,7 +201,7 @@
             </div>
         </div>
         <div class="separete">
-                    <div class="personal-details">
+                    <!-- <div class="personal-details">
                         <div class="heading">
                             <div class="color-top"></div>
                             <div class="begin">
@@ -214,7 +214,7 @@
                                 <input type="text" id="input-box" placeholder="Add your text">
 
                                 <button onclick="addTask()">Add</button>
-                            </div>
+                            </div> -->
                             <ul id="list-container">
                                 <!-- <li class="checked">Task 1</li>
                                 <li>Task 2</li>
@@ -223,7 +223,7 @@
                         </div>
                     </div>
 
-                    <div class="personal-details">
+                    <!-- <div class="personal-details">
                         <div class="heading">
                             <div class="color-top"></div>
                             <div class="begin">
@@ -234,7 +234,7 @@
                         <div class="todo-app">
                             <canvas id="doughnut" width="300" height="300"></canvas>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
     </div>
 </main>

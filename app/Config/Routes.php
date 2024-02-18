@@ -171,10 +171,16 @@ $routes->get('emp-attendance','EmpHomeController::EmpAttendance');
 $routes->get('emp-login','EmpHomeController::EmpLogin');
 
 //returns the emp-loan view
-$routes->get('emp-loan','EmpHomeController::empLoan');
+// $routes->get('emp-loan','EmpHomeController::empLoan');
 
-//returns the emp-leave view
-$routes->get('emp-leave','EmpHomeController::empLeave');
+//returns the vacancy view
+$routes->get('vacancy','EmpHomeController::Vacancy');
+
+//returns the application view
+$routes->get('application','EmpHomeController::application');
+
+//returns the user view
+$routes->get('user','EmpHomeController::User');
 
 
 //route for login details
@@ -182,6 +188,24 @@ $routes->post('sendlogindetails','EmpHomeController::HandleLoginCredentials');
 
 //route for inserting login time into the database
 $routes->post('insertintoattendance','EmpHomeController::insertTime');
+
+//route for employee payroll
+$routes->get('emp-payroll','EmpHomeController::empPayroll');
+
+//route for employee leave
+$routes->get('emp-leave','EmpHomeController::empLeave');
+
+//route for payroll report
+$routes->get('payroll-report','EmpHomeController::payrollReport');
+
+//route for leave report
+$routes->get('leave-report','EmpHomeController::leaveReport');
+
+//route for attendancereport
+$routes->get('attendance-report','EmpHomeController::reportAttendance');
+
+//route for leave approval
+$routes->get('leave-approve','EmpHomeController::leaveApprove');
 
 
 
