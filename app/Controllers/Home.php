@@ -23,16 +23,11 @@ class Home extends BaseController
     {
         // return view('welcome_message');
         return view('index');
-    }
-
+    }    
     public function CreateEmployee()
     {
-        // SQL query for retrieving distinct branches
-        $distinctBranchQuery = "SELECT DISTINCT branch FROM branch_manager_table";
-        $branchResult = $this->db->query($distinctBranchQuery)->getResultArray();
-        
         // SQL query for retrieving distinct designations
-        $distinctDesignationQuery = "SELECT DISTINCT designation FROM designation_table";
+        $distinctDesignationQuery = "SELECT DISTINCT designation, salary FROM designation_table";
         $designationResult = $this->db->query($distinctDesignationQuery)->getResultArray();
         
         // sql query for retrieving payement type
@@ -57,7 +52,6 @@ class Home extends BaseController
 
         // Pass the results to the view with separate keys
         return view('create-employee', ['results' => [
-            'branch' => $branchResult, 
             'designation' => $designationResult,
             'payement' => $payementResult,
             'department' => $departmentResult,
@@ -80,18 +74,7 @@ class Home extends BaseController
         return view("department", $data);
     }
 
-    public function BranchMaster()
-    {
-        $title = [
-            'page_title' => "Manage Branches",
-            'head' => "Branch",
-            'link' => 'Add Branch'
-        ];
-        $data = [
-            'active' => 'active-list',
-        ];
-        return view("branch-master", array_merge($data, $title));
-    }
+   
 
     public function Job()
     {
@@ -135,6 +118,17 @@ class Home extends BaseController
             'link' => 'Add payement method'
         ];
         return view('payement', $data);
+    }
+
+    public function Allowances()
+    {
+        $data = [
+            'active' => 'active-list',
+            'page_title' => "Allowances",
+            'head' => 'Manage Allowances',
+            'link' => 'Add allowance'
+        ];
+        return view('allowances', $data);
     }
 
     public function Designation()
@@ -200,7 +194,15 @@ class Home extends BaseController
 
     public function CreatePayroll()
     {
-        return view('create-payroll');
+         // SQL query for retrieving distinct designations
+         $distinctDesignationQuery = "SELECT DISTINCT designation_id, designation, salary FROM designation_table";
+         $designationResult = $this->db->query($distinctDesignationQuery)->getResultArray();
+
+         //Sql query for retrieving distinct employee
+         return view('create-payroll', ['results' => [
+            'designation' => $designationResult
+        ]]);
+
     }
     public function CreateAttendance()
     {
@@ -281,4 +283,6 @@ class Home extends BaseController
         $modal->insert($data);
         return redirect()->to('home');
     }  
+
 }
+

@@ -36,4 +36,8 @@
         <a href="<?= base_url('job'); ?>">User Type</a>
         <i class='bx bxs-chevron-right arrow'></i>
     </li>
+    <li class="<?= basename($_SERVER['PHP_SELF']) == 'allowances' ? 'active-list' : '' ?>">
+        <a href="<?= base_url('allowances'); ?>">Allowances</a>
+        <i class='bx bxs-chevron-right arrow'></i>
+    </li>
 </ul>

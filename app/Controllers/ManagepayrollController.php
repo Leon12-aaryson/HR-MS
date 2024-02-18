@@ -20,7 +20,7 @@ class ManagepayrollController extends BaseController
     public function fetchmanagepayroll()
     {
         $query = $this->db->table('payroll_table');
-        $query->select('employee_table.first_name, employee_table.last_name, net_pay, pay_date, payroll_id');
+        $query->select('employee_table.first_name, employee_table.last_name, net_pay, pay_date, total_allowance,total_deduction, payroll_id');
         $query->join('employee_table', 'payroll_table.employee_id = employee_table.employee_id', 'inner');
 
         // Check if date search is enabled
@@ -67,6 +67,8 @@ class ManagepayrollController extends BaseController
             $sub_array = [
                 $row['first_name'] . ' ' . $row['last_name'],
                 $row['net_pay'],
+                $row['total_allowance'],
+                $row['total_deduction'],
                 date('Y', strtotime($row['pay_date'])),
                 date('F', strtotime($row['pay_date'])),
                 'PAID',
@@ -77,9 +79,9 @@ class ManagepayrollController extends BaseController
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['payroll_id'] . '">
+                            <a href="' . base_url('update_payroll') . '/' . $row['payroll_id'] . '" type="button" id="adminupdatebtn" class="dropdown-item">
                                 <i class="bi bi-pencil" style="color:dodgerblue"></i> Edit
-                            </button>
+                            </a>
                         </li>
                         <li>
                             <button type="button" id="admindeletebtn" class="dropdown-item" value="' . $row['payroll_id'] . '">
@@ -88,12 +90,13 @@ class ManagepayrollController extends BaseController
                         </li>
                         <li>
                             <button type="button" id="adminupdatebtn" class="dropdown-item" value="' . $row['payroll_id'] . '">
-                                <i class="bi bi-eye" style="color:green"></i> View
+                                <i class="bi bi-eye" style="color:green"></i> Download payslip
                             </button>
                         </li>
                     </ul>
                 </div>
                 '
+            
             ];
 
             $data[] = $sub_array;
