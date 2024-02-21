@@ -27,7 +27,7 @@
 
                             </div>
                             <div class="head">
-                            <h2><?= $emp_count ?></h2>
+                            <h2>50</h2>
                                 <p>Employess</p>
                             </div>
 

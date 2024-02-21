@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="public/assets/css/skin/color-3.css" class="alternate-style" title="color-3" disabled>
     <link rel="stylesheet" href="public/assets/css/skin/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="public/assets/css/skin/color-5.css" class="alternate-style" title="color-5" disabled>
+    <script src="//cdn.ckeditor.com/4.5.5/standard/ckeditor.js"></script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
