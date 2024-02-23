@@ -48,6 +48,9 @@ $routes->get('allowances', 'Home::Allowances');
 $routes->get('create-payroll', 'Home::CreatePayroll');
 $routes->get('create-attendance', 'Home::CreateAttendance');
 
+// Working with Attendance (Admin)
+$routes->post('fetchattendance', 'AttendanceController::index');
+$routes->post('updateattendance', 'AttendanceController::updatebranchmanager');
 
 // Working with employees
 $routes->get('employeespage', 'EmployeeController::page');

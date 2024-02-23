@@ -25,7 +25,6 @@
                         <thead>
                             <tr>
                                 <th>S.N</th>
-                                <th>Branch</th>
                                 <th>Department</th>
                                 <th>Salary</th>
                                 <th>Action</th>

@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class DepartmentModel extends Model
+class AttendanceModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'department_table';
-    protected $primaryKey       = 'department_id';
+    protected $table            = 'attendance_table';
+    protected $primaryKey       = 'attendance_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['department_name','salary'];
+    protected $allowedFields    = ['employee_id','date','clock_in_time','clock_out_time','status','	active'];
 
     // Dates
     protected $useTimestamps = false;

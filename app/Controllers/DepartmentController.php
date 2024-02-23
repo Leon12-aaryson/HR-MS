@@ -22,15 +22,13 @@ class DepartmentController extends BaseController
         // Select Department table 
         $builder = $this->db->table('department_table');
 
-        $builder->select('department_table.*, branch_manager_table.branch');
-        $builder->join('branch_manager_table', 'department_table.branch = branch_manager_table.branch_manager_id', 'inner'); // Join with the "branch_manager_table" table
+        $builder->select('department_table.*');
 
         // Handle search value
         $searchData = $this->request->getPost('search');
         if (isset($searchData['value']) && !empty($searchData['value'])) {
             $searchValue = $searchData['value'];
             $builder->groupStart()
-                ->like('branch', $searchValue)
                 ->orLike('department_name', $searchValue)
                 ->orLike('salary', $searchValue)
                 ->groupEnd();
@@ -67,7 +65,6 @@ class DepartmentController extends BaseController
             // Columns to be returned back in DataTable
             $sub_array = [
                 $row['department_id'],
-                $row['branch'],
                 $row['department_name'],
                 number_format(floatval($row['salary'])),
                 '<div class="dropdown">
@@ -128,7 +125,6 @@ class DepartmentController extends BaseController
     {
         // Prepare Department data
         $departmentData = [
-            'branch' => $this->request->getPost('branchname'),
             'department_name' => $this->request->getPost('departmentname'),
             'salary' => $this->request->getPost('salary')
         ];
@@ -150,7 +146,6 @@ class DepartmentController extends BaseController
     {
         $id = $this->request->getPost('departmentid');
         $data = [
-            'branch' => $this->request->getPost('branchname'),
             'department_name' => $this->request->getPost('departmentname'),
             'salary' => $this->request->getPost('salary')
         ];
