@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\EventModel;
 use App\Models\PayrollModel;
+use App\models\VacancyModel;
 
 class Home extends BaseController
 {
@@ -284,5 +285,24 @@ class Home extends BaseController
         return redirect()->to('home');
     }  
 
+    function landingPage(){
+        
+        $model = new VacancyModel();
+        
+        // Retrieve full-time vacancies
+        $data['full_vacancies'] = $model->where('job_nature', 'Full Time')
+                          ->where('status', 'active')
+                          ->findAll();
+        
+        // Retrieve part-time vacancies
+        $data['part_vacancies'] = $model->where('job_nature', 'Part Time')
+                                ->where('status', 'active')
+                                ->findAll();
+        
+        return view('landing-page', $data);
+    }
+
+
+    
 }
 

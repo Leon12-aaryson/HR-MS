@@ -71,8 +71,8 @@
                 </ul>
             </li>
             <li>
+         
                 <a href="<?= base_url('employee'); ?>">
-                <a href="<?= base_url('employeespage'); ?>">
                     <i class="bx bx-user icon"></i>
                     <span class="link_name">Employee</span>
                 </a>
@@ -270,13 +270,12 @@
          
         <script>
             $(document).ready(function() {
-
+                fetch_payroll('no');
                 });
 
-                fetch_payroll('no')
+             
 
-            });
-
+        
 
 
             function fetch_payroll(is_date_search, year = '', month = '') {

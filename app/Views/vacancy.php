@@ -13,6 +13,26 @@
         <div class="hr"></div>
 
         <div class="event-table mt-3">
+            <?php
+            $validation = \config\Services::validation(); ?>
+
+            <?php if (session()->getFlashdata('success')) : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('success'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
+            <?php if (session()->getFlashdata('error')) : ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('error'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            <?php endif; ?>
             <div class="color-top" style="left: -22px;"></div>
 
             <table>
@@ -22,7 +42,6 @@
                         <th>Position</th>
                         <th>Availabity</th>
                         <th>Status</th>
-                        <th>Description</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -32,8 +51,6 @@
                         <td>Web Developer</td>
                         <td>10</td>
                         <td class="text-success">Active</td>
-
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, eaque...</td>
                         <td>
 
                             <div class="dropdown">
@@ -71,23 +88,23 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">New Vacancy</h1>
                     <button type="button" class="btn-close" style="color: var(--text-color);" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action>
+                <form action="<?= base_url('insert_vacancy') ?>" method="post">
                     <div class="modal-body">
 
                         <div class="row mb-2 g-3">
                             <div class="col" style="width: 80%; margin: 0 auto;">
                                 <label class="form-label">Position Name</label>
-                                <input type="text" class="form-control form-name" placeholder="Enter the position name">
+                                <input type="text" class="form-control form-name" name="position" placeholder="Enter the position name" required>
                             </div>
                             <div class="col" style="width: 80%; margin: 0 auto;">
                                 <label class="form-label">Salary</label>
-                                <input type="text" class="form-control form-name" placeholder="Enter the salary range">
+                                <input type="text" class="form-control form-name" name="salary" salary placeholder="Enter the salary range" required>
                             </div>
                         </div>
                         <div class="row mb-2 g-3">
                             <div class="col" style="width: 80%; margin: 0 auto;">
                                 <label class="form-label">Job Nature</label>
-                                <select class="form-select " aria-label=".form-select-lg example">
+                                <select class="form-select " name="job_nature" aria-label=".form-select-lg example">
                                     <option selected>Select Job Nature</option>
                                     <option value="Full Time">Full Time</option>
                                     <option value="Part Time">Part Time</option>
@@ -95,47 +112,55 @@
                             </div>
                             <div class="col" style="width: 80%; margin: 0 auto;">
                                 <label class="form-label">Vacancy Position</label>
-                                <input type="text" class="form-control form-name" placeholder="Enter the number of vacancies">
+                                <input type="text" name="number_of_vacancy" class="form-control form-name" placeholder="Enter the number of vacancies" required>
                             </div>
-                            
+
                         </div>
                         <div class="row mb-2 g-3">
-                        <div class="col" style="width: 80%; margin: 0 auto;">
+                            <div class="col" style="width: 80%; margin: 0 auto;">
                                 <label class="form-label">Publish Date</label>
-                                <input type="date" class="form-control form-name" placeholder="Enter the Publish Date">
+                                <input type="date" name="publish_date" class="form-control form-name" placeholder="Enter the Publish Date" required>
                             </div>
                             <div class="col" style="width: 80%; margin: 0 auto;">
                                 <label class="form-label">Dead line date</label>
-                                <input type="date" class="form-control form-name" placeholder="Enter the deadline date">
+                                <input type="date" name="deadline_date" class="form-control form-name" placeholder="Enter the deadline date" required>
                             </div>
                         </div>
                         <div class="mb-2" style="width: 80%; margin: 0 auto;">
-                                <label class="form-label">Address</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2">Enter the job location</textarea>
-                            </div>
+                            <label class="form-label">Job Status</label>
+                            <select class="form-select " name="status" aria-label=".form-select-lg example">
+                                <option selected>Select Job Status</option>
+                                <option value="active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="mb-2" style="width: 80%; margin: 0 auto;">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-control" name="address" placeholder="Enter the job location" rows="2"></textarea>
+                        </div>
                         <div class="mb-2 row g-3" style="width: 80%; margin: 0 auto;">
-                           <div class="col">
-                           <label class="form-label">Enter the Job Responsiblities</label>
-                            <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
-                            <textarea class="form-control" name="cat_desc" id="cat_desc" rows="3" required>Enter the job Responsiblities.</textarea>
-                            <script>
-                                CKEDITOR.replace('cat_desc');
-                            </script>
-                           </div>
+                            <div class="col">
+                                <label class="form-label">Enter the Job Responsiblities</label>
+                                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+                                <textarea class="form-control" name="responsibility" id="cat_desc" rows="3" required>Enter the job Responsiblities.</textarea>
+                                <script>
+                                    CKEDITOR.replace('cat_desc');
+                                </script>
+                            </div>
 
-                           <div class="col">
-                           <label class="form-label">Enter the Job Qualifications</label>
-                            <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
-                            <textarea class="form-control" name="cat_desc" id="qualify" rows="3" required>Enter the job Qualifications</textarea>
-                            <script>
-                                CKEDITOR.replace('qualify');
-                            </script>
-                           </div>
+                            <div class="col">
+                                <label class="form-label">Enter the Job Qualifications</label>
+                                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+                                <textarea class="form-control" name="qualifications" id="qualify" rows="3" required>Enter the job Qualifications</textarea>
+                                <script>
+                                    CKEDITOR.replace('qualify');
+                                </script>
+                            </div>
                         </div>
                         <div class="mb-2" style="width: 80%; margin: 0 auto;">
                             <label class="form-label">Enter the Job Descriptions</label>
                             <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
-                            <textarea class="form-control" name="desc" id="desc" rows="3" required>Enter the job descriptions.</textarea>
+                            <textarea class="form-control" name="description" id="desc" rows="3" required>Enter the job descriptions.</textarea>
                             <script>
                                 CKEDITOR.replace('desc');
                             </script>
@@ -144,7 +169,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-sm" style="background: var(--skin-color); color: #fff">Save</button>
+                        <button type="submit" class="btn btn-sm" style="background: var(--skin-color); color: #fff">Save</button>
                     </div>
                 </form>
             </div>
