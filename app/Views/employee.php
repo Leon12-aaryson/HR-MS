@@ -32,13 +32,51 @@
                         <th>Employee_ID</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Branch</th>
                         <th>Department</th>
                         <th>Designation</th>
                         <th>Date of joining</th>
                         <th>Action</th>
                     </tr>
                 </thead>
+<<<<<<< HEAD
+                <tbody>
+                    <tr>
+                        <td>Emp_0000001</td>
+                        <td>Ssewankambo Derick</td>
+                        <td>ssewankamboderick@gmail.com</td>
+
+                        <td>IT Dept</td>
+                        <td>Software Engineer</td>
+                        <td>9/6/2023</td>
+                        <td>
+
+                            <div class="dropdown">
+                                <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bx-dots-vertical" style="color: var(--skin-color);"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#" class=" dropdown-item update btn-sm btn"><i class="bx bx-edit"></i> Edit</a>
+                                    </li>
+                                    <li>
+                                        <button type="submit" class="dropdown-item btn-sm btn delete">
+                                            <i class="bx bx-trash"></i>
+                                            Delete
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item btn-sm btn">
+                                            <i class="bx bx-show"></i>
+                                            View
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+=======
+>>>>>>> cyber
             </table>
         </div>
 

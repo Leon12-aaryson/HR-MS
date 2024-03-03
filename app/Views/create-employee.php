@@ -138,6 +138,19 @@
                     <hr>
 
                     <!-- <form action="#"> -->
+<<<<<<< HEAD
+                        
+                        <div class="row g-3 mb-3">
+                          
+                            <div class="col">
+                                <label for="Department">Select Department<span>*</span></label>
+                                <select class="form-select form-select-sm" aria-label="Default select example" name="department" id="department">
+                                    <?php foreach ($results['department'] as $result) : ?>
+                                        <option value="<?= $result['department_id'] ?>"><?= $result['department_name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+=======
 
                     <div class="row g-3 mb-3">
                         <div class="col">
@@ -148,6 +161,7 @@
                                     <option value="<?= $result['branch'] ?>"><?= $result['branch'] ?></option>
                                 <?php endforeach ?>
                             </select>
+>>>>>>> cyber
                         </div>
                         <div class="col">
                             <label for="Department">Select Department<span>*</span></label>

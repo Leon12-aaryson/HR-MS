@@ -17,6 +17,9 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+$routes->setAutoRoute(true);
+
+$routes->get("genete-pdf", "Student::generatePdf");
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -32,6 +35,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('employee', 'Home::Employee');
+$routes->get('add-employee', 'Home::CreateEmployee');
 $routes->get('department', 'Home::Department');
 $routes->get('branch-master', 'Home::BranchMaster');
 $routes->get('job', 'Home::Job');
@@ -44,25 +49,25 @@ $routes->get('loan', 'Home::Loan');
 $routes->get('shift', 'Home::Shift');
 $routes->get('permission', 'Home::Permission');
 $routes->get('payroll', 'Home::Payroll');
-$routes->get('allowances', 'Home::Allowances');
 $routes->get('create-payroll', 'Home::CreatePayroll');
 $routes->get('create-attendance', 'Home::CreateAttendance');
+//The following route is not yet linked anywhere
+$routes->get('view-employee', 'Home::ViewEmployee');
+//Route for displinary module
+$routes->get('displinary','Disciplinary::index');
+$routes->post('insert_disciplinary', 'Disciplinary::Insert_displinary');
+$routes->post('fetchDisplinary', 'Disciplinary::fetchDisplinary');
+
 
 // Working with Attendance (Admin)
 $routes->post('fetchattendance', 'AttendanceController::index');
 $routes->post('updateattendance', 'AttendanceController::updatebranchmanager');
+//The following routes are for employee's dashboard
+$routes->get('employee-dashboard', 'Home::employeeDashboard');
+
 
 // Working with employees
-$routes->get('employeespage', 'EmployeeController::page');
-$routes->get('createpage', 'EmployeeController::createpage');
-$routes->post('fetchemployees', 'EmployeeController::index');
-$routes->post('addemployee', 'EmployeeController::create');
-$routes->get('employee/edit/(:num)', 'EmployeeController::edit/$1');
-$routes->post('employee/update/(:num)', 'EmployeeController::update/$1');
-$routes->post('deleteemployee', 'EmployeeController::delete');
-
-
-// $routes->get('update-employee/:id', 'EmployeeController::updateEmployee');
+$routes->post('fetchemployees', 'EmployeeController::fetchEmployees');
 
 // Working with branch manager
 $routes->post('fetchbranchmanagers', 'BranchmasterController::fetchbranchmanagers');
@@ -135,15 +140,17 @@ $routes->post('addjobtype', 'JobtypeController::addjobtype');
 $routes->post('updatejobtype', 'JobtypeController::updatejobtype');
 $routes->post('deletejobtype', 'JobtypeController::deletejobtype');
 
-// Working with Allowances
-$routes->post('fetchallowances', 'AllowanceController::fetchallowances');
-$routes->post('fetchallowance', 'AllowanceController::fetchallowance');
-$routes->post('addallowance', 'AllowanceController::addallowance');
-$routes->post('updateallowance', 'AllowanceController::updateallowance');
-$routes->post('deleteallowance', 'AllowanceController::deleteallowance');
-
 // Working with payroll
 $routes->post('fetchmanagepayroll', 'ManagepayrollController::fetchmanagepayroll');
+
+//insert data in employee table
+$routes->post('insertintoemployee', 'EmployeeDataInsert::index');
+
+//insert data into payroll table
+$routes->post('insert_in_to_payroll', 'PayrollDataInsertController::index');
+// $routes->get('update_payroll/' . $row['payroll_id'] . '', 'PayrollDataInsertController::update');
+// $routes->match(['get','post'], 'insert_in_to_payroll','PayrollDataInsertController::index');
+
 
 //fetching department on dashboard
 // $routes->get('countdepartment', 'DashboardController::department');
@@ -152,8 +159,63 @@ $routes->get('home', 'Home::Dashboard');
 //inserting data into events table
 $routes->post('insertintoevents','Home::add_event');
 
-
 $routes->get('getevents','Home::fetchDataFromEventsTable');
+
+
+
+
+
+// ROUTES FOR HANDLING EMPLOYEE USER 
+  //returns the emp-dashboard view
+$routes->get('emp-dashboard','EmpHomeController::index');
+
+//returns the emp-attendance view
+$routes->get('emp-attendance','EmpHomeController::EmpAttendance');
+
+//returns the emp-login view
+$routes->get('emp-login','EmpHomeController::EmpLogin');
+
+//returns the emp-loan view
+// $routes->get('emp-loan','EmpHomeController::empLoan');
+
+//returns the vacancy view
+$routes->get('vacancy','EmpHomeController::Vacancy');
+
+//returns the application view
+$routes->get('application','EmpHomeController::application');
+
+//returns the user view
+$routes->get('user','EmpHomeController::User');
+
+
+//route for login details
+$routes->post('sendlogindetails','EmpHomeController::HandleLoginCredentials');
+
+//route for inserting login time into the database
+$routes->post('insertintoattendance','EmpHomeController::insertTime');
+
+//route for employee payroll
+$routes->get('emp-payroll','EmpHomeController::empPayroll');
+
+//route for employee leave
+$routes->get('emp-leave','EmpHomeController::empLeave');
+
+//route for payroll report
+$routes->get('payroll-report','EmpHomeController::payrollReport');
+
+//route for leave report
+$routes->get('leave-report','EmpHomeController::leaveReport');
+
+//route for attendancereport
+$routes->get('attendance-report','EmpHomeController::reportAttendance');
+
+//route for leave approval
+$routes->get('leave-approve','EmpHomeController::leaveApprove');
+
+
+
+
+
 
 
 

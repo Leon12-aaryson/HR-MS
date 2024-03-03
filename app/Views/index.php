@@ -15,7 +15,9 @@
         <div class="mother-card">
             <div class="child-card">
 
-                <div class="cards">
+            <a href="add-employee" style="text-decoration: none;">
+                
+            <div class="cards">
                     <div class="cards-body">
                         <div class="both-card-body">
                             <div class="down">
@@ -25,14 +27,14 @@
 
                             </div>
                             <div class="head">
-                                <h2><?= $dept_count ?></h2>
-                                <p>Departments</p>
-                                
+                            <h2><?= $emp_count ?></h2>
+                                <p>Employess</p>
                             </div>
 
                         </div>
                     </div>
                 </div>
+            </a>
 
                 <div class="cards">
                     <div class="cards-body">
@@ -44,8 +46,8 @@
 
                             </div>
                             <div class="head">
-                            <h2><?= $emp_count ?></h2>
-                                <p>Employees</p>
+                                <h2>3</h2>
+                                <p>Vacancy</p>
                             </div>
 
                         </div>
@@ -62,8 +64,8 @@
 
                             </div>
                             <div class="head">
-                            <h2><?= $job_count ?></h2>
-                                <p>Jobs</p>
+                                <h2>2</h2>
+                                <p>Applications</p>
                             </div>
 
                         </div>
@@ -84,7 +86,7 @@
 
                             </div>
                             <div class="head">
-                            <h2><?= $leave_count ?></h2>
+                            <h2>500</h2>
                                 <p>Leaves</p>
                             </div>
 
@@ -104,7 +106,7 @@
                             </div>
                             <div class="head">
                                 <h2>2</h2>
-                                <p>Disciplinary</p>
+                                <p>Grievance</p>
                             </div>
 
                         </div>
@@ -120,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="head">
-                            <h2><?= $leave_count ?></h2>
+                            <h2>5</h2>
                                 <p>Loans</p>
                             </div>
 
@@ -136,18 +138,20 @@
                 <h2>Add an Event</h2>
                 <form action="<?= base_url('insertintoevents') ?>" method="post">
                     <div class="mb-2">
-                        <label for="title" class="form-label">Event's Name</label>
-                        <input name="event_name" class="form-control form-control-sm" type="text" placeholder="name" aria-label=".form-control-sm example">
+                        <label for="title" class="form-label">Annoucement  Title</label>
+                        <input class="form-control form-control-sm" type="text" placeholder="name" aria-label=".form-control-sm example">
                     </div>
 
                     <div class="mb-2">
-                        <label for="start-date" class="form-label">Start Date</label>
-                        <input name="start_date" class="form-control form-control-sm" type="date" placeholder="Start date" aria-label=".form-control-sm example">
+                        <label for="start-date" class="form-label">Date for the Event</label>
+                        <input class="form-control form-control-sm" type="date" placeholder="Start date" aria-label=".form-control-sm example">
                     </div>
 
                     <div class="mb-2">
-                        <label for="end-date" class="form-label">End Date</label>
-                        <input name="end_date" class="form-control form-control-sm" type="date" placeholder="End date" aria-label=".form-control-sm example">
+                        <label for="end-date" class="form-label">Describe</label>
+                        <textarea
+                                        class="form-control"
+                                        rows="3"></textarea>
                     </div>
 
                     <div class="mb-2 button">
@@ -158,13 +162,12 @@
             <div class="event-table">
                 <div class="color-top"></div>
                 <h2>View Events</h2>
-                <table>
+                <table class="table">
                     <thead>
                         <tr>
-                            <th>Event Name</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <!-- <th>Time</th> -->
+                            <th>Announcement Title</th>
+                            <th>Date</th>
+                            <th>Explanation</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -173,8 +176,7 @@
                         <tr>
                             <td>Meeting</td>
                             <td>9/4/2023</td>
-                            <td></td>
-                            <td>11:pm</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, doloremque.</td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-light hidden-arrow dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -198,6 +200,42 @@
                 </table>
             </div>
         </div>
+        <div class="separete">
+                    <!-- <div class="personal-details">
+                        <div class="heading">
+                            <div class="color-top"></div>
+                            <div class="begin">
+                                <h2>To-Do List <img src="./public/assets/img/icon.png"></h2>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="todo-app">
+                            <div class="input-row">
+                                <input type="text" id="input-box" placeholder="Add your text">
+
+                                <button onclick="addTask()">Add</button>
+                            </div> -->
+                            <ul id="list-container">
+                                <!-- <li class="checked">Task 1</li>
+                                <li>Task 2</li>
+                                <li>Task 3</li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="personal-details">
+                        <div class="heading">
+                            <div class="color-top"></div>
+                            <div class="begin">
+                                <h2>Ratio of Male to Female</h2>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="todo-app">
+                            <canvas id="doughnut" width="300" height="300"></canvas>
+                        </div>
+                    </div> -->
+                </div>
     </div>
 </main>
 <!-- html for main part ends here -->

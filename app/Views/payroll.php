@@ -43,11 +43,14 @@
 
         <div class="event-table small-table mt-3">
             <div class="color-top" style="left: -22px;"></div>
-            <table id="managepayrollDataTable">
+            <table class="table" id="managepayrollDataTable">
                 <thead>
                     <tr>
                         <th>Employee Name</th>
-                        <th>Amount</th>
+                        <!-- <th>Gross Pay</th> -->
+                        <th>Net Pay</th>
+                        <th>Total Allowance</th>
+                        <th>Total Deduction</th>
                         <th>Year</th>
                         <th>Month</th>
                         <th>Status</th>

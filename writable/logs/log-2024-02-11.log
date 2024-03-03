@@ -1,0 +1,553 @@
+CRITICAL - 2024-02-11 13:24:13 --> Undefined variable $dept_count
+in APPPATH\Views\index.php on line 28.
+ 1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:24:16 --> Undefined variable $events
+in APPPATH\Views\index.php on line 173.
+ 1 APPPATH\Views\index.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:24:20 --> Undefined variable $events
+in APPPATH\Views\index.php on line 173.
+ 1 APPPATH\Views\index.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:24:24 --> Undefined variable $events
+in APPPATH\Views\index.php on line 173.
+ 1 APPPATH\Views\index.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $events', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 173)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:26:01 --> Undefined variable $event
+in APPPATH\Views\index.php on line 183.
+ 1 APPPATH\Views\index.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $event', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 183)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:26:28 --> Undefined variable $event
+in APPPATH\Views\index.php on line 183.
+ 1 APPPATH\Views\index.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $event', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 183)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 13:26:29 --> Undefined variable $event
+in APPPATH\Views\index.php on line 183.
+ 1 APPPATH\Views\index.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $event', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 183)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(255): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-11 14:23:09 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 195.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-11 14:25:35 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 195.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-02-11 14:27:24 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 195.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2024-02-11 13:28:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 13:28:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `employee_table`
+INNER JOIN `department_table` ON `employee_table`.`department` = `department_table`.`department_id`
+INNER JOIN `position_table` ON `employee_table`.`position` = `position_table`.`position_id`', [], false)
+ 3 APPPATH\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 13:28:07 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\Home.php(189): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...')
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->payroll()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\app\Controllers\Home.php(189): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...')
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->payroll()
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-02-11 13:28:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(189): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT YEAR(pay_date) AS year, MIN(payroll_id) AS year_id FROM payroll_table GROUP BY year')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 13:28:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 13:28:12 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `employee_table`
+INNER JOIN `department_table` ON `employee_table`.`department` = `department_table`.`department_id`
+INNER JOIN `position_table` ON `employee_table`.`position` = `position_table`.`position_id`', [], false)
+ 3 APPPATH\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 14:14:14 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 14:14:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `employee_table`
+INNER JOIN `department_table` ON `employee_table`.`department` = `department_table`.`department_id`
+INNER JOIN `position_table` ON `employee_table`.`position` = `position_table`.`position_id`', [], false)
+ 3 APPPATH\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 14:14:28 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 14:14:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `branch_manager_table`', [], false)
+ 3 APPPATH\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+
+CRITICAL - 2024-02-11 19:29:11 --> Undefined variable $dept_count
+in APPPATH\Views\index.php on line 28.
+ 1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'D:\\Xammp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Xammp\\htdocs\\HR-MS\\app\\Views\\index.php')
+CRITICAL - 2024-02-11 15:29:18 --> Undefined variable $dept_count
+in APPPATH\Views\index.php on line 28.
+ 1 APPPATH\Views\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dept_count', 'C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\HR-MS\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+
+ERROR - 2024-02-11 19:10:40 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 19:10:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `branch_manager_table`', [], false)
+ 3 APPPATH\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:11:03 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 19:11:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `employee_table`
+INNER JOIN `department_table` ON `employee_table`.`department` = `department_table`.`department_id`
+INNER JOIN `position_table` ON `employee_table`.`position` = `position_table`.`position_id`', [], false)
+ 3 APPPATH\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:11:11 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\Home.php(189): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...')
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->payroll()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\app\Controllers\Home.php(189): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...')
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Home->payroll()
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-02-11 19:11:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(189): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT YEAR(pay_date) AS year, MIN(payroll_id) AS year_id FROM payroll_table GROUP BY year')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->payroll()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:11:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 19:11:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `employee_table`
+INNER JOIN `department_table` ON `employee_table`.`department` = `department_table`.`department_id`
+INNER JOIN `position_table` ON `employee_table`.`position` = `position_table`.`position_id`', [], false)
+ 3 APPPATH\Controllers\EmployeeController.php(60): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\EmployeeController->fetchEmployees()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 19:11:49 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'hrmsdb', 3306, '', 0)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Xammp\htdocs\HR-MS\app\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+#7 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hrmsdb' in D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Xammp\htdocs\HR-MS\app\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+#5 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+#6 D:\Xammp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xammp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-11 19:11:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hrmsdb'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `branch_manager_table`', [], false)
+ 3 APPPATH\Controllers\BranchmasterController.php(54): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\BranchmasterController->fetchbranchmanagers()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BranchmasterController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+
+ERROR - 2024-02-11 17:21:10 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\HR-MS\app\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+#6 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#7 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-11 17:21:10 --> Unknown column 'department_table.branch' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', [], false)
+ 5 APPPATH\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 17:21:34 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\HR-MS\app\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+#6 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#7 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-11 17:21:34 --> Unknown column 'department_table.branch' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', [], false)
+ 5 APPPATH\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-11 18:02:09 --> mysqli_sql_exception: Unknown column 'department_table.branch' in 'on clause' in D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\HR-MS\app\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+#6 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#7 D:\xampp\htdocs\HR-MS\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\HR-MS\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-11 18:02:10 --> Unknown column 'department_table.branch' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `department_table`
+INNER JOIN `branch_manager_table` ON `department_table`.`branch` = `branch_manager_table`.`branch_manager_id`', [], false)
+ 5 APPPATH\Controllers\DepartmentController.php(57): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DepartmentController->fetchdepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> 748d75954eee0ddbb858616c01fda174f4bdbc2f

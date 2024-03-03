@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR-MS</title>
-
+  
     <?= link_tag("public/assets/bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.2.3_dist_css_bootstrap.min.css") ?>
     <?= link_tag("public/assets/datatables/datatables.min.css") ?>
     <?= link_tag("public/assets/datatables/responsive.bootstrap5.min.css") ?>
     <?= link_tag("public/assets/bootstrap-icons/bootstrap-icons.css") ?>
     <?= link_tag("public/assets/boxicons/css/boxicons.min.css") ?>
     <?= link_tag("public/assets/css/style.css") ?>
-
     <?= link_tag('public/assets/sweetalert/css/sweetalert.min.css') ?>
 
     <!--========= Style switcher========= -->
@@ -57,6 +56,21 @@
             </li>
 
             <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxs-report'></i>
+                        <span class="link_name">Recruitment</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li class="no-list"><a href="#" class="link_name">Recruitment</a></li>
+                    <li><a href="<?= base_url('application'); ?>">Application</a></li>
+                    <li><a href="<?= base_url('vacancy'); ?>">Vacancy</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="<?= base_url('employee'); ?>">
                 <a href="<?= base_url('employeespage'); ?>">
                     <i class="bx bx-user icon"></i>
                     <span class="link_name">Employee</span>
@@ -79,24 +93,6 @@
 
             <li>
                 <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bxs-report'></i>
-                        <span class="link_name">Report</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <ul class="sub-menu">
-                    <li class="no-list"><a href="#" class="link_name">Report</a></li>
-                    <li><a href="#">Monthly Attendance</a></li>
-                    <li><a href="#">Leave</a></li>
-                    <li><a href="#">Payroll</a></li>
-                    <li><a href="#">Timesheet</a></li>
-
-                </ul>
-            </li>
-
-            <li>
-                <div class="icon-link">
                     <a href="<?= base_url('create-attendance'); ?>">
                         <i class='bx bx-timer'></i>
                         <span class="link_name">Attendance</span>
@@ -114,48 +110,54 @@
                 </div>
                 <ul class="sub-menu">
                     <li class="no-list"><a href="#" class="link_name">Approval</a></li>
-                    <li><a href="#">Answer grievance</a></li>
-                    <li><a href="#">Loan Approval</a></li>
-                    <li><a href="#">Manage Leave</a></li>
+                    <li><a href="<?= base_url('leave-approve'); ?>">Manage Leave</a></li>
+                    <li><a href="<?= base_url('manage-loan'); ?>">Loan Approval</a></li>
+                    <li><a href="<?= base_url('manage-leave'); ?>">Manage Leave</a></li>
+
                 </ul>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-briefcase'></i>
-                    <span class="link_name">Jobs</span>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxs-report'></i>
+                        <span class="link_name">Report</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li class="no-list"><a href="#" class="link_name">Report</a></li>
+                    <li><a href="<?= base_url('attendance-report'); ?>">Monthly Attendance</a></li>
+                    <li><a href="<?= base_url('leave-report'); ?>">Leave</a></li>
+                    <li><a href="<?= base_url('payroll-report'); ?>">Payroll</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="<?= base_url('user'); ?>">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Users</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Jobs</a></li>
+                    <li class="no-list"><a href="<?= base_url('user'); ?>" class="link_name">Users</a></li>
                 </ul>
             </li>
-
             <li>
-                <a href="#">
-                    <i class='bx bx-message-dots'></i>
-                    <span class="link_name">Message</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Message</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">
+                <a href="<?= base_url('disciplinary'); ?>">
                     <i class='bx bx-user-x'></i>
                     <span class="link_name">Disciplinary</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="#" class="link_name">Disciplinary</a></li>
+                    <li class="no-list"><a href="<?= base_url('disciplinary'); ?>" class="link_name">Disciplinary</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="<?= base_url('branch-master'); ?>">
+                <a href="<?= base_url('department'); ?>">
                     <i class='bx bx-cog'></i>
                     <span class="link_name">HR system setup</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li class="no-list"><a href="<?= base_url('branch-master'); ?>" class="link_name">HR system setup</a></li>
+                    <li class="no-list"><a href="<?= base_url('department'); ?>" class="link_name">HR system setup</a></li>
                 </ul>
             </li>
 
@@ -193,181 +195,11 @@
                             <ul class="notification_ul">
                                 <li class="starbucks success">
                                     <div class="notify_icon">
-                                        <span class="icon"></span>
+                                        
                                     </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            Lorem, ipsum dolor.
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>11:05am</p>
-                                    </div>
-                                </li>
-                                <li class="baskin_robbins failed">
-                                    <div class="notify_icon">
-                                        <span class="icon"></span>
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            Lorem, ipsum dolor.
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>08:00am</p>
-                                    </div>
-                                </li>
-                                <li class="mcd success">
-                                    <div class="notify_icon">
-                                        <span class="icon"></span>
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            Lorem, ipsum dolor.
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>9/4/2023</p>
-                                    </div>
-                                </li>
-                                <li class="pizzahut failed">
-                                    <div class="notify_icon">
-                                        <span class="icon"></span>
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            Lorem, ipsum dolor.
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>9/4/2023</p>
-                                    </div>
-                                </li>
-                                <li class="kfc success">
-                                    <div class="notify_icon">
-                                        <span class="icon"></span>
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            Lorem, ipsum dolor.
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>9/4/2023</p>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
 
 
-
-                    <div class="message">
-                        <div class="icon_wrap">
-                            <a href="#">
-                                <span><i class='bx bx-envelope bx-tada'></i></span>
-                                <span class="badge">2</span>
-                            </a>
-                        </div>
-                        <div class="message_dd">
-                            <ul class="message_ul">
-                                <li class="starbucks success">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            ssewankamboderick@gmail.com
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>11:05am</p>
-                                    </div>
-                                </li>
-                                <li class="baskin_robbins failed">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            ssewankamboderick@gmail.com
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>08:00am</p>
-                                    </div>
-                                </li>
-                                <li class="mcd success">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            rickrambo78@gmail.com
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>9/4/2023</p>
-                                    </div>
-                                </li>
-                                <li class="pizzahut failed">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            ssewankamboderick@gmail.com
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>9/4/2023</p>
-                                    </div>
-                                </li>
-                                <li class="kfc success">
-                                    <div class="notify_icon email-logo">
-                                        <img src="public/assets/img/w.png" alt="">
-                                    </div>
-                                    <div class="notify_data">
-                                        <div class="title">
-                                            kikajjosda@gmail.com
-                                        </div>
-                                        <div class="sub_title">
-                                            Lorem ipsum dolor sit amet consectetur.
-                                        </div>
-                                    </div>
-                                    <div class="notify_status">
-                                        <p>9/4/2023</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <div>
                         <span class="style-switcher-toggler s-icon"><i class='bx bx-cog bx-spin'></i></span>
@@ -418,6 +250,7 @@
             </div>
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <?= script_tag("public/assets/jquery-3.6.1.min.js") ?>
         <?= script_tag("public/assets/bootstrap/js/bootstrap.bundle.min.js") ?>
         <?= script_tag("public/assets/datatables/datatables.min.js") ?>
@@ -430,10 +263,14 @@
         <?= script_tag("public/assets/js/color-picker.js") ?>
         <?= script_tag("public/assets/sweetalert/js/sweetalert2@11.js") ?>
         <?= script_tag("public/assets/jquery.validate.min.js") ?>
+        <?= script_tag("public/assets/js/script.js") ?>
+        <?= script_tag("public/assets/js/chart.js") ?>
         <?= script_tag("public/assets/js/ajax.js") ?>
-
+         
         <script>
             $(document).ready(function() {
+
+                });
 
                 fetch_payroll('no')
 
