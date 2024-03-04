@@ -107,7 +107,7 @@ class EmpHomeController extends BaseController
             return view('emp-dashboard',['results' => $results]);
         } else {
             // If credentials are invalid, redirect to login page with error message
-            return redirect()->to(base_url('emp-login'))->with('error', 'Invalid email or password');
+            return redirect()->to(base_url('login'))->with('error', 'Invalid email or password');
         }
 
 
@@ -140,7 +140,7 @@ class EmpHomeController extends BaseController
         exit();
 
     
-        return redirect()->to(base_url('emp-login'));
+        return redirect()->to(base_url('login'));
     }
     
 

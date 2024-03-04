@@ -9,7 +9,7 @@
             <li><a href="#">Home</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active">Employee</a></li>
-            <li><a href="<?= base_url('createpage') ?>" class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add Employee</a></li>
+            <li><a href="<?= base_url('createEmployee') ?>" class="btn btn-sm" style="background: var(--skin-color); color: #fff">Add Employee</a></li>
         </ul>
         <div class="hr"></div>
 

@@ -157,6 +157,8 @@ $routes->post('insertintoevents','Home::add_event');
 $routes->get('getevents','Home::fetchDataFromEventsTable');
 
 
+//login route
+$routes->get('login','LoginController::index');
 
 
 
@@ -207,6 +209,12 @@ $routes->get('attendance-report','EmpHomeController::reportAttendance');
 //route for leave approval
 $routes->get('leave-approve','EmpHomeController::leaveApprove');
 
+
+//website route
+$routes->get('landing-page','Home::landingPage');
+$routes->get('job-detail/(:segment)', 'JobDetailController::jobDetails/$1');
+$routes->post('insert_job_detail','JobDetailController::index');
+$routes->post('insert_vacancy','VacancyController::index');
 
 
 
