@@ -58,8 +58,13 @@ $routes->get('displinary','Disciplinary::index');
 $routes->post('insert_disciplinary', 'Disciplinary::Insert_displinary');
 $routes->post('fetchDisplinary', 'Disciplinary::fetchDisplinary');
 
+
+// Working with Attendance (Admin)
+$routes->post('fetchattendance', 'AttendanceController::index');
+$routes->post('updateattendance', 'AttendanceController::updatebranchmanager');
 //The following routes are for employee's dashboard
 $routes->get('employee-dashboard', 'Home::employeeDashboard');
+
 
 // Working with employees
 $routes->post('fetchemployees', 'EmployeeController::fetchEmployees');

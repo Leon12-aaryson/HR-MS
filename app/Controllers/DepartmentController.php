@@ -22,14 +22,20 @@ class DesignationController extends BaseController
         // Select Designation table 
         $builder = $this->db->table('designation_table');
 
+        $builder->select('department_table.*');
         $builder->select('designation_table.*'); 
+
 
         // Handle search value
         $searchData = $this->request->getPost('search');
         if (isset($searchData['value']) && !empty($searchData['value'])) {
             $searchValue = $searchData['value'];
             $builder->groupStart()
+
+                ->orLike('department_name', $searchValue)
+                ->orLike('salary', $searchValue)
                 ->like('designation', $searchValue)
+
                 ->groupEnd();
         }
 
@@ -63,6 +69,11 @@ class DesignationController extends BaseController
 
             // Columns to be returned back in DataTable
             $sub_array = [
+
+                $row['department_id'],
+                $row['department_name'],
+                number_format(floatval($row['salary'])),
+
                 $row['designation_id'],
                 $row['designation'],
                 '<div class="dropdown">
@@ -122,9 +133,15 @@ class DesignationController extends BaseController
     // Add Designation
     public function adddesignation()
     {
+
+        // Prepare Department data
+        $departmentData = [
+            'department_name' => $this->request->getPost('departmentname'),
+            'salary' => $this->request->getPost('salary')
         // Prepare Designation data
         $branchData = [
             'designation' => $this->request->getPost('designation')
+
         ];
 
         // Insert the Designation data into the database
@@ -146,7 +163,11 @@ class DesignationController extends BaseController
         $id = $this->request->getPost('designationid');
 
         $data = [
+
+            'department_name' => $this->request->getPost('departmentname'),
+            'salary' => $this->request->getPost('salary')
             'designation' => $this->request->getPost('designation'),
+
         ];
 
         $this->designation->update($id, $data);

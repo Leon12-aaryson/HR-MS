@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\DepartmentModel;
 use App\Models\EventModel;
 use App\Models\PayrollModel;
 use App\models\VacancyModel;
@@ -10,6 +11,7 @@ class Home extends BaseController
     private $payroll;
     protected $db;
     private $event;
+    private $departments;
 
     public function __construct()
     {
@@ -17,6 +19,7 @@ class Home extends BaseController
         $this->db = \Config\Database::connect();
         $this->payroll = new PayrollModel();
         $this->event = new EventModel();
+        $this->departments = new DepartmentModel();
         helper(['html', 'form']);
     }
 
@@ -207,7 +210,10 @@ class Home extends BaseController
     }
     public function CreateAttendance()
     {
-        return view('create-attendance');
+        // Fetch all departments from the database
+        $departments = $this->departments->findAll();
+    
+        return view('create-attendance', ['departments'=>$departments]);
     }
 
     // The following method is not yet linked anywhere

@@ -1,3 +1,91 @@
+// Managing Attendance
+var manageAttendanceDataTable = $("#manageAttendanceDataTable").DataTable({
+    "processing": true,
+    "serverSide": true,
+    "stateSave": false, // Remembers data table state
+    "order": [],
+    "ajax": {
+        url: "fetchattendance",
+        method: "POST",
+    },
+    "columnDefs": [{
+        "orderable": false,
+        "targets": [6]
+    }],
+    "dom": '<"row"<"col-md-6"><"col-md-6"f>>' +
+        '<"row"<"col-md-12"t>>' +
+        '<"row"<"col-md-5"i><"col-md-7"p>>',
+    buttons: [{
+            extend: 'excelHtml5',
+            text: 'Excel <i class="bi bi-file-earmark-excel"></i> ',
+            titleAttr: 'Export to Excel',
+            className: 'btn btn-sm btn-danger',
+            exportOptions: {
+                columns: [0, 1],
+                search: 'applied',
+                order: 'applied',
+            }
+        },
+        {
+            extend: 'pdfHtml5',
+            text: 'PDF <i class="bi bi-file-earmark-pdf"></i> ',
+            titleAttr: 'Export to PDF',
+            className: 'btn btn-sm btn-danger',
+            filename: 'employees_pdf',
+            exportOptions: {
+                columns: [0, 1],
+                search: 'applied',
+                order: 'applied',
+            }
+        },
+        {
+            extend: 'print',
+            text: 'Print <i class="bi bi-printer"></i> ',
+            titleAttr: 'Print',
+            className: 'btn btn-sm btn-danger',
+            exportOptions: {
+                columns: [0, 1],
+                search: 'applied',
+                order: 'applied',
+            }
+        },
+        {
+            extend: "copyHtml5",
+            text: 'Copy <i class="bi bi-file-earmark"></i> ',
+            titleAttr: 'Copy',
+            className: 'btn btn-sm btn-danger',
+            exportOptions: {
+                columns: [0, 1]
+            }
+        },
+    ]
+});
+
+
+
+
+$(document).on("submit", "#attendancefilterform", (event) => {
+    event.preventDefault();
+    $.ajax({
+        method: "POST",
+        url: "fetchattendance",
+        data: new FormData($("#attendancefilterform")[0]),
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            $("#manageAttendanceDataTable").DataTable().destroy();
+            manageAttendanceDataTable.ajax.reload();
+        }
+    });
+});
+
+
+
+
+
+
+
+
 /**
  * Employee
  */
@@ -497,7 +585,7 @@ $(document).ready(function () {
         },
         "columnDefs": [{
             "orderable": false,
-            "targets": [4]
+            "targets": [3]
         }],
     })
 

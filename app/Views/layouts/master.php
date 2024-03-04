@@ -331,13 +331,6 @@
 
             })
 
-            // Update
-            // STEP 1: Fetch employee data and populate the update form
-            $(document).on('click', '#employeeupdatebtn', function() {
-                const id = $(this).val();
-
-                alert(id)
-            });
         </script>
 
 </body>

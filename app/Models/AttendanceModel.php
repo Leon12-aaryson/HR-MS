@@ -7,13 +7,21 @@ use CodeIgniter\Model;
 class AttendanceModel extends Model
 {
     protected $DBGroup          = 'default';
+
+    protected $table            = 'attendance_table';
+    protected $primaryKey       = 'attendance_id';
     protected $table            = 'attendances';
     protected $primaryKey       = 'id';
+
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
+
+    protected $allowedFields    = ['employee_id','date','clock_in_time','clock_out_time','status','	active'];
+
     protected $allowedFields    = [];
+
 
     // Dates
     protected $useTimestamps = false;
